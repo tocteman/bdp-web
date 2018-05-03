@@ -14,7 +14,7 @@ puesto: "Desarrollo México"
 
 **Experiencia en Python(3.x) y la plataforma Django, incluyendo:**
 
-- Conceptos generales de la plataforma: modelos, vistas, plantillas, formularios, seguridad, etc.
+- Conceptos generales de la plataformas: modelos, vistas, plantillas, formularios, seguridad, etc.
 - Desarrollo e integración con APIs y servicios externos.  
 - Mapeo objeto-relacional(ORM) con base de datos Postgres; migraciones de datos.  
 - Medición de desempeño, optimización, caching.  

@@ -1,0 +1,6 @@
+@tailwind preflight;
+@tailwind components;
+@tailwind utilities;
+.bg-hero-image-estrellas {
+  background-image: url('../images/estrellas.jpg')
+}

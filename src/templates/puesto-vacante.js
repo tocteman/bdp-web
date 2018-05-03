@@ -19,7 +19,7 @@ export default function Template({ data }) {
       <br/>
       <div className="flex flex-wrap mx-auto">
       <div className="w-full">
-      <form name="contact" method="POST" netlify>
+            <form name="contact" method="POST" data-netlify="true" netlify>
           <label className="font-medium uppercase mr-3">Nombre</label>
           <input type="text" className="md:w-md block text-teal-darker bg-white focus:bg-grey-light focus:text-grey-darkest  border border-teal-darker rounded-lg shadow-md mb-4 p-3"/>
 

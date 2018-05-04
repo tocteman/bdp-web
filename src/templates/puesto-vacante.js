@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import TiArrowBack from 'react-icons/lib/ti/arrow-back'
+import FileUploadForm from '../components/FileUploadForm'
 export default function Template({ data }) {
   const post = data.markdownRemark
 
@@ -19,7 +20,9 @@ export default function Template({ data }) {
       <br/>
       <div className="flex flex-wrap mx-auto">
       <div className="w-full">
-            <form name="contact" method="POST" data-netlify="true" netlify>
+      <FileUploadForm/>
+            {/* <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={this.handleSubmit}>
+              <input type="hidden" name="form-name" value="contact" />
           <label className="font-medium uppercase mr-3">Nombre</label>
           <input type="text" className="md:w-md block text-teal-darker bg-white focus:bg-grey-light focus:text-grey-darkest  border border-teal-darker rounded-lg shadow-md mb-4 p-3"/>
 
@@ -32,7 +35,7 @@ export default function Template({ data }) {
           <input type="file" className="md:w-md block text-teal-darker bg-white focus:bg-grey-light focus:text-grey-darkest  border border-teal-darker rounded-lg shadow-md mb-4 p-3" />
         
           <button type="submit" className="mt-4 rounded text-white bg-teal-darker hover:bg-grey-light hover:border hover:border-teal-darker hover:text-teal-darker px-6 py-2 shadow-md ">Enviar</button>
-        </form>
+        </form> */}
         </div>
         </div>
       </div>

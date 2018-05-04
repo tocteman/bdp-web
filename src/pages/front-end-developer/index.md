@@ -5,37 +5,22 @@ title: "Front-End Developer"
 puesto: "Desarrollo México"
 ---
 
-### A leading Cryptocurrency Company based in Central London are looking for a mid level Frontend Developer to join their team on a permanent basis.</strong>
+#Frontend Developer
+##Requisitos
+Ubank está en la búsqueda de un front developer para implementar su aplicación de ahorro automático en los bancos más prestigiosos de la región.
 
-**The successful candidate will have experience working with HTML5, CSS3 as well as Javascript and ReactJS.**
+##Habilidades
+- Experiencia en el uso de frameworks de frontend, de preferencia Angular 4+ con TypeScript
+- Trabajar con Ionic 3+, uso de sus componentes, librerías e integración de elementos nativos.
+- Construcción de soluciones que se conectan con APIs RESTful
+- Desarrollo de soluciones móviles para Android y iOS.
+- Manejo de GIT, de preferencia GitHub
+- Conocimientos demostrables en HTML, CSS, JavaScript y Bootstrap 4
+- Ser autodidacta, atreverse a proponer nuevas soluciones y abierto para aprender y trabajar nuevas tecnologías.
 
-They would be responsible for the production, modification, and maintenance of websites and web application’s user interfaces, working closely with designers and project team to turn their static designs into working browser based web pages to be delivered across devices. They will also work closely with back-end developers to implement their server-side code in order to develop complex, interactive, and content repository / database driven websites.
-
-The Senior Front-end Developer is fully capable in delivering user stories end-to-end and is highly-skilled and experienced in industry-standard frontend technologies and agile methodologies such as Scrum and Kanban. They would have a complete understanding of the software development life cycle, and is familiar with the Attlassian suite including Jira and Confluence.
-
-###Key Responsibilities
-  
-  - Develop and implement websites and/or public-facing web applications using HTML5, CSS3 and JavaScript.
-  - Hands on technical role; contributes to all phases of the software development lifecycle, including analysis, design, implementation, and QA. 
-  - Works with stakeholders to understand and document software requirements, and ensure application UI meets functional requirements.
-  - Produce clean, semantic HTML5 markup and accessibility to AAA standards.
-  - Develop authoring templates and components for content editors within Enterprise - Digital Content - - Management Systems such as Adobe Experience Manager (AEM).
-  - Develop functional prototypes from wireframes and mockups, and create proper documentation.
-  - Build internal knowledge base by documenting best-practices, templates, standards and internal policies.
-  - Mentor peers to enforce development best-practices and consistency across projects.
-
-### The Successful Candidate Must Have*
-
-- JavaScript
-- Node.js
-- Angular/React and other similar frameworks
-- HTML5 / CSS3
-- Responsive Design - Across browsers and devices
-- SASS/LESS/Bootstrap
-- Modular CSS component design
-- Webpack/Gulp/Grunt/Bower
-- API Integration experience
-- Git
-- Agile experience
-- Financial or eCommerce background
-- ReactJS
+##Opcionales
+- GULP o Grunt
+- Contar con un equipo Apple para ejecución de Xcode
+- Experiencia trabajando con Wordpress o CMS similares
+- Competente en el idioma inglés (hablar, leer, escribir)
+- Portafolio de proyectos en los que has participado

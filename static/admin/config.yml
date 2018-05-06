@@ -4,7 +4,7 @@ backend:
   branch: master
 
 publish_mode: editorial_workflow
-media_folder: src/img/uploads
+media_folder: static/img/uploads
 
 collections:
   - name: blog

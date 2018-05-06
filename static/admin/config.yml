@@ -3,15 +3,17 @@ backend:
   repo: tocteman/ubank_app
   branch: master
 
-media_folder: static/assets
+publish_mode: editorial_workflow
+media_folder: src/img/uploads
 
 collections:
   - name: blog
     label: Blog
-    folder: blog
+    folder: src/pages/blog
     create: true
     fields:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
+      - { name: thumbnail, label: Featured Image, widget: image }
       - { name: title, label: Title }
-
+      - { name: "body", label: "Blog post content", widget: "markdown"}

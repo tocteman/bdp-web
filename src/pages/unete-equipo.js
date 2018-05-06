@@ -10,11 +10,11 @@ const UneteEquipo = ({ data }) => (
         <div className="w-full">
           <div className="flex flex-wrap group m-4 p-4 border rounded-lg text-center hover:bg-blue-lightest hover:text-white" key={post.node.id}>
             <div className="group w-1/2">
-              <Link to={post.node.frontmatter.path} className="no-underline text-teal-darkest pb-1 font-medium hover:text-teal-darker">{post.node.frontmatter.title}</Link>
+              <Link to={post.node.fields.slug} className="no-underline text-teal-darkest pb-1 font-medium hover:text-teal-darker">{post.node.frontmatter.title}</Link>
               <p className="no-underline text-sm font-light text-teal-darkest pb-1 hover:text-teal-darkest">{post.node.frontmatter.puesto}</p>
             </div>
             <div className="w-1/2">
-              <Link to={post.node.frontmatter.path} className="no-underline"><button className="font-medium  bg-green-dark rounded p-2 text-sm shadow-md text-white hover:bg-green">Leer más.</button></Link>
+              <Link to={post.node.fields.slug} className="no-underline"><button className="font-medium  bg-green-dark rounded p-2 text-sm shadow-md text-white hover:bg-green">Leer más.</button></Link>
             </div>
           </div>
         </div>
@@ -28,6 +28,9 @@ export const pageQuery = graphql`
       allMarkdownRemark {
         edges {
           node {
+            fields {
+              slug
+            }
             id
             frontmatter {
               path

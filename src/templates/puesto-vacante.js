@@ -1,8 +1,9 @@
 import React from 'react'
+import _ from 'lodash'
 import Link from 'gatsby-link'
 import TiArrowBack from 'react-icons/lib/ti/arrow-back'
 import FileUploadForm from '../components/FileUploadForm'
-export default function Template({ data }) {
+export default function VacanteTemplate({ data }) {
   const post = data.markdownRemark
 
   return (
@@ -28,12 +29,14 @@ export default function Template({ data }) {
   )
 }
 
-export const postQuery = graphql`
-  query BlogPostByPath($path: String!){
-    markdownRemark(frontmatter: { path: {eq: $path}}){
+export const vacanteQuery = graphql`
+  query VacantePosts($slug: String!){
+    markdownRemark(fields: { slug: {eq: $slug}}){
       html
+      fields{
+        slug
+      }
       frontmatter {
-        path
         title
         date
         puesto

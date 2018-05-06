@@ -5,7 +5,6 @@ const parseFilepath = require('parse-filepath')
 const fs = require ('fs-extra')
 const slash = require ('slash')
 const slugify = require('limax')
-const {createFilePath} = require('gatsby-source-filesystem')
 
 
 const slugToAnchor = slug => 
@@ -14,18 +13,6 @@ const slugToAnchor = slug =>
     .filter(item => item !== ``)
     .pop()
 
-exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
-  const { createNodeField } = boundActionCreators
-  if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `pages` })
-    createNodeField({
-      node,
-      name: `slug`,
-      value: slug,
-    })
-  }
-};
-  
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage, createRedirect } = boundActionCreators
   return new Promise ((resolve, reject) => {
@@ -78,7 +65,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           path: `${edge.node.fields.slug}`,
           component: slash(blogTemplate),
           context: {
-            slug: edge.node.fields.slug
+            slug: edge.node.fields.slug,
+            prev,
+            next
           },
         })
       })
@@ -101,5 +90,39 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       })
     )
   })
+}
+
+exports.onCreateNode = ({node, boundActionCreators, getNode}) => {
+  const {createNodeField} = boundActionCreators
+  let slug
+  if (node.internal.type === `File`) {
+    const parsedFilepath = parseFilepath(node.relativePath)
+    if(node.sourceInstanceName === `vacante`){
+      if (parsedFilepath.name !== 'index' && parsedFilepath.dir !== ''){
+        slug = `${parsedFilepath.dir}/${parsedFilepath.name}/`
+      } else if (parsedFilepath === ``) {
+        slug = `/${parsedFilepath.name}`
+      } else {
+        slug = `/${parsedFilepath.dir}/`
+      }
+    }
+    if (slug){
+      createdNodeField({node, name: 'slug', value: slug})
+    }
+  } else if (
+    node.internal.type === 'MarkDownRemark'
+  ) {
+    const fileNode = getNode(node.parent)
+    const parsedFilepath = parseFilepath(fileNode.relativePath)
+    if (fileNode.sourceInstanceName === 'blog'){
+      if (parsedFilePath.name !== `index` && parsedFilePath.dir !== ``) {
+        slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`
+      } else if (parsedFilePath.dir === ``) {
+        slug = `/${parsedFilePath.name}/`
+      } else {
+        slug = `/${parsedFilePath.dir}/`
+      }
+    }
+  }
 }
    

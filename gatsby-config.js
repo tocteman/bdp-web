@@ -6,11 +6,20 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
     'gatsby-transformer-json',
+    'gatsby-plugin-react-next',
+    'gatsby-transformer-remark',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages`,
         name: 'pages'
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/pages/blog`,
+        name: 'blog'
       },
     },
     {
@@ -27,16 +36,8 @@ module.exports = {
         path: `${__dirname}/src/`
       }
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `blog`,
-        path: `${__dirname}/blog`
-      }
-    },
-    'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
-    'gatsby-plugin-netlify-cms'
+    // 'gatsby-plugin-sharp',
+    'gatsby-plugin-netlify-cms',
   ],
 }

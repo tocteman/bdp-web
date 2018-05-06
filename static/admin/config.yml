@@ -12,8 +12,8 @@ collections:
     folder: src/pages/blog
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: thumbnail, label: Featured Image, widget: image }
       - { name: title, label: Title }
+      - { name: date, label: Date, widget: date, default: ""}
+      - { name: thumbnail, label: Featured Image, widget: image }
       - { name: "body", label: "Blog post content", widget: "markdown"}
+      - { name: public, label: Public, widget: boolean, default: true}

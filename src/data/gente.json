@@ -1,0 +1,44 @@
+[{
+    "userID": 1,
+    "nombre": "Mijael Feldman",
+    "cargo": "CEO, Fundador",
+    "relacion": "equipo"
+  },
+  {
+    "userID": 2,
+    "nombre": "Fernando Reyes",
+    "cargo": "CTO, Fundador",
+    "relacion": "equipo"
+  },
+  {
+    "userID": 3,
+    "nombre": "Fabián Peña",
+    "cargo": "Backend",
+    "relacion": "equipo"
+  },
+
+  {
+    "userID": 4,
+    "nombre": "Dan Ariely",
+    "cargo": "Mentor",
+    "relacion": "mentor"
+  },
+  {
+    "userID": 5,
+    "nombre": "Jean-Stephane Gourevitch",
+    "cargo": "Mentor",
+    "relacion": "mentor"
+  },
+  {
+    "userID": 6,
+    "nombre": "Nick Fitz",
+    "cargo": "Mentor",
+    "relacion": "mentor"
+  },
+  {
+    "userID": 7,
+    "nombre": "Tomás Lungenstrass",
+    "cargo": "Mentor",
+    "relacion": "mentor"
+  }
+]

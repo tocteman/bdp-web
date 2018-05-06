@@ -5,6 +5,8 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     'gatsby-transformer-json',
     'gatsby-plugin-react-next',
     'gatsby-transformer-remark',
@@ -36,8 +38,6 @@ module.exports = {
         path: `${__dirname}/src/`
       }
     },
-    'gatsby-transformer-sharp',
-    // 'gatsby-plugin-sharp',
     'gatsby-plugin-netlify-cms',
   ],
 }

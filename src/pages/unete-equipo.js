@@ -25,7 +25,7 @@ const UneteEquipo = ({ data }) => (
 
 export const pageQuery = graphql`
       query BlogIndexQuery {
-      allMarkdownRemark {
+      allMarkdownRemark{
         edges {
           node {
             fields {

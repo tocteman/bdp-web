@@ -26,29 +26,64 @@ const Reglas = ({ data }) => (
         <h3 className="text-center pb-16 text-blue-darkest">Si compro un café entonces ahorro $10 para la playa</h3>
       </div>
       <div className="bg-grey-light border-t-1 border-grey">
-        <div className="flex">
-          <div className="w-full md:w-1/2 lg:w-1/3">
-          {/* {data.Relacionados.edges.map(post => ( */}
-            <div class="max-w-sm rounded overflow-hidden shadow-md">
-              <Img resolutions/>
+        <ul className="flex flex-wrap px-8 mx-auto mt-8 justify-center py-16 max-w-3xl">
+          {data.datosReglas.edges.map(post => (
+          <li className="flex m-3 md:w-1/2 lg:w-1/3 max-w-xs rounded-lg shadow-md overflow-hidden ">
+            <div className="flex flex-col overflow-hidden bg-white overflow">
+              <Img resolutions={post.node.frontmatter.featuredImage.childImageSharp.resolutions}/>
+              <div className="flex px-4 pt-4 pb-2 items-center">
+                <Img resolutions={post.node.frontmatter.icono.childImageSharp.resolutions}/>
+                <h3 className="font-medium pl-2">{post.node.frontmatter.nombre}</h3>
+              </div>
+              <p className="px-4 pb-2 text-grey-darker max-w-xs leading-normal">
+                {post.node.excerpt}
+              </p>
+            <p className="p-4 text-sm italic font-light">{post.node.frontmatter.requerimento}</p>
             </div>
-            
-            {/* ))} */}
-          </div>
-        </div>    
+          </li>
+             ))}
+        </ul>    
       </div>
     </div>
 )
     
   export const queryReglas = graphql`
   query indexReglasQuery {
-    datosReglas: allReglasJson{
+    datosReglas: allMarkdownRemark(
+    filter: {fields: {slug:{regex:"/reglas/"} }}
+  ){
       edges {
         node{
-          id
-          nombre
-          descripcion
-          requerimento
+          frontmatter {
+            nombre
+            requerimento
+            icono{
+              childImageSharp{
+                resolutions(
+                  width: 50
+                  height: 50
+                ){
+                  ...GatsbyImageSharpResolutions_noBase64
+                }
+              }
+            }
+            featuredImage {
+              childImageSharp {
+                resolutions (
+                  duotone: {
+                    highlight: "#1bb876",
+                    shadow: "#388dd1",
+                    opacity: 15  },
+                  width: 400
+                  height: 300
+                  cropFocus: ENTROPY
+                ){
+                  ...GatsbyImageSharpResolutions_noBase64
+                }
+              }
+            }
+          }
+          excerpt
         }
       }
     }
@@ -59,39 +94,6 @@ const Reglas = ({ data }) => (
     opacity: 55
   }){
       ...GatsbyImageSharpSizes_noBase64
-      }
-    }
-    zapatoReglasImage: imageSharp(id: {regex: "/reglas_zapatos/"}){
-      resolutions(
-        duotone: {
-          highlight: "#1bb876",
-          shadow: "#184059",
-          opacity: 55
-        },
-        cropFocus: ENTROPY,
-        width:300
-      ){
-      ...GatsbyImageSharpResolutions_noBase64
-      }
-    }
-    mexicoReglasImage: imageSharp(id: {regex: "/reglas_mexico/"}){
-      resolutions(width: 300){
-      ...GatsbyImageSharpResolutions_noBase64
-      }
-    }
-    correrReglasImage: imageSharp(id: {regex: "/reglas_correr/"}){
-      resolutions(width: 300){
-      ...GatsbyImageSharpResolutions_noBase64
-      }
-    }
-    frascosReglasImage: imageSharp(id: {regex: "/reglas_frascos-monedas/"}){
-      resolutions(width: 300){
-      ...GatsbyImageSharpResolutions_noBase64
-      }
-    }
-    cenaReglasImage: imageSharp(id: {regex: "/reglas_cena-amig/"}){
-      resolutions(width:300){
-      ...GatsbyImageSharpResolutions_noBase64
       }
     }
   }

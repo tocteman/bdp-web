@@ -52,9 +52,7 @@ hr {
 
 
 @tailwind utilities;
-.bg-hero-image-estrellas {
-  background-image: url('../images/estrellas.jpg')
-}
+
 
 @responsive {
   .bg-gradient-green-dark-to-green {

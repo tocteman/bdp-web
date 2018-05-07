@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
 import ReactGranimCanvas from "../components/ReactGranimCanvas"
-import IPhone from "../images/iphone7.png"
+import IPhone from "../img/iphone7.png"
 import FaLongArrowRight from 'react-icons/lib/fa/long-arrow-right'
 import FaShield from 'react-icons/lib/fa/shield'
 import FaDollar from 'react-icons/lib/fa/dollar'
@@ -51,7 +51,7 @@ const IndexPage = ({ data }) => (
       </div>
     </div>
 
-    <div className="flex flex-wrap pt-8 m-8 bg-grey-lightest max-w-xl mx-auto">
+    <div className="flex flex-wrap pt-8 m-8 bg-grey-lightest max-w-xl mx-auto rounded-lg">
       <div className="sm:w-full md:w-1/2 pt-4 px-4 pb-0 mx-auto md:p-8">
         <div className="flex">
           <div className="wt-1/3 p-2">

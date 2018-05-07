@@ -5,12 +5,12 @@ title: "Back-End Developer"
 puesto: "Desarrollo México"
 ---
 
-# Requisitos
+### Requisitos
 
 Übank está en la búsqueda de un backend developer para implementar su API de ahorro automático en los bancos más prestigiosos de la región.  
 
 
-# Habilidades
+### Habilidades
 
 **Experiencia en Python(3.x) y la plataforma Django, incluyendo:**
 
@@ -25,7 +25,7 @@ puesto: "Desarrollo México"
 - Conocimientos en Ruby, NodeJS y otros lenguajes backend.  
 - Ser autodidacta, atreverse a proponer nuevas solucionas y abierto para aprender y trabajar con nuevas tecnologías.  
 
-## Opcionales
+#### Opcionales
 
 - Experiencia trabajando en instituciones financieras.  
 - Experiencia trabajando con arquitectura en base de microservicios.  

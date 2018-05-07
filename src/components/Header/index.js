@@ -29,11 +29,14 @@ const Header = () => {
 
         <div id="nav" className="hidden md:flex md:items-center w-full md:w-auto">
           <div className="text">
-            <Link to="/unete-equipo" className="block md:inline-block mt-4 md:mt-0 mr-6 no-underline text-grey-lightest hover:text-grey-light">
-              Trabaja con nosotros
-            </Link>
-              <Link to="/reglas" className="block md:inline-block mt-4 md:mt-0 mr-6 no-underline text-grey-lightest hover:text-grey-light">
+            <Link to="/reglas" className="block md:inline-block mt-4 md:mt-0 mr-6 no-underline text-grey-lightest hover:text-grey-light">
                 Reglas
+            </Link>
+            <Link to="/equipo" className="block md:inline-block mt-4 md:mt-0 mr-6 no-underline text-grey-lightest hover:text-grey-light">
+              Equipo
+            </Link>
+              <Link to="/unete-equipo" className="block md:inline-block mt-4 md:mt-0 mr-6 no-underline text-grey-lightest hover:text-grey-light">
+              Ünete
             </Link>
           </div>
         </div>

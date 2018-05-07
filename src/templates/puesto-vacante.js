@@ -11,7 +11,7 @@ export default function VacanteTemplate({ data }) {
       <Link to="/unete-equipo" className="no-underline py-12 text-grey-darker hover:text-teal-darker">
       <TiArrowBack className="text-3xl" /> Regresar</Link>
       <hr />
-      <hr/>
+
       <h1 className="text-4xl p-4">{post.frontmatter.title}</h1>
       <div className="p-4">
       <div dangerouslySetInnerHTML={{ __html: post.html }} />

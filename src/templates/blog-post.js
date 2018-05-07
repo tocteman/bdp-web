@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Img from 'gatsby-image'
 
 export default function BlogTemplate({ data }) {
   const post = data.markdownRemark
@@ -22,6 +23,7 @@ query BlogPosts($slug: String!){
       title
       date
       tipo
+      thumbnail
       public
     }
     excerpt

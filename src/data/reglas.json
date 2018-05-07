@@ -1,0 +1,37 @@
+[
+  {
+    "reglaID": 1,
+    "nombre": "Placer Culposo",
+    "descripcion": "¿Adicta a los zapatos? Ahorra $10 pesos cada vez que compres un nuevo par de tacones.",
+    "requerimento": "Requiere conexión a tu cuenta bancaria",
+    "imagen": "/src/img/fotos reglas/reglas_zapatos.jpg"
+  },
+  {
+    "reglaID": 2,
+    "nombre": "Pasión Futbolera",
+    "descripcion": "¡Asegura tu visita a la Copa del Mundo! Ahorra $100 pesos cada vez que la selección anote un gol.",
+    "requerimento": "Esta regla usa conexión con ESPN.",
+    "imagen": "/src/img/fotos reglas/reglas_mexico.jpg"
+  },
+  {
+    "reglaID": 3,
+    "nombre": "Redondeo",
+    "descripcion": "Compra un café por $52, ahorra $48 para el viaje a Europa.",
+    "requerimento": "Requiere conexión a tu cuenta bancaria",
+    "imagen": "/src/img/fotos reglas/reglas_frascos.jpg"
+  },
+  {
+    "reglaID": 4,
+    "nombre": "Actividad física",
+    "descripcion": "Ahorra $50 pesos cada que sales a correr y asegura que tu cuerpo estará listo para el verano.",
+    "requerimento": "Requiere conexión con Apple Health Kit",
+    "imagen": "/src/img/fotos reglas/reglas_correr.jpg"
+  },
+  {
+    "reglaID": 5,
+    "nombre": "Gastar Menos",
+    "descripcion": "¿Gastas mucho en restaurantes? Fija un límite de gasto. Si gastas menos, ahorras la diferencia.",
+    "requerimento": "Requiere conexión a tu cuenta bancaria",
+    "imagen": "/src/img/fotos reglas/reglas_cena-amig.jpg"
+  }
+]

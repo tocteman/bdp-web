@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => (
   </div>
 
 
-    <div className="flex pt-8 px-8 pb-4 mx-auto text-teal-darkest max-w-xl">
+    <div className="flex pt-8 px-8 pb-4 mx-auto text-blue-darkest max-w-xl">
       <div className="sm:w-full md:w-1/2 mx-auto">
         <h1 className="font-medium leading-normal">Qué es Übank</h1>
         <p className="max-w-sm leading-normal"><strong>Übank</strong> es la aplicación que te permite ahorrar según tu estilo de vida. A través de las <em>Reglas de Ahorro Automático</em>, puedes elegir cuánto y cuándo ahorrar y seguir haciendo tu vida. Los ahorros se acumularán si que ni siquiera te des cuenta.</p>

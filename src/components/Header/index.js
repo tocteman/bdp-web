@@ -13,7 +13,7 @@ const Header = () => {
   };
 
   return (
-    <Headroom>
+    <Headroom className="z-40">
       <nav className="bg-gradient-green-dark-to-green shadow-md">
       <div className="flex flex-wrap items-center justify-between max-w-xl mx-auto p-4 md:p-4">
         <Link to="/" className="flex items-center no-underline text-white hover:text-grey-light">
@@ -23,25 +23,17 @@ const Header = () => {
         </Link>
 
 
-        <button
-          className="block md:hidden flex items-center px-3 py-2 text-white"
-          onClick={handleClick}
-        >
+        <button className="block md:hidden flex items-center px-3 py-2 text-white" onClick={handleClick}>
           <FaBars />
-  
         </button>
 
-        <div
-          id="nav"
-          className="hidden md:flex md:items-center w-full md:w-auto"
-        >
+        <div id="nav" className="hidden md:flex md:items-center w-full md:w-auto">
           <div className="text">
-
-            <Link
-              to="/unete-equipo"
-              className="block md:inline-block mt-4 md:mt-0 mr-6 no-underline text-grey-lightest hover:text-grey-light"
-            >
+            <Link to="/unete-equipo" className="block md:inline-block mt-4 md:mt-0 mr-6 no-underline text-grey-lightest hover:text-grey-light">
               Trabaja con nosotros
+            </Link>
+              <Link to="/reglas" className="block md:inline-block mt-4 md:mt-0 mr-6 no-underline text-grey-lightest hover:text-grey-light">
+                Reglas
             </Link>
           </div>
         </div>

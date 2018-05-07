@@ -51,8 +51,8 @@ let colors = {
   'grey-darker': '#677180',
   'grey-dark': '#939fb2',
   'grey': '#b1c0d7',
-  'grey-light': '#c9d9f0',
-  'grey-lighter': '#d3e5ff',
+  'grey-light': '#dee5ef',
+  'grey-lighter': '#e3e9ea',
   'grey-lightest': '#eff2f1',
   'white': '#ffffff',
 
@@ -453,6 +453,7 @@ module.exports = {
     '64': '16rem',
     '96': '24rem',
     '128': '32rem',
+    '160': '40rem',
     '1/2': '50%',
     '1/3': '33.33333%',
     '2/3': '66.66667%',
@@ -500,6 +501,9 @@ module.exports = {
     '32': '8rem',
     '48': '12rem',
     '64': '16rem',
+    '96': '24rem',
+    '128': '32rem',
+    '160': '40rem',
     'full': '100%',
     'screen': '100vh'
   },
@@ -620,7 +624,11 @@ module.exports = {
     '6': '1.5rem',
     '8': '2rem',
     '12': '3rem',
-    '16': '4rem'
+    '16': '4rem',
+    '32': '8rem',
+    '64': '16rem',
+    '96': '24rem',
+    '128': '32rem',
   },
 
 
@@ -649,6 +657,11 @@ module.exports = {
     '4': '1rem',
     '6': '1.5rem',
     '8': '2rem',
+    '16': '4rem',
+    '32': '8rem',
+    '64': '16rem',
+    '96': '24rem',
+    '128': '32rem',
   },
 
 

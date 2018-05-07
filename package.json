@@ -29,6 +29,7 @@
     "react-headroom": "^2.2.2",
     "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7",
+    "react-parallax": "^1.7.0",
     "slash": "^2.0.0",
     "typeface-clear-sans": "0.0.44",
     "typeface-ibm-plex-sans": "0.0.58"

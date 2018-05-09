@@ -7,7 +7,7 @@ export default function VacanteTemplate({ data }) {
   const post = data.markdownRemark
 
   return (
-    <div className="text-teal-darkest mx-auto font-light leading-normal m-8 p-4 sm:max-w-sm md:max-w-md">
+    <div className="mx-auto font-light leading-normal m-8 p-4 sm:max-w-sm md:max-w-md">
       <Link to="/unete-equipo" className="no-underline py-12 text-grey-darker hover:text-teal-darker">
       <TiArrowBack className="text-3xl" /> Regresar</Link>
       <hr />

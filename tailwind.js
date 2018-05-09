@@ -47,7 +47,7 @@ let colors = {
   'transparent': 'transparent',
 
   'black': '#191b1c',
-  'grey-darkest': '#454b54',
+  'grey-darkest': '#2F343F',
   'grey-darker': '#677180',
   'grey-dark': '#939fb2',
   'grey': '#b1c0d7',
@@ -92,26 +92,6 @@ let colors = {
   'blue-light': '#3e9ce8',
   'blue-lighter': '#c8e8f4',
   'blue-lightest': '#eaf5ff',
-
-  'indigo-darkest': '#191e38',
-  'indigo-darker': '#2f365f',
-  'indigo-dark': '#5661b3',
-  'indigo': '#6574cd',
-  'indigo-light': '#7886d7',
-  'indigo-lighter': '#b2b7ff',
-  'indigo-lightest': '#e6e8ff',
-
-
-  'purple-darker': '#382b5f',
-  'purple-dark': '#794acf',
-  'purple': '#9561e2',
-  'purple-light': '#a779e9',
-
-
-
-  'pink-dark': '#eb5286',
-  'pink': '#f66d9b',
-  'pink-light': '#fa7ea8',
 
 }
 
@@ -451,6 +431,7 @@ module.exports = {
     '32': '8rem',
     '48': '12rem',
     '64': '16rem',
+    '80': '20rem',
     '96': '24rem',
     '128': '32rem',
     '160': '40rem',
@@ -504,6 +485,9 @@ module.exports = {
     '96': '24rem',
     '128': '32rem',
     '160': '40rem',
+    '200': '50rem',
+    '240': '60rem',
+    '320': '80rem',
     'full': '100%',
     'screen': '100vh'
   },
@@ -566,6 +550,7 @@ module.exports = {
   */
 
   maxWidth: {
+    'xxs': '12rem',
     'xs': '20rem',
     'sm': '30rem',
     'md': '40rem',
@@ -625,7 +610,9 @@ module.exports = {
     '8': '2rem',
     '12': '3rem',
     '16': '4rem',
+    '24': '6rem',
     '32': '8rem',
+    '48': '12rem',
     '64': '16rem',
     '96': '24rem',
     '128': '32rem',
@@ -659,6 +646,7 @@ module.exports = {
     '8': '2rem',
     '16': '4rem',
     '32': '8rem',
+    '48': '12rem',
     '64': '16rem',
     '96': '24rem',
     '128': '32rem',

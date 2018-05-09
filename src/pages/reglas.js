@@ -7,7 +7,7 @@ const Reglas = ({ data }) => (
     <div>
       <div className="flex absolute z-10 text-white max-w-xl flex-wrap h-128">
         <div className="md:flex-2 self-center p-8 md:p-32 max-w-md">
-          <p className="text-5xl font-extrabold pb-4">Transforma tu vida con ahorros automáticos.</p>
+          <p className="text-4xl sm:text-5xl font-extrabold pb-4">Transforma tu vida con ahorros automáticos.</p>
           <p className="font-medium text-xl leading-normal">Conoce las <strong>Reglas de Ahorro autómatico</strong> y descubre las miles de formas en las que puedes ahorrar sin esfuerzo.</p>
         </div>
         <div className="flex-1"></div>
@@ -26,7 +26,7 @@ const Reglas = ({ data }) => (
       <h3 className="mx-auto font-light p-4 pb-16 text-blue-darkest italic max-w-xs sm:max-w-sm md:max-w-md">"Ya tengo suficientes camisetas. Le diré a Übank que si me compro otra, guarde $10 para mi viaje a la playa".</h3>
     </div>
     <div className="bg-grey-light border-t-1 border-grey">
-      <ul className="flex flex-wrap px-8 mx-auto mt-8 justify-center py-16 max-w-3xl">
+      <ul className="flex flex-wrap px-3 sm:px-8 mx-auto mt-8 justify-center py-16 max-w-3xl">
         {data.datosReglas.edges.map(post => (
           <li className="flex m-3 md:w-1/2 lg:w-1/3 max-w-xs rounded-lg shadow-md overflow-hidden ">
             <div className="flex flex-col overflow-hidden bg-white overflow">

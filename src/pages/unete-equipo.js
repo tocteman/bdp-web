@@ -8,15 +8,15 @@ const UneteEquipo = ({ data }) => (
     <div>
       <div className="flex absolute z-10 text-blue-darkest flex-wrap h-160  w-full">
         <div className="flex-1"></div>
-        <div className="flex-2 p-8 md:p-32 max-w-md mt-8 md:bg-transparent">
-          <h1 className="p-1 leading-tight text-right mb-2">Ünete a nuestro equipo.</h1>
-          <p className="p-1 font-medium text-xl leading-normal text-right">Ayúdanos a construir esta nueva forma de ahorrar e invertir.</p>
+        <div className="flex-2 p-8 md:p-32 max-w-md mt-8">
+          <h1 className="p-1 leading-tight text-right mb-2 bg-grey-lightest sm:bg-transparent">Ünete a nuestro equipo.</h1>
+          <p className="p-1 font-medium text-xl leading-normal text-right bg-grey-lightest sm:bg-transparent">Ayúdanos a construir esta nueva forma de ahorrar e invertir.</p>
         </div>
       </div>
       <Img sizes={data.escritorioImage.sizes} className="h-160 m-0" />
     </div>
     <div className="mb-16">
-    <p className="mt-8 mb-4 mx-auto p-4 text-center text-2xl max-w-md">Estamos buscando personas que quieran cambiar el mundo, un paso a la vez.</p>
+    <p className="mt-8 mb-4 mx-auto p-4 text-center text-2xl max-w-md leading-normal font-medium">Estamos buscando personas que quieran cambiar el mundo, un paso a la vez.</p>
     {data.vacanteIndexQuery.edges.map(post => (
       <div className="flex mx-auto max-w-xl">
         <div className="w-full">

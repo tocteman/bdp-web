@@ -9,15 +9,15 @@ const Equipo = ({ data }) => (
       <div className="flex absolute z-10 text-white flex-wrap h-160 justify-end content-end items-end w-full">
         <div className="flex-1"></div>
         <div className="flex-2 p-8 md:p-32 max-w-md">
-          <h1 className="p-1 leading-tight text-right bg-blue-darkest mb-2">Nuestra misión es que consigas la independencia financiera.</h1>
-          <p className="p-1 font-medium text-xl leading-normal text-right bg-blue-darkest">Empecemos por el ahorro. Conoce al equipo y por qué estamos haciendo esto.</p>
+          <div className="p-1 text-3xl sm:text-4xl leading-tight text-right bg-blue-darkest mb-2 font-semibold">Nuestra misión es que consigas la independencia financiera.</div>
+          <p className="p-1 text-xl leading-normal text-right bg-blue-darkest">Empecemos por el ahorro. Conoce al equipo y por qué estamos haciendo esto.</p>
         </div>
       </div>
       <Img sizes={data.columpioImage.sizes} className="h-160 m-0" />
     </div>
     <div className="shadow-sm">
       <div className="m-8 p-4 mx-auto leading-normal text-blue-darkest max-w-xs sm:max-w-xs md:max-w-sm lg:max-w-md">
-        <h1>Predeciblemente irracionales.</h1>
+        <div className="text-3xl sm:text-4xl font-semibold pb-3">Predeciblemente irracionales.</div>
         <p>Uno de los conceptos más repetidos en finanzas personales es ahorrar. Todos dicen que hay que ahorrar para el retiro, ahorrar para emergencias, ahorrar para la casa propia. Pero no es tan fácil como dicen.</p><br/>
         <p>Una de las razones es porque ahorrar significa sacrificar dinero que podemos gastar hoy y guardarlo para un futuro, donde sabemos qué podemos conseguir con esos $100 pesos más. En el futuro no podemos percibirlo; ahora mismo sí. ¿Pero qué sucede cuando los acumulamos, $100 pesos diarios, una y otra vez?</p><br />
         <p>A través de mucha investigación, pruebas y análisis, hemos identificado que la mejor manera de conseguir el ahorro es haciéndolo automático. Que sea tan fácil y simple que solo debamos decidir ahorrar una vez y que luego todo funcione en segundo plano.</p>
@@ -26,7 +26,7 @@ const Equipo = ({ data }) => (
     <div>
         <div className="bg-grey-lightest border-t-1 border-grey py-8">
         <div>
-          <h1 className="mx-auto text-center mt-4">Equipo</h1>
+          <div className="text-3xl sm:text-4xl mx-auto text-center mt-4 font-semibold">Equipo</div>
           <p className="mx-auto text-center max-w-xs sm:max-w-md mt-4 leading-normal">Procedemos de todo el mundo. Ahora nos hemos reunido para facilitarte la vida.</p>
         </div>
           
@@ -40,7 +40,7 @@ const Equipo = ({ data }) => (
             ))}
           </ul>
       <div>
-        <h1 className="mx-auto text-center pt-8 mt-8">Mentores e Inversionistas</h1>
+          <div className="text-3xl sm:text-4xl mx-auto text-center mt-4 font-semibold">Mentores & Inversionistas</div>
           <p className="mx-auto text-center max-w-xs sm:max-w-md mt-4 leading-normal">Si queremos cambiar el mundo, necesitamos de los mejores. Ellos son quienes nos ayudan a llevar a cabo nuestra misión.</p>
       </div>
 
@@ -63,7 +63,7 @@ export const equipoQuery = graphql`
 query IntegrantesQuery {
   datosIntegrantes: allMarkdownRemark(
     filter: {frontmatter: {relacion: {regex: "/integrante/"}}}
-    sort: {fields:[frontmatter___pasoNro], order:ASC}
+    sort: {fields:[frontmatter___orden], order:ASC}
 
   ) {
     edges {

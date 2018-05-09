@@ -72,7 +72,7 @@ let colors = {
   'green-darkest': '#117c41',
   'green-darker': '#159950',
   'green-dark': '#1aaf5d',
-  'green': '#1bb876',
+  'green': '#17C671',
   'green-light': '#1FD178',
   'green-lighter': '#88feaa',
   'green-lightest': '#e5fcf4',

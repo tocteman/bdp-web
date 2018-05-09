@@ -19,7 +19,7 @@ const Reglas = ({ data }) => (
       <div className="mt-8 p-4 mx-auto leading-normal text-blue-darkest max-w-xs sm:max-w-sm md:max-w-md">
         <h1 className="leading-tight mb-4">Por qué ahorrar en automático</h1>
         <p>Ahorrar siempre ha sido difícil y solo unos pocos han conseguido hacerlo de manera constante. Hasta ahora.</p>
-        <p>Las <em>Reglas de Ahorro</em> son la mejor forma de ahorrar de manera entretenida y sin esfuerzo. Configura las <em>Reglas</em> según tú estilo de vida y deja que te lleven hacia tus sueños y metas.</p><br />
+        <p>Las <em>Reglas de Ahorro</em> son la mejor forma de ahorrar de manera entretenida y sin esfuerzo. Configura las <em>Reglas</em> según tu estilo de vida y deja que te lleven hacia tus sueños y metas.</p><br />
         <p>Las reglas son dos condiciones que se componen de dos partes: un evento y un ahorro.</p>
 
       </div>

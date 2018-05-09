@@ -12,8 +12,9 @@ import Img from 'gatsby-image'
 const TemplateWrapper = ({ children, data }) => (
   <div className="flex flex-col font-sans min-h-screen text-blue-darkest">
       <Helmet
-      title="Übank"
+    title="Übank"
       meta={[
+        { name: 'viewport', content: 'width=device-width, maximum-scale=1' },
         { name: "description", content: "Sample" },
         { name: "keywords", content: "fintech, ahorro" }
       ]}
@@ -32,6 +33,7 @@ const TemplateWrapper = ({ children, data }) => (
           <img src={AppleStore} className="w-32" />
         </div>
       </div>
+      {/* <Img sizes={data.file.childImageSharp.sizes} className="h-40"/> */}
     </div>
     <Footer />
   </div>

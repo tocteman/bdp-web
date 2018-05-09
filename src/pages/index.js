@@ -113,7 +113,7 @@ const IndexPage = ({ data }) => (
                   </div>
                   <div className="sm:w-2/3 max-w-md sm:ml-8 lg:mx-16 px-4 sm:px-0 sm:pl-24 sm:pr-12 md:pl-16 md:pr-16 xl:pl-32 text-center sm:text-left w-full">
                   {/* <div className="sm:border-b-2 sm:border-blue-lighter mb-6"></div>  */}
-                    <h2 className="max-w-xs md:max-w-sm mx-auto">{post.node.frontmatter.titulo}</h2>
+                    {/* <h2 className="max-w-xs md:max-w-sm mx-auto">{post.node.frontmatter.titulo}</h2> */}
                     <h4 className="max-w-xs md:max-w-sm mx-auto">{post.node.frontmatter.subtitulo}</h4>
                     <p className="max-w-xs md:max-w-sm leading-normal mx-auto">{post.node.excerpt}</p>
                   </div>

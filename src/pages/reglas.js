@@ -91,7 +91,7 @@ export const queryReglas = graphql`
       sizes(maxWidth: 1920, cropFocus: ENTROPY, duotone: {
     highlight: "#184059",
     shadow: "#191b1c",
-    opacity: 55
+    opacity: 10
   }){
       ...GatsbyImageSharpSizes_noBase64
       }

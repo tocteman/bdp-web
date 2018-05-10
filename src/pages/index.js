@@ -138,11 +138,11 @@ const IndexPage = ({ data }) => (
 
     <div className="text-center mx-auto text-3xl font-semibold sm:text-4xl mb-8 mt-8">Prensa</div>
     <ul className="list-reset sm:flex flex-wrap items-center mx-auto justify-center max-w-xs sm:max-w-sm md:max-w-lg mb-16">
-      <li className="px-3 py-8 md:py-2 sm:w-1/3 md:w-1/5 text-center mx-auto"><a href='https://www.forbes.com.mx/estas-son-las-9-empresas-de-fintech-de-startupbootcamp-en-latam/' target="_blank"><img src={Forbes} /></a></li>
-      <li className="px-3 py-2 sm:w-1/3 md:w-1/5 text-center mx-auto"><a href='http://www.fintechlatam.net/2017/04/18/ubank-la-app-que-te-ayuda-a-ahorrar-de-forma-automatica/' target="_blank"><img src={FintechLatam} /></a></li>
-      <li className="px-3 py-2 sm:w-1/3 md:w-1/5 text-center mx-auto"><a href='https://www.df.cl/noticias/empresas/innovacion-y-emprendimiento/noticias/ubank-la-app-que-permite-ahorrar-gano-competencia-regional/2017-03-15/173937.html' target="_blank"><img src={DiarioFinaciero} className="w-64" /></a></li>
-      <li className="px-3 py-2 sm:w-1/3 md:w-1/5 text-center mx-auto"><a href='http://www.soychile.cl/Santiago/Tecnologia/2017/04/19/456377/Con-foco-en-los-millennials-chilenos-crean-una-app-para-ahorrar-dinero-de-forma-entretenida.aspx' target="_blank"><img src={SoyChile} /></a></li>
-      <li className="px-3 py-2 sm:w-1/3 md:w-1/5 text-center mx-auto"><a href='https://www.entrepreneur.com/article/299189' target="_blank"><img src={Entrepeneur} /></a></li>
+      <li className="px-3 py-4 md:py-2 sm:w-1/3 md:w-1/5 text-center mx-auto"><a href='https://www.forbes.com.mx/estas-son-las-9-empresas-de-fintech-de-startupbootcamp-en-latam/' target="_blank"><img src={Forbes} /></a></li>
+      <li className="px-3 py-4 md:py-2 sm:w-1/3 md:w-1/5 text-center mx-auto"><a href='http://www.fintechlatam.net/2017/04/18/ubank-la-app-que-te-ayuda-a-ahorrar-de-forma-automatica/' target="_blank"><img src={FintechLatam} /></a></li>
+      <li className="px-3 py-4 md:py-2 sm:w-1/3 md:w-1/5 text-center mx-auto"><a href='https://www.df.cl/noticias/empresas/innovacion-y-emprendimiento/noticias/ubank-la-app-que-permite-ahorrar-gano-competencia-regional/2017-03-15/173937.html' target="_blank"><img src={DiarioFinaciero} className="w-64" /></a></li>
+      <li className="px-3 py-4 md:py-2 sm:w-1/3 md:w-1/5 text-center mx-auto"><a href='http://www.soychile.cl/Santiago/Tecnologia/2017/04/19/456377/Con-foco-en-los-millennials-chilenos-crean-una-app-para-ahorrar-dinero-de-forma-entretenida.aspx' target="_blank"><img src={SoyChile} /></a></li>
+      <li className="px-3 py-4 md:py-2 sm:w-1/3 md:w-1/5 text-center mx-auto"><a href='https://www.entrepreneur.com/article/299189' target="_blank"><img src={Entrepeneur} /></a></li>
     </ul>
 
     <div className="text-3xl sm:text-4xl font-semibold mb-8 mt-16 mx-auto text-center">Testimonios</div>

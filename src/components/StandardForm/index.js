@@ -67,7 +67,7 @@ export default class FileUploadForm extends React.Component {
               <input type="text" name="name" onChange={this.handleChange} className="appearance-none text-blue-darkest bg-white focus:bg-blue-lighest border-green-lightest  rounded-lg shadow py-3 px-4 text-sm my-2" />
             </div>
 
-            <div className="w-1/2 md:w-full py-3 px-4 max-w-sm sm:max-w-md   md:max-w-lg">
+            <div className="w-1/2 md:w-full py-3 px-4 md:max-w-lg">
               <label>
                 Email:
               </label>

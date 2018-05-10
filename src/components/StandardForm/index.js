@@ -39,7 +39,7 @@ export default class FileUploadForm extends React.Component {
 
   render() {
     return (
-      <div className="mx-auto max-w-md">
+      <div className="mx-auto max-w-xs sm:max-w-sm max-w-md">
         <form
           name="file-upload"
           method="post"
@@ -52,7 +52,7 @@ export default class FileUploadForm extends React.Component {
               Don’t fill this out: <input name="bot-field" onChange={this.handleChange} />
             </label>
           </p>
-          <div className="flex flex-wrap justify-center mx-3">
+          <div className="md:flex flex-wrap justify-center mx-3">
             <div className="w-1/2 py-3 px-4">
               <label className="mb-4">
                 Nombre:
@@ -67,16 +67,16 @@ export default class FileUploadForm extends React.Component {
               <input type="text" name="name" onChange={this.handleChange} className="appearance-none text-blue-darkest bg-white focus:bg-blue-lighest border-green-lightest  rounded-lg shadow py-3 px-4 text-sm my-2" />
             </div>
 
-            <div className="w-full py-3 px-4 max-w-lg">
+            <div className="w-1/2 md:w-full py-3 px-4 max-w-sm sm:max-w-md   md:max-w-lg">
               <label>
                 Email:
               </label>
-                <input type="email" name="name" onChange={this.handleChange} className="appearance-none text-blue-darkest bg-white focus:bg-blue-lighest border-green-lightest  rounded-lg shadow py-3 px-4 text-sm w-128 my-2" />
+              <input type="email" name="name" onChange={this.handleChange} className="appearance-none text-blue-darkest bg-white focus:bg-blue-lighest border-green-lightest  rounded-lg shadow py-3 px-4 text-sm md:w-108 my-2" />
             </div>
 
-            <div className="w-full py-3 px-4 max-w-lg">
+            <div className="w-1/2 md:w-full py-3 px-4 max-w-lg">
               <label>Cuéntanos</label>
-              <textarea type="message" name="message" onChange={this.handleChange} className="appearance-none text-blue-darkest bg-white focus:bg-blue-lightest border-green-lightest rounded-lg shadow py-3 px-4 text-sm w-128 my-2"></textarea>
+              <textarea type="message" name="message" onChange={this.handleChange} className="appearance-none text-blue-darkest bg-white focus:bg-blue-lightest border-green-lightest rounded-lg shadow py-3 px-4 text-sm md:w-108 my-2"></textarea>
             </div>
 
             <div className="">

@@ -62,11 +62,11 @@ const IndexPage = ({ data }) => (
       <ul className="list-reset mt-16 lg:mt-32 border-t-2 bg-grey-lightest border-blue-lighter">
         {data.pasosHome.edges.map(post => (
         <li className="container m-0 p-0 w-full border-b-2 border-blue-lighter">
-          <div className="sm:flex sm:flex-row sm:items-center">
+          <div className="sm:flex sm:flex-row items-center">
             <div className="sm:w-1/3">
                 <div className="z-20 my-8 sm:my-0 sm:mt-16 sm:ml-4 md:ml-16 lg:ml-32 xl:ml-48 sm:absolute mx-auto sm:flex justify-around items-center max-w-xl">
-                <div className="sm:w-1/3 sm:flex-shrink items-center sm:mx-0 sm:px-4 md:px-8 lg:px-16 xl:px-24">
-                  <Img resolutions={post.node.frontmatter.imagenApp.childImageSharp.resolutions} className="fadeIn:false"/>
+                <div className="sm:w-1/3 sm:flex-shrink items-center text-center sm:text-left mx-auto sm:mx-0 sm:px-4 md:px-8 lg:px-16 xl:px-24 py-2">
+                  <Img resolutions={post.node.frontmatter.imagenApp.childImageSharp.resolutions}/>
                   </div>
                   <div className="sm:w-2/3 max-w-md sm:ml-8 lg:mx-16 px-4 sm:px-0 sm:pl-24 sm:pr-12 md:pl-16 md:pr-16 xl:pl-32 text-center sm:text-left w-full">
                   {/* <div className="sm:border-b-2 sm:border-blue-lighter mb-6"></div>  */}
@@ -137,12 +137,12 @@ const IndexPage = ({ data }) => (
     </div>
 
     <div className="text-center mx-auto text-3xl font-semibold sm:text-4xl mb-8 mt-8">Prensa</div>
-    <ul className="list-reset flex items-center mx-auto justify-center max-w-lg mb-16">
-      <li className="px-3 py-2"><a href='https://www.forbes.com.mx/estas-son-las-9-empresas-de-fintech-de-startupbootcamp-en-latam/' target="_blank"><img src={Forbes} /></a></li>
-      <li className="px-3 py-2"><a href='http://www.fintechlatam.net/2017/04/18/ubank-la-app-que-te-ayuda-a-ahorrar-de-forma-automatica/' target="_blank"><img src={FintechLatam} /></a></li>
-      <li className="px-3 py-2"><a href='https://www.df.cl/noticias/empresas/innovacion-y-emprendimiento/noticias/ubank-la-app-que-permite-ahorrar-gano-competencia-regional/2017-03-15/173937.html' target="_blank"><img src={DiarioFinaciero} className="w-64" /></a></li>
-      <li className="px-3 py-2"><a href='http://www.soychile.cl/Santiago/Tecnologia/2017/04/19/456377/Con-foco-en-los-millennials-chilenos-crean-una-app-para-ahorrar-dinero-de-forma-entretenida.aspx' target="_blank"><img src={SoyChile} /></a></li>
-      <li className="px-3 py-2"><a href='https://www.entrepreneur.com/article/299189' target="_blank"><img src={Entrepeneur} /></a></li>
+    <ul className="list-reset sm:flex flex-wrap items-center mx-auto justify-center max-w-xs sm:max-w-sm md:max-w-lg mb-16">
+      <li className="px-3 py-8 md:py-2 sm:w-1/3 md:w-1/5 text-center mx-auto"><a href='https://www.forbes.com.mx/estas-son-las-9-empresas-de-fintech-de-startupbootcamp-en-latam/' target="_blank"><img src={Forbes} /></a></li>
+      <li className="px-3 py-2 sm:w-1/3 md:w-1/5 text-center mx-auto"><a href='http://www.fintechlatam.net/2017/04/18/ubank-la-app-que-te-ayuda-a-ahorrar-de-forma-automatica/' target="_blank"><img src={FintechLatam} /></a></li>
+      <li className="px-3 py-2 sm:w-1/3 md:w-1/5 text-center mx-auto"><a href='https://www.df.cl/noticias/empresas/innovacion-y-emprendimiento/noticias/ubank-la-app-que-permite-ahorrar-gano-competencia-regional/2017-03-15/173937.html' target="_blank"><img src={DiarioFinaciero} className="w-64" /></a></li>
+      <li className="px-3 py-2 sm:w-1/3 md:w-1/5 text-center mx-auto"><a href='http://www.soychile.cl/Santiago/Tecnologia/2017/04/19/456377/Con-foco-en-los-millennials-chilenos-crean-una-app-para-ahorrar-dinero-de-forma-entretenida.aspx' target="_blank"><img src={SoyChile} /></a></li>
+      <li className="px-3 py-2 sm:w-1/3 md:w-1/5 text-center mx-auto"><a href='https://www.entrepreneur.com/article/299189' target="_blank"><img src={Entrepeneur} /></a></li>
     </ul>
 
     <div className="text-3xl sm:text-4xl font-semibold mb-8 mt-16 mx-auto text-center">Testimonios</div>
@@ -150,7 +150,7 @@ const IndexPage = ({ data }) => (
       <li className="sm:w-1/2 lg:w-1/3 p-4 mx-auto text-center">
           <Img resolutions={post.node.frontmatter.imagen.childImageSharp.resolutions} className="rounded-full shadow-md" />
           <div className="max-w-sm mx-auto p-4">
-          <div className="font-semibold text-xl sm:text-2xl mt-2 max-w-xxs leading-tight">{post.node.frontmatter.nombre} {post.node.frontmatter.apellido}</div>
+          <div className="font-semibold text-xl sm:text-2xl mt-2 leading-tight text-center">{post.node.frontmatter.nombre} {post.node.frontmatter.apellido}</div>
             <p className="text-grey-darker font-light pb-2">{post.node.frontmatter.cargo}</p>
             <p className="max-w-xs leading-normal mx-auto text-sm">{post.node.excerpt}</p>
           </div>

@@ -27,8 +27,8 @@ GranimCanvas.defaultProps = {
   states: {
     "default-state": {
       gradients: [
-        ['#1f9d55', '#0d3331'],
-        ['#296699', '#159950'],
+        ['#1f9d55', '#3e9ce8'],
+        ['#296699', '#17C671'],
         ['#117c41', '#388dd1'],
       ],
       transitionSpeed: 2000

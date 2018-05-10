@@ -1,6 +1,6 @@
 ---
 titulo: "Metas de Ahorro"
-subtitulo: "Elige para qué quieres ahorrar"
+subtitulo: "Tú eliges para qué quieres ahorrar."
 imagenFondo: "../../img/home-pasos/elizeu-dias-565661-unsplash.jpg"
 imagenApp: "../../img/home-pasos/home-pasos_reglas-app.png"
 pasoNro: 1

@@ -27,7 +27,8 @@ export default class FileUploadForm extends React.Component {
   };
 
   handleSubmit = e => {
-    fetch("/", { method: "POST",
+    fetch("/", {
+      method: "POST",
       body: encode({ "form-name": "file-upload", ...this.state })
     })
       .then(() => alert("Hemos recibido tu formulario"))
@@ -54,13 +55,13 @@ export default class FileUploadForm extends React.Component {
           <p>
             <label>
               Nombre:<br />
-              <input type="text" name="name" onChange={this.handleChange} className="md:w-md block text-teal-darker bg-white focus:bg-grey-light focus:text-grey-darkest  border border-green-light rounded-lg shadow-md mb-4 p-3 text-sm"/>
+              <input type="text" name="name" onChange={this.handleChange} className="md:w-md block text-teal-darker bg-white focus:bg-grey-light focus:text-grey-darkest  border border-green-light rounded-lg shadow-md mb-4 p-3 text-sm" />
             </label>
           </p>
           <p>
             <label>
               Apellido:<br />
-              <input type="text" name="name" onChange={this.handleChange} className="md:w-md block text-teal-darker bg-white focus:bg-grey-light focus:text-grey-darkest  border border-green-light rounded-lg shadow-sm mb-4 p-3 text-sm"/>
+              <input type="text" name="name" onChange={this.handleChange} className="md:w-md block text-teal-darker bg-white focus:bg-grey-light focus:text-grey-darkest  border border-green-light rounded-lg shadow-sm mb-4 p-3 text-sm" />
             </label>
           </p>
           <p>

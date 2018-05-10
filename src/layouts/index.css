@@ -845,7 +845,7 @@ hr {
 }
 
 .bg-blue-darkest {
-  background-color: #184059;
+  background-color: #316099;
 }
 
 .bg-blue-darker {
@@ -1009,7 +1009,7 @@ hr {
 }
 
 .hover\:bg-blue-darkest:hover {
-  background-color: #184059;
+  background-color: #316099;
 }
 
 .hover\:bg-blue-darker:hover {
@@ -1237,7 +1237,7 @@ hr {
 }
 
 .border-blue-darkest {
-  border-color: #184059;
+  border-color: #316099;
 }
 
 .border-blue-darker {
@@ -1401,7 +1401,7 @@ hr {
 }
 
 .hover\:border-blue-darkest:hover {
-  border-color: #184059;
+  border-color: #316099;
 }
 
 .hover\:border-blue-darker:hover {
@@ -3721,7 +3721,7 @@ hr {
 }
 
 .text-blue-darkest {
-  color: #184059;
+  color: #316099;
 }
 
 .text-blue-darker {
@@ -3885,7 +3885,7 @@ hr {
 }
 
 .hover\:text-blue-darkest:hover {
-  color: #184059;
+  color: #316099;
 }
 
 .hover\:text-blue-darker:hover {
@@ -4283,7 +4283,7 @@ hr {
 }
 
 .bg-gradient-green-dark-to-green {
-  background-image: linear-gradient(to right, #1aaf5d, #265e4b);
+  background-image: linear-gradient(to right, #17c671, #159950);
 }
 
 @media (min-width: 576px) {
@@ -4445,7 +4445,7 @@ hr {
   }
 
   .sm\:bg-blue-darkest {
-    background-color: #184059;
+    background-color: #316099;
   }
 
   .sm\:bg-blue-darker {
@@ -4609,7 +4609,7 @@ hr {
   }
 
   .sm\:hover\:bg-blue-darkest:hover {
-    background-color: #184059;
+    background-color: #316099;
   }
 
   .sm\:hover\:bg-blue-darker:hover {
@@ -4837,7 +4837,7 @@ hr {
   }
 
   .sm\:border-blue-darkest {
-    border-color: #184059;
+    border-color: #316099;
   }
 
   .sm\:border-blue-darker {
@@ -5001,7 +5001,7 @@ hr {
   }
 
   .sm\:hover\:border-blue-darkest:hover {
-    border-color: #184059;
+    border-color: #316099;
   }
 
   .sm\:hover\:border-blue-darker:hover {
@@ -7313,7 +7313,7 @@ hr {
   }
 
   .sm\:text-blue-darkest {
-    color: #184059;
+    color: #316099;
   }
 
   .sm\:text-blue-darker {
@@ -7477,7 +7477,7 @@ hr {
   }
 
   .sm\:hover\:text-blue-darkest:hover {
-    color: #184059;
+    color: #316099;
   }
 
   .sm\:hover\:text-blue-darker:hover {
@@ -7875,7 +7875,7 @@ hr {
   }
 
   .sm\:bg-gradient-green-dark-to-green {
-    background-image: linear-gradient(to right, #1aaf5d, #265e4b);
+    background-image: linear-gradient(to right, #17c671, #159950);
   }
 }
 
@@ -8038,7 +8038,7 @@ hr {
   }
 
   .md\:bg-blue-darkest {
-    background-color: #184059;
+    background-color: #316099;
   }
 
   .md\:bg-blue-darker {
@@ -8202,7 +8202,7 @@ hr {
   }
 
   .md\:hover\:bg-blue-darkest:hover {
-    background-color: #184059;
+    background-color: #316099;
   }
 
   .md\:hover\:bg-blue-darker:hover {
@@ -8430,7 +8430,7 @@ hr {
   }
 
   .md\:border-blue-darkest {
-    border-color: #184059;
+    border-color: #316099;
   }
 
   .md\:border-blue-darker {
@@ -8594,7 +8594,7 @@ hr {
   }
 
   .md\:hover\:border-blue-darkest:hover {
-    border-color: #184059;
+    border-color: #316099;
   }
 
   .md\:hover\:border-blue-darker:hover {
@@ -10906,7 +10906,7 @@ hr {
   }
 
   .md\:text-blue-darkest {
-    color: #184059;
+    color: #316099;
   }
 
   .md\:text-blue-darker {
@@ -11070,7 +11070,7 @@ hr {
   }
 
   .md\:hover\:text-blue-darkest:hover {
-    color: #184059;
+    color: #316099;
   }
 
   .md\:hover\:text-blue-darker:hover {
@@ -11468,7 +11468,7 @@ hr {
   }
 
   .md\:bg-gradient-green-dark-to-green {
-    background-image: linear-gradient(to right, #1aaf5d, #265e4b);
+    background-image: linear-gradient(to right, #17c671, #159950);
   }
 }
 
@@ -11631,7 +11631,7 @@ hr {
   }
 
   .lg\:bg-blue-darkest {
-    background-color: #184059;
+    background-color: #316099;
   }
 
   .lg\:bg-blue-darker {
@@ -11795,7 +11795,7 @@ hr {
   }
 
   .lg\:hover\:bg-blue-darkest:hover {
-    background-color: #184059;
+    background-color: #316099;
   }
 
   .lg\:hover\:bg-blue-darker:hover {
@@ -12023,7 +12023,7 @@ hr {
   }
 
   .lg\:border-blue-darkest {
-    border-color: #184059;
+    border-color: #316099;
   }
 
   .lg\:border-blue-darker {
@@ -12187,7 +12187,7 @@ hr {
   }
 
   .lg\:hover\:border-blue-darkest:hover {
-    border-color: #184059;
+    border-color: #316099;
   }
 
   .lg\:hover\:border-blue-darker:hover {
@@ -14499,7 +14499,7 @@ hr {
   }
 
   .lg\:text-blue-darkest {
-    color: #184059;
+    color: #316099;
   }
 
   .lg\:text-blue-darker {
@@ -14663,7 +14663,7 @@ hr {
   }
 
   .lg\:hover\:text-blue-darkest:hover {
-    color: #184059;
+    color: #316099;
   }
 
   .lg\:hover\:text-blue-darker:hover {
@@ -15061,7 +15061,7 @@ hr {
   }
 
   .lg\:bg-gradient-green-dark-to-green {
-    background-image: linear-gradient(to right, #1aaf5d, #265e4b);
+    background-image: linear-gradient(to right, #17c671, #159950);
   }
 }
 
@@ -15224,7 +15224,7 @@ hr {
   }
 
   .xl\:bg-blue-darkest {
-    background-color: #184059;
+    background-color: #316099;
   }
 
   .xl\:bg-blue-darker {
@@ -15388,7 +15388,7 @@ hr {
   }
 
   .xl\:hover\:bg-blue-darkest:hover {
-    background-color: #184059;
+    background-color: #316099;
   }
 
   .xl\:hover\:bg-blue-darker:hover {
@@ -15616,7 +15616,7 @@ hr {
   }
 
   .xl\:border-blue-darkest {
-    border-color: #184059;
+    border-color: #316099;
   }
 
   .xl\:border-blue-darker {
@@ -15780,7 +15780,7 @@ hr {
   }
 
   .xl\:hover\:border-blue-darkest:hover {
-    border-color: #184059;
+    border-color: #316099;
   }
 
   .xl\:hover\:border-blue-darker:hover {
@@ -18092,7 +18092,7 @@ hr {
   }
 
   .xl\:text-blue-darkest {
-    color: #184059;
+    color: #316099;
   }
 
   .xl\:text-blue-darker {
@@ -18256,7 +18256,7 @@ hr {
   }
 
   .xl\:hover\:text-blue-darkest:hover {
-    color: #184059;
+    color: #316099;
   }
 
   .xl\:hover\:text-blue-darker:hover {
@@ -18654,6 +18654,6 @@ hr {
   }
 
   .xl\:bg-gradient-green-dark-to-green {
-    background-image: linear-gradient(to right, #1aaf5d, #265e4b);
+    background-image: linear-gradient(to right, #17c671, #159950);
   }
 }

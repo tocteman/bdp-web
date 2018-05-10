@@ -5,8 +5,8 @@ import Img from 'gatsby-image'
 const Reglas = ({ data }) => (
   <div>
     <div>
-      <div className="flex absolute z-10 text-white max-w-xl flex-wrap h-128">
-        <div className="md:flex-2 self-center p-8 md:p-32 max-w-md">
+      <div className="flex absolute z-10 text-white max-w-xl flex-wrap h-128 items-center">
+        <div className="md:flex-2 self-center mt-24 sm:mt-4 p-8 sm:p-32 max-w-md">
           <p className="text-4xl sm:text-5xl font-extrabold pb-4">Transforma tu vida con ahorros automáticos.</p>
           <p className="font-medium text-xl leading-normal">Conoce las <strong>Reglas de Ahorro autómatico</strong> y descubre las miles de formas en las que puedes ahorrar sin esfuerzo.</p>
         </div>
@@ -16,16 +16,16 @@ const Reglas = ({ data }) => (
       <Img sizes={data.surfImage.sizes} className="h-160 m-0" />
     </div>
     <div className="shadow-sm">
-      <div className="mt-8 p-4 mx-auto leading-normal text-blue-darkest max-w-xs sm:max-w-sm md:max-w-md">
+      <div className="mt-8 p-4 mx-auto leading-normal text-black max-w-xs sm:max-w-sm md:max-w-md">
         <h1 className="leading-tight mb-4">Por qué ahorrar en automático</h1>
         <p>Ahorrar siempre ha sido difícil y solo unos pocos han conseguido hacerlo de manera constante. Hasta ahora.</p>
         <p>Las <em>Reglas de Ahorro</em> son la mejor forma de ahorrar de manera entretenida y sin esfuerzo. Configura las <em>Reglas</em> según tu estilo de vida y deja que te lleven hacia tus sueños y metas.</p><br />
-        <p>Las reglas son dos condiciones que se componen de dos partes: un evento y un ahorro.</p>
+        <p>Las reglas son condiciones que se componen de dos partes: un evento y un ahorro.</p>
 
       </div>
-      <h3 className="mx-auto font-light p-4 pb-16 text-blue-darkest italic max-w-xs sm:max-w-sm md:max-w-md">"Ya tengo suficientes camisetas. Le diré a Übank que si me compro otra, guarde $10 para mi viaje a la playa".</h3>
+      <h4 className="mx-auto font-light p-4 pb-16 text-black italic max-w-xs sm:max-w-sm md:max-w-md">"Ya tengo suficientes camisetas. Le diré a Übank que si me compro otra, guarde $10 para mi viaje a la playa".</h4>
     </div>
-    <div className="bg-grey-light border-t-1 border-grey">
+    <div className="bg-grey-lightest border-t-1 border-grey">
       <ul className="flex flex-wrap px-3 sm:px-8 mx-auto mt-8 justify-center py-16 max-w-3xl">
         {data.datosReglas.edges.map(post => (
           <li className="flex m-3 md:w-1/2 lg:w-1/3 max-w-xs rounded-lg shadow-md overflow-hidden ">
@@ -33,7 +33,7 @@ const Reglas = ({ data }) => (
               <Img resolutions={post.node.frontmatter.featuredImage.childImageSharp.resolutions} />
               <div className="flex px-4 pt-4 pb-2 items-center">
                 <Img resolutions={post.node.frontmatter.icono.childImageSharp.resolutions} />
-                <h3 className="font-medium pl-2">{post.node.frontmatter.nombre}</h3>
+                <h3 className="font-medium pl-2 leading-tight">{post.node.frontmatter.nombre}</h3>
               </div>
               <p className="px-4 pb-2 text-grey-darker max-w-xs leading-normal">
                 {post.node.excerpt}
@@ -73,7 +73,7 @@ export const queryReglas = graphql`
                   duotone: {
                     highlight: "#1bb876",
                     shadow: "#388dd1",
-                    opacity: 15  }
+                    opacity: 10  }
                   width: 400
                   height: 300
                   cropFocus: ENTROPY

@@ -1,6 +1,6 @@
 ---
 titulo: "Reglas de Ahorro"
-subtitulo: "Ahorro fácil y sin esfuerzo"
+subtitulo: "Tú eliges las Reglas de Ahorro."
 imagenFondo: "../../img/home-pasos/jeremy-bishop-131063-unsplash.jpg"
 imagenApp: "../../img/home-pasos/home-pasos_metas-app.png"
 pasoNro: 2

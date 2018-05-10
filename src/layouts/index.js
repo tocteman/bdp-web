@@ -10,7 +10,7 @@ require("typeface-ibm-plex-sans")
 import Img from 'gatsby-image'
 
 const TemplateWrapper = ({ children, data }) => (
-  <div className="flex flex-col font-sans min-h-screen text-blue-darkest">
+  <div className="flex flex-col font-sans min-h-screen text-grey-darkest">
       <Helmet
     title="Übank"
       meta={[
@@ -26,7 +26,7 @@ const TemplateWrapper = ({ children, data }) => (
     </div>
     <div className="flex flex-col bg-grey-darkest text-grey-lightest mt-0 pt-16 pb-16">
       <div className="mx-auto">
-        <h2 className="font-medium px-4">¿Aún no tienes Übank?</h2>
+        <h2 className="font-medium px-4">¿Aún no tienes <span className="text-white">Übank?</span></h2>
         <h5 className="font-light px-4">Descarga la app y comienza a hacer tus metas realidad.</h5>
         <div className="flex px-4 justify-between py-4 w-80">
           <img src={GooglePlay} className="w-32" />

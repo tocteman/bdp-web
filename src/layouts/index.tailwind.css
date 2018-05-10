@@ -56,6 +56,6 @@ hr {
 
 @responsive {
   .bg-gradient-green-dark-to-green {
-    background-image: linear-gradient(to right, config('colors.green-dark'), config('colors.teal-darkest'));
+    background-image: linear-gradient(to right, config('colors.green'), config('colors.green-darker'));
   }
 }

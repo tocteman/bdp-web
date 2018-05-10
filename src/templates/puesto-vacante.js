@@ -8,7 +8,7 @@ export default function VacanteTemplate({ data }) {
 
   return (
     <div className="mx-auto font-light leading-normal m-8 p-4 sm:max-w-sm md:max-w-md">
-      <Link to="/unete-equipo" className="no-underline py-12 text-grey-darker hover:text-teal-darker">
+      <Link to="/unete-equipo" className="no-underline py-12 text-grey-darker hover:text-green-darker">
       <TiArrowBack className="text-3xl" /> Regresar</Link>
       <hr />
 

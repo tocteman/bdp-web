@@ -24,7 +24,7 @@ const TemplateWrapper = ({ children, data }) => (
     
     <div className="flex flex-col flex-grow md:justify-center w-full">      {children()}
     </div>
-    <div className="flex flex-col bg-grey-darkest text-grey-lightest mt-0 pt-16 pb-16">
+    <div className="flex flex-col bg-grey-darkest text-grey-lightest mt-0 pt-16 pb-16 text-center">
       <div className="mx-auto">
         <h2 className="font-medium px-4">¿Aún no tienes <span className="text-white">Übank?</span></h2>
         <h5 className="font-light px-4">Descarga la app y comienza a hacer tus metas realidad.</h5>

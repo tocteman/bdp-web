@@ -11,7 +11,6 @@ import FaLightbulbO from 'react-icons/lib/fa/lightbulb-o'
 import FaList from 'react-icons/lib/fa/list'
 import Img from 'gatsby-image'
 import StandardForm from '../components/StandardForm'
-
 import DiarioFinaciero from '../img/home_prensa/prensa_diariofinanciero.png'
 import Entrepeneur from '../img/home_prensa/prensa_entrepeneur.png'
 import FintechLatam from '../img/home_prensa/prensa_fintech-latam.png'
@@ -84,7 +83,7 @@ const IndexPage = ({ data }) => (
 
     <div className="pt-8 m-8 mt-16  max-w-xl mx-auto">
     <div className="text-3xl sm:text-4xl font-semibold mb-6 mx-auto text-center">Funcionalidades</div>
-    <div className="flex flex-wrap justify-around">
+    <div className="sm:flex flex-wrap justify-around">
       <div className="sm:w-full md:w-1/2 pt-4 px-4 pb-0 mx-auto md:p-8">
         <div className="flex">
           <div className="wt-1/3 p-2">
@@ -136,13 +135,21 @@ const IndexPage = ({ data }) => (
     </div>
     </div>
 
+    <div className="bg-grey-lightest md:flex justify-center items-center">
+      <div className="md:w-1/2 p-8 mx-auto"><Img sizes={ data.seguridadImage.sizes} /></div>
+        <div className="text-center md:text-left md:w-1/2 leading-normal max-w-xs mx-auto lg:mr-64 pt-8 pb-16">
+          <h3>Tu dinero seguro. Siempre.</h3>
+          <p>Al registrate en Übank, aperturaremos automáticamente una cuenta de ahorros en un banco partner. Tus ahorros siempre estarán seguros y disponibles para usarlos cuando quieras. Dile adiós a ahorrar en la misma cuenta bancaria que no genera interés.</p>
+        </div>
+    </div>
+
     <div className="text-center mx-auto text-3xl font-semibold sm:text-4xl mb-8 mt-8">Prensa</div>
     <ul className="list-reset sm:flex flex-wrap items-center mx-auto justify-center max-w-xs sm:max-w-sm md:max-w-lg mb-16">
-      <li className="px-3 py-4 md:py-2 sm:w-1/3 md:w-1/5 text-center mx-auto"><a href='https://www.forbes.com.mx/estas-son-las-9-empresas-de-fintech-de-startupbootcamp-en-latam/' target="_blank"><img src={Forbes} /></a></li>
-      <li className="px-3 py-4 md:py-2 sm:w-1/3 md:w-1/5 text-center mx-auto"><a href='http://www.fintechlatam.net/2017/04/18/ubank-la-app-que-te-ayuda-a-ahorrar-de-forma-automatica/' target="_blank"><img src={FintechLatam} /></a></li>
-      <li className="px-3 py-4 md:py-2 sm:w-1/3 md:w-1/5 text-center mx-auto"><a href='https://www.df.cl/noticias/empresas/innovacion-y-emprendimiento/noticias/ubank-la-app-que-permite-ahorrar-gano-competencia-regional/2017-03-15/173937.html' target="_blank"><img src={DiarioFinaciero} className="w-64" /></a></li>
-      <li className="px-3 py-4 md:py-2 sm:w-1/3 md:w-1/5 text-center mx-auto"><a href='http://www.soychile.cl/Santiago/Tecnologia/2017/04/19/456377/Con-foco-en-los-millennials-chilenos-crean-una-app-para-ahorrar-dinero-de-forma-entretenida.aspx' target="_blank"><img src={SoyChile} /></a></li>
-      <li className="px-3 py-4 md:py-2 sm:w-1/3 md:w-1/5 text-center mx-auto"><a href='https://www.entrepreneur.com/article/299189' target="_blank"><img src={Entrepeneur} /></a></li>
+      <li className="px-3 py-4 md:py-2 sm:w-1/3 md:w-1/5 text-center mx-auto w-32"><a href='https://www.forbes.com.mx/estas-son-las-9-empresas-de-fintech-de-startupbootcamp-en-latam/' target="_blank"><img src={Forbes}/></a></li>
+      <li className="px-3 py-4 md:py-2 sm:w-1/3 md:w-1/5 text-center mx-auto w-48"><a href='http://www.fintechlatam.net/2017/04/18/ubank-la-app-que-te-ayuda-a-ahorrar-de-forma-automatica/' target="_blank"><img src={FintechLatam}/></a></li>
+      <li className="px-3 py-4 md:py-2 sm:w-1/3 md:w-1/5 text-center mx-auto w-48"><a href='https://www.df.cl/noticias/empresas/innovacion-y-emprendimiento/noticias/ubank-la-app-que-permite-ahorrar-gano-competencia-regional/2017-03-15/173937.html' target="_blank"><img src={DiarioFinaciero} /></a></li>
+      <li className="px-3 py-4 md:py-2 sm:w-1/3 md:w-1/5 text-center mx-auto w-32"><a href='http://www.soychile.cl/Santiago/Tecnologia/2017/04/19/456377/Con-foco-en-los-millennials-chilenos-crean-una-app-para-ahorrar-dinero-de-forma-entretenida.aspx' target="_blank"><img src={SoyChile}/></a></li>
+      <li className="px-3 py-4 md:py-2 sm:w-1/3 md:w-1/5 text-center mx-auto w-48"><a href='https://www.entrepreneur.com/article/299189' target="_blank"><img src={Entrepeneur}/></a></li>
     </ul>
 
     <div className="text-3xl sm:text-4xl font-semibold mb-8 mt-16 mx-auto text-center">Testimonios</div>
@@ -157,12 +164,12 @@ const IndexPage = ({ data }) => (
           
           </li>
       ))}
+      </ul>
 
-      <div className="bg-grey-lightest rounded shadow-md max-w-md mx-auto mt-16 p-8">
+      <div className="bg-grey-lightest rounded shadow-md mx-auto mt-16 py-8">
         <div className="text-center mx-auto text-3xl font-semibold sm:text-4xl mb-8">Hablemos</div>
         <StandardForm />
       </div>
-        </ul>
       
       
       
@@ -238,6 +245,11 @@ export const query = graphql`
       }
     }
   }
+  seguridadImage: imageSharp(id: { regex: "/seguridad_tres/"}){
+      sizes(maxWidth:1200 quality:80){
+        ...GatsbyImageSharpSizes_noBase64
+      }
+    }
     montaniaImage: imageSharp(id: { regex: "/icono-cordillera/"}){
       resolutions(width:90){
         ...GatsbyImageSharpResolutions_noBase64

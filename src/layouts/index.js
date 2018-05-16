@@ -28,7 +28,7 @@ const TemplateWrapper = ({ children, data }) => (
       <div className="mx-auto">
         <h2 className="font-medium px-4">¿Aún no tienes <span className="text-white">Übank?</span></h2>
         <h5 className="font-light px-4">Descarga la app y comienza a hacer tus metas realidad.</h5>
-        <div className="flex px-4 justify-between py-4 w-80">
+        <div className="flex px-4 justify-around py-6">
           <img src={GooglePlay} className="w-32" />
           <img src={AppleStore} className="w-32" />
         </div>

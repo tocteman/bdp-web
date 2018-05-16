@@ -58,4 +58,7 @@ hr {
   .bg-gradient-green-dark-to-green {
     background-image: linear-gradient(to right, config('colors.green'), config('colors.green-darker'));
   }
+  .bg-gradient-blue-dark-to-blue {
+    background-image: linear-gradient(to right, rgba(56, 141, 209, 1), rgba(41, 102, 153, 0.5));
+  }
 }

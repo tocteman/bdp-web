@@ -1,14 +1,17 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
+import IconoCafe from '../img/iconos-colores/icono-placer-culpable.png'
+import ReglaCompletandose from '../img/fotos_reglas/regla_completandose.png'
+import FlechaAbajo from '../img/fotos_reglas/flechaAbajo.png'
 
 const Reglas = ({ data }) => (
   <div>
     <div>
       <div className="flex absolute z-10 text-white max-w-xl flex-wrap h-128 items-center">
         <div className="md:flex-2 self-center mt-24 sm:mt-4 p-8 sm:p-32 max-w-md">
-          <p className="text-4xl sm:text-5xl font-extrabold pb-4">Transforma tu vida con ahorros automáticos.</p>
-          <p className="font-medium text-xl leading-normal">Conoce las <strong>Reglas de Ahorro autómatico</strong> y descubre las miles de formas en las que puedes ahorrar sin esfuerzo.</p>
+          <p className="text-3xl sm:text-4xl font-semibold pb-4 p-1 bg-gradient-blue-dark-to-blue mb-2">Transforma tu vida con ahorros automáticos.</p>
+          <p className="text-xl leading-normal bg-gradient-blue-dark-to-blue p-1">Conoce las <strong>Reglas de Ahorro autómatico</strong> y descubre las miles de formas en las que puedes ahorrar sin esfuerzo.</p>
         </div>
         <div className="flex-1"></div>
       </div>
@@ -23,10 +26,31 @@ const Reglas = ({ data }) => (
         <p>Las reglas son condiciones que se componen de dos partes: un evento y un ahorro.</p>
 
       </div>
-      <h4 className="mx-auto font-light p-4 pb-16 text-black italic max-w-xs sm:max-w-sm md:max-w-md">"Ya tengo suficientes camisetas. Le diré a Übank que si me compro otra, guarde $10 para mi viaje a la playa".</h4>
+      <div className="flex max-w-sm mx-auto bg-blue-lightest rounded-lg mt-4 mb-8">
+      <div className="w-4/5">
+        <ul className="list-reset mx-auto text-black italic max-w-xs">
+          <li className="p-4 m-4 rounded-lg bg-white shadow-md flex items-center justify-around">
+              <div>Cada que compro un</div>
+              <div><img src={IconoCafe} width="50" className="ml-2"/></div>
+            </li>
+            <li className="p-4 m-4 rounded-lg bg-white shadow-md flex items-center justify-around">
+              <div>ahorro</div>  
+              <div><span className="text-green text-4xl font-bold">$30</span></div>
+            </li>
+            <li className="p-4 m-4 rounded-lg bg-white shadow-md flex items-center justify-around">
+              <div>para mi meta.</div>
+              <div><img src={ReglaCompletandose} width="50" className="ml-4"/></div>
+            </li>
+        </ul>
+        </div>
+        <div className="1/5 flex flex-col justify-center -ml-8 pt-4">
+          <div><img src={FlechaAbajo} width="25" className="pb-8 pt-12"/></div>
+          <div><img src={FlechaAbajo} width="25" className="pb-8"/></div>
+        </div>
+      </div>
     </div>
     <div className="bg-grey-lightest border-t-1 border-grey">
-      <ul className="flex flex-wrap px-3 sm:px-8 mx-auto mt-8 justify-center py-16 max-w-3xl">
+      <ul className="flex flex-wrap px-3 sm:px-8 mx-auto justify-center py-16 max-w-3xl">
         {data.datosReglas.edges.map(post => (
           <li className="flex m-3 md:w-1/2 lg:w-1/3 max-w-xs rounded-lg shadow-md overflow-hidden ">
             <div className="flex flex-col overflow-hidden bg-white overflow">
@@ -88,14 +112,30 @@ export const queryReglas = graphql`
       }
     }
     surfImage: imageSharp(id: {regex: "/header_surf/"}){
-      sizes(maxWidth: 1920, cropFocus: ENTROPY, duotone: {
-    highlight: "#184059",
-    shadow: "#191b1c",
-    opacity: 10
-  }){
+      sizes(maxWidth: 1920, cropFocus: ENTROPY){
       ...GatsbyImageSharpSizes_noBase64
       }
     }
+     cafeImage: allMarkdownRemark(
+       filter: {fields: {slug:{regex:"/regla_placer-culposo/"} }}
+     ){
+       edges{
+         node{
+           frontmatter{
+             icono{
+              childImageSharp{
+                resolutions(
+                  width: 50
+                  height: 50
+                ){
+                  ...GatsbyImageSharpResolutions_noBase64
+                }
+              }
+            }
+           }
+         }
+       }
+     }
   }
 `
 

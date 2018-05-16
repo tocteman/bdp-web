@@ -21,6 +21,7 @@ export default class FileUploadForm extends React.Component {
   handleChange = e => {
     if (e.target.files) {
       this.setState({ [e.target.name]: e.target.files[0] });
+      document.getElementById("guatita").innerHTML = e.target.files[0].name
     } else {
       this.setState({ [e.target.name]: e.target.value });
     }
@@ -55,30 +56,34 @@ export default class FileUploadForm extends React.Component {
           <p>
             <label>
               Nombre:<br />
-              <input type="text" name="name" onChange={this.handleChange} className="md:w-md block text-teal-darker bg-white focus:bg-grey-light focus:text-grey-darkest  border border-green-light rounded-lg shadow-md mb-4 p-3 text-sm" />
+              <input type="text" name="name" onChange={this.handleChange} className="md:w-md block text-grey-darkest bg-green-lightest focus:bg-grey-light focus:text-grey-darkest rounded-lg shadow-md mb-4 p-3 text-sm" />
             </label>
           </p>
           <p>
             <label>
               Apellido:<br />
-              <input type="text" name="name" onChange={this.handleChange} className="md:w-md block text-teal-darker bg-white focus:bg-grey-light focus:text-grey-darkest  border border-green-light rounded-lg shadow-sm mb-4 p-3 text-sm" />
+              <input type="text" name="name" onChange={this.handleChange} className="md:w-md block  text-grey-darkest bg-green-lightest focus:bg-grey-light focus:text-grey-darkest  rounded-lg shadow-md mb-4 p-3 text-sm" />
             </label>
           </p>
           <p>
             <label>
               Email:<br />
-              <input type="email" name="name" onChange={this.handleChange} className="md:w-md block text-teal-darker bg-white focus:bg-grey-light focus:text-grey-darkest  border border-green-light rounded-lg shadow-sm mb-4 p-3 text-sm" />
+              <input type="email" name="name" onChange={this.handleChange} className="md:w-md block text-grey-darkest bg-green-lightest focus:bg-grey-light focus:text-grey-darkest rounded-lg shadow-md mb-4 p-3 text-sm" />
             </label>
           </p>
           <p>
-            <label>
-              Sube tu CV:<br />
+            Sube tu CV:
+            <label for="file-upload" className="rounded-lg bg-green-lightest block cursor-pointer shadow-md p-2 max-w-xs">
+            <div id="guatita"></div>
+              <div>
               <input
+                id="file-upload"
                 type="file"
                 name="attachment"
                 onChange={this.handleChange}
-                className="md:w-md block text-teal-darker bg-white focus:bg-grey-light focus:text-grey-darkest  border border-green-light rounded-lg shadow-sm mb-4 p-3"
+                className="hidden"
               />
+              </div>
             </label>
           </p>
           <p>

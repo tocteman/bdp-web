@@ -17,7 +17,7 @@ const Equipo = ({ data }) => (
     </div>
     <div className="shadow-sm">
       <div className="m-8 p-4 mx-auto leading-normal max-w-xs sm:max-w-sm md:max-w-md">
-        <div className="text-3xl sm:text-4xl font-semibold pb-3">Predeciblemente irracionales.</div>
+        <div className="text-3xl sm:text-4xl font-bold pb-3 leading-tight">Predeciblemente irracionales.</div>
         <p>Uno de los conceptos más repetidos en finanzas personales es ahorrar. Todos dicen que hay que ahorrar para el retiro, ahorrar para emergencias, ahorrar para la casa propia. Pero no es tan fácil como dicen.</p><br/>
         <p>Una de las razones es porque ahorrar significa sacrificar dinero que podemos gastar hoy y guardarlo para un futuro, donde sabemos qué podemos conseguir con esos $100 pesos más. En el futuro no podemos percibirlo; ahora mismo sí. ¿Pero qué sucede cuando los acumulamos, $100 pesos diarios, una y otra vez?</p><br />
         <p>A través de mucha investigación, pruebas y análisis, hemos identificado que la mejor manera de conseguir el ahorro es haciéndolo automático. Que sea tan fácil y simple que solo debamos decidir ahorrar una vez y que luego todo funcione en segundo plano.</p>
@@ -27,7 +27,7 @@ const Equipo = ({ data }) => (
         <div className="bg-grey-lightest border-t-1 border-grey py-8">
         <div>
           <div className="text-3xl sm:text-4xl mx-auto text-center mt-4 font-semibold">Equipo</div>
-          <p className="mx-auto text-center max-w-xs sm:max-w-sm mt-4 leading-normal">Venimos de todo el mundo, con la misión de hacer tu vida más fácil y entretenida.</p>
+          <p className="mx-auto text-center max-w-xs sm:max-w-sm mt-4 leading-normal px-4">Venimos de todo el mundo, con la misión de hacer tu vida más fácil y entretenida.</p>
         </div>
           
           <ul className="flex flex-wrap items-stretch px-6 mx-auto justify-center mt-6 max-w-xl">
@@ -41,7 +41,7 @@ const Equipo = ({ data }) => (
           </ul>
       <div>
           <div className="text-3xl sm:text-4xl mx-auto text-center mt-8 font-semibold">Mentores & Inversionistas</div>
-          <p className="mx-auto text-center max-w-xs sm:max-w-md mt-4 leading-normal">Si queremos cambiar el mundo, necesitamos de los mejores. Ellos son quienes nos ayudan a llevar a cabo nuestra misión.</p>
+          <p className="mx-auto text-center max-w-xs sm:max-w-md mt-4 leading-normal px-4">Si queremos cambiar el mundo, necesitamos de los mejores. Ellos son quienes nos ayudan a llevar a cabo nuestra misión.</p>
       </div>
 
       <ul className="flex flex-wrap items-stretch px-6 mx-auto justify-center mt-6 max-w-xl">

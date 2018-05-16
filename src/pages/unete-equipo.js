@@ -16,7 +16,7 @@ const UneteEquipo = ({ data }) => (
       <Img sizes={data.escritorioImage.sizes} className="h-160 m-0" />
     </div>
     <div className="mb-16">
-    <p className="mt-8 mb-4 mx-auto p-4 text-center text-2xl max-w-md leading-normal font-medium">Estamos buscando personas que quieran cambiar el mundo, un paso a la vez.</p>
+    <p className="mt-8 mb-4 mx-auto p-4 text-center text-xl max-w-md leading-normal font-medium">Estamos buscando personas que quieran cambiar el mundo, un paso a la vez.</p>
     {data.vacanteIndexQuery.edges.map(post => (
       <div className="flex mx-auto max-w-xl">
         <div className="w-full">

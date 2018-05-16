@@ -133,7 +133,7 @@ const IndexPage = ({ data }) => (
 
   <div className="bg-blue-lightest md:py-16">
     <div className="md:flex mx-auto justify-center items-center max-w-xl p-4">
-      <div className="md:w-1/2 pt-8 sm:pb-8 mx-auto max-w-md"><Img sizes={ data.seguridadImage.sizes} /></div>
+      <div className="md:w-1/2 pt-8 sm:pb-8 mx-auto max-w-sm"><Img sizes={ data.seguridadImage.sizes} /></div>
         <div className="text-center md:text-left md:w-1/2 leading-normal max-w-xs md:max-w-sm mx-auto pb-24 sm:px-4 md:px-16 pt-4">
           <h4>Tu dinero seguro. Siempre.</h4>
           <p>Al registrate en Übank, aperturaremos automáticamente una cuenta de ahorros en un banco partner. Tus ahorros siempre estarán seguros y disponibles para usarlos cuando quieras. Dile adiós a ahorrar en la misma cuenta bancaria que no genera interés.</p>

@@ -3,6 +3,7 @@
     requerimento: "Requiere conexión a tu cuenta bancaria"
     featuredImage: "../../img/fotos_reglas/reglas_cena-amig.jpg"
     icono: "../../img/iconos-colores/icono-gastar-menos.png"
+    miniIcono: "../../img/iconos-colores/fa-university.png"
 
 ---
 

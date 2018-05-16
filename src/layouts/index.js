@@ -15,8 +15,8 @@ const TemplateWrapper = ({ children, data }) => (
     title="Übank"
       meta={[
         { name: 'viewport', content: 'width=device-width, maximum-scale=1' },
-        { name: "description", content: "Sample" },
-        { name: "keywords", content: "fintech, ahorro" }
+        { name: "description", content: "Ahorra para las cosas que realmente importan. Tú decides las reglas que las harán realidad" },
+        { name: "keywords", content: "fintech, ahorro" },
       ]}
     />
     <Header />
@@ -26,8 +26,8 @@ const TemplateWrapper = ({ children, data }) => (
     </div>
     <div className="flex flex-col bg-grey-darkest text-grey-lightest mt-0 pt-16 pb-16 text-center">
       <div className="mx-auto">
-        <h2 className="font-medium px-4">¿Aún no tienes <span className="text-white">Übank?</span></h2>
-        <h5 className="font-light px-4">Descarga la app y comienza a hacer tus metas realidad.</h5>
+        <h3 className="font-medium px-4">¿Aún no tienes <span className="text-white">Übank?</span></h3>
+        <p className="font-light px-4">Descarga la app y comienza a hacer tus metas realidad.</p>
         <div className="flex px-4 justify-around py-6">
           <img src={GooglePlay} className="w-32" />
           <img src={AppleStore} className="w-32" />

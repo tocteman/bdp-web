@@ -74,7 +74,7 @@ export default class FileUploadForm extends React.Component {
           <p>
             Sube tu CV:
             <label for="file-upload" className="rounded-lg bg-green-lightest block cursor-pointer shadow-md p-2 max-w-xs">
-            <div id="guatita"><br/></div>
+            <div id="guatita">...</div>
               <div>
               <input
                 id="file-upload"

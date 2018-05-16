@@ -3,6 +3,7 @@
     requerimento: "Requiere conexión con Apple Health Kit"
     featuredImage: "../../img/fotos_reglas/reglas_correr.jpg"
     icono: "../../img/iconos-colores/iconos-running.png"
+    miniIcono: "../../img/iconos-colores/apple-healthki.png"
 
 ---
 

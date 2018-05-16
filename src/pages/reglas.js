@@ -21,12 +21,12 @@ const Reglas = ({ data }) => (
     <div className="shadow-sm">
       <div className="mt-8 p-4 mx-auto leading-normal text-black max-w-xs sm:max-w-sm md:max-w-md">
         <div className="text-3xl sm:text-4xl font-bold pb-3 leading-tight">Por qué ahorrar en automático.</div>
-        <p>Ahorrar siempre ha sido difícil y solo unos pocos han conseguido hacerlo de manera constante. Hasta ahora.</p>
-        <p>Las <em>Reglas de Ahorro</em> son la mejor forma de ahorrar de manera entretenida y sin esfuerzo. Configura las <em>Reglas</em> según tu estilo de vida y deja que te lleven hacia tus sueños y metas.</p>
+        <p className="leading-normal">Ahorrar siempre ha sido difícil y solo unos pocos han conseguido hacerlo de manera constante. Hasta ahora.</p>
+        <p className="leading-normal">Las <em>Reglas de Ahorro</em> son la mejor forma de ahorrar de manera entretenida y sin esfuerzo. Configura las <em>Reglas</em> según tu estilo de vida y deja que te lleven hacia tus sueños y metas.</p>
         
 
       </div>
-      <div className="max-w-xs sm:max-w-sm mx-auto bg-blue-lightest rounded-lg">
+      <div className="max-w-xs sm:max-w-sm mx-auto bg-blue-lightest rounded-lg mt-4 shadow-md">
         <div className="italic p-4 ">Las reglas son condiciones que se componen de dos partes: un evento y un ahorro.</div>
       <div className="flex mb-8">
       <div className="w-4/5 mx-auto">
@@ -65,7 +65,11 @@ const Reglas = ({ data }) => (
               <p className="px-4 pb-2 text-grey-darker max-w-xs leading-normal">
                 {post.node.excerpt}
               </p>
-              <p className="p-4 text-sm italic font-light">{post.node.frontmatter.requerimento}</p>
+              <div className="flex justify-center items-center">
+                <Img resolutions={post.node.frontmatter.miniIcono.childImageSharp.resolutions} className="m-4" />
+                <p className="p-4 text-sm italic font-light">{post.node.frontmatter.requerimento}</p>
+
+              </div>
             </div>
           </li>
         ))}
@@ -89,6 +93,16 @@ export const queryReglas = graphql`
                 resolutions(
                   width: 50
                   height: 50
+                ){
+                  ...GatsbyImageSharpResolutions_noBase64
+                }
+              }
+            }
+            miniIcono{
+              childImageSharp {
+                resolutions(
+                  width: 25
+                  height: 25
                 ){
                   ...GatsbyImageSharpResolutions_noBase64
                 }

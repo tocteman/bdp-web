@@ -3,6 +3,8 @@
     requerimento: "Requiere conexión a tu cuenta bancaria"
     featuredImage: "../../img/fotos_reglas/reglas_zapatos.jpg"
     icono: "../../img/iconos-colores/icono-placer-culpable.png"
+    miniIcono: "../../img/iconos-colores/fa-university.png"
+
 
 ---
 

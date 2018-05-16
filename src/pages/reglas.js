@@ -72,8 +72,8 @@ export const queryReglas = graphql`
                 resolutions (
                   duotone: {
                     highlight: "#1bb876",
-                    shadow: "#388dd1",
-                    opacity: 10  }
+                    shadow: "#117c41",
+                    opacity: 1  }
                   width: 400
                   height: 300
                   cropFocus: ENTROPY

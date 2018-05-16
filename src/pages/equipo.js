@@ -9,8 +9,8 @@ const Equipo = ({ data }) => (
       <div className="flex absolute z-10 text-white flex-wrap h-160 justify-end content-end items-end w-full">
         <div className="flex-1"></div>
         <div className="flex-2 p-8 md:p-32 max-w-md">
-          <div className="p-1 text-3xl sm:text-4xl leading-tight text-right bg-green-darker mb-2 font-semibold">Nuestra misión es que consigas la independencia financiera.</div>
-          <p className="p-1 text-xl leading-normal text-right bg-green-darker">Empecemos por el ahorro. Conoce al equipo y por qué estamos haciendo esto.</p>
+          <div className="p-1 text-3xl sm:text-4xl leading-tight text-right bg-gradient-green-dark-to-green mb-2 font-semibold">Nuestra misión es que consigas la independencia financiera.</div>
+          <p className="p-1 text-xl leading-normal text-right bg-gradient-green-dark-to-green ">Empecemos por el ahorro. Conoce al equipo y por qué estamos haciendo esto.</p>
         </div>
       </div>
       <Img sizes={data.columpioImage.sizes} className="h-160 m-0" />
@@ -81,7 +81,7 @@ query IntegrantesQuery {
                 duotone: {
                     highlight: "#1bb876",
                     shadow: "#388dd1",
-                    opacity: 10  },
+                    opacity: 5  },
               ) {
                 ...GatsbyImageSharpResolutions_noBase64
               }
@@ -110,7 +110,7 @@ query IntegrantesQuery {
                 duotone: {
                     highlight: "#1bb876",
                     shadow: "#388dd1",
-                    opacity: 10  },
+                    opacity: 5  },
               ) {
                 ...GatsbyImageSharpResolutions_noBase64
               }

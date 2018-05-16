@@ -11,11 +11,6 @@ import FaLightbulbO from 'react-icons/lib/fa/lightbulb-o'
 import FaList from 'react-icons/lib/fa/list'
 import Img from 'gatsby-image'
 import StandardForm from '../components/StandardForm'
-import DiarioFinaciero from '../img/home_prensa/prensa_diariofinanciero.png'
-import Entrepeneur from '../img/home_prensa/prensa_entrepeneur.png'
-import FintechLatam from '../img/home_prensa/prensa_fintech-latam.png'
-import Forbes from '../img/home_prensa/prensa_forbes.png'
-import SoyChile from '../img/home_prensa/prensa_soychile.png'
 
 const IndexPage = ({ data }) => (
   <div>
@@ -36,41 +31,41 @@ const IndexPage = ({ data }) => (
 
     <div className="flex pt-8 px-8 pb-4 mx-auto text-grey-darkest max-w-xl mt-16">
       <div className="sm:w-full md:w-1/2 mx-auto">
-        <h1 className="font-medium leading-normal">Qué es Übank</h1>
-        <p className="max-w-sm leading-normal"><strong>Übank</strong> es la aplicación que te permite ahorrar según tu estilo de vida. A través de las <em>Reglas de Ahorro Automático</em>, puedes elegir cuándo ahorrar y seguir haciendo tu vida. Los ahorros se acumularán sin que te hayas cuenta.</p>
+        <h1 className="font-bold leading-normal">Qué es Übank</h1>
+        <p className="max-w-sm leading-normal"><strong>Übank</strong> es la aplicación que te permite ahorrar según tu estilo de vida. A través de las <em>Reglas de Ahorro Automático</em>, puedes elegir cuándo ahorrar y seguir haciendo tu vida. Los ahorros se acumularán sin que te des cuenta.</p>
       </div>
     </div>
     <div className="flex flex-wrap p-4 max-w-xl mx-auto items-baseline mb-8">
       <div className="md:w-1/3 p-4 text-center">
         <Img resolutions={data.montaniaImage.resolutions} />
-        <h2 className="leading-normal font-medium">Sueña</h2>
+        <h4 className="leading-normal font-medium">Sueña</h4>
         <p className="max-w-sm leading-normal">Ahorra para las cosas que realmente te importan. Tú decides las <em>Reglas</em> que las harán realidad.</p>
       </div>
       <div className="md:w-1/3 p-4 text-center">
         <Img resolutions={data.coctelImage.resolutions} />
-        <h2 className="leading-normal font-medium">Vive</h2>
+        <h4 className="leading-normal font-medium">Vive</h4>
         <p className="max-w-sm leading-normal">Ahorrar no tiene por qué significar sacrificarte. Vive tu vida y deja que <strong>Übank</strong> haga el trabajo difícil.</p>
       </div>
       <div className="md:w-1/3 p-4 text-center">
         <Img resolutions={data.creceImage.resolutions} />
-        <h2 className="leading-normal font-medium">Crece</h2>
+        <h4 className="leading-normal font-medium">Crece</h4>
         <p className="max-w-sm leading-normal">Cuando las <em>Reglas</em> se activan, transferimos el dinero a una cuenta segura. Siempre estará disponible.</p>
       </div>
     </div>
 
-      <ul className="list-reset mt-16 lg:mt-32 border-t-2 bg-grey-lightest border-blue-lighter">
+    <div className="bg-white sm:bg-green-lightest">
+      
+      <ul className="list-reset mt-16 lg:mt-24 border-t-2 border-b-2 bg-white border-green-lightest max-w-xl mx-auto">
         {data.pasosHome.edges.map(post => (
-        <li className="container m-0 p-0 w-full border-b-2 border-blue-lighter">
+        <li className="container m-0 p-0 w-full md:border-b-2 md:border-green-lightest py-2 sm:py-0">
           <div className="sm:flex sm:flex-row items-center">
             <div className="sm:w-1/3">
-                <div className="z-20 my-8 sm:my-0 sm:mt-16 sm:ml-4 md:ml-16 lg:ml-32 xl:ml-48 sm:absolute mx-auto sm:flex justify-around items-center max-w-xl">
+                <div className="z-20 my-8 sm:my-0 sm:mt-16 sm:ml-4 md:ml-16 lg:ml-24 sm:absolute mx-auto sm:flex justify-around items-center max-w-xl">
                 <div className="sm:w-1/3 sm:flex-shrink items-center text-center sm:text-left mx-auto sm:mx-0 sm:px-4 md:px-8 lg:px-16 xl:px-24 py-2">
                   <Img resolutions={post.node.frontmatter.imagenApp.childImageSharp.resolutions}/>
                   </div>
-                  <div className="sm:w-2/3 max-w-md sm:ml-8 lg:mx-16 px-4 sm:px-0 sm:pl-24 sm:pr-12 md:pl-16 md:pr-16 xl:pl-32 text-center sm:text-left w-full">
-                  {/* <div className="sm:border-b-2 sm:border-blue-lighter mb-6"></div>  */}
-                    {/* <h2 className="max-w-xs md:max-w-sm mx-auto">{post.node.frontmatter.titulo}</h2> */}
-                    <h4 className="max-w-xs md:max-w-sm mx-auto">{post.node.frontmatter.subtitulo}</h4>
+                  <div className="sm:w-2/3 max-w-md sm:ml-16 sm:max-w-xs text-center sm:text-left w-full">
+                    <h4 className="max-w-xs md:max-w-sm mx-auto py-4">{post.node.frontmatter.subtitulo}</h4>
                     <p className="max-w-xs md:max-w-sm leading-normal mx-auto">{post.node.excerpt}</p>
                   </div>
                 </div>
@@ -80,15 +75,16 @@ const IndexPage = ({ data }) => (
           </li>
         ))}
       </ul>
+    </div>
 
-    <div className="pt-8 m-8 mt-16  max-w-xl mx-auto">
-    <div className="text-3xl sm:text-4xl font-semibold mb-6 mx-auto text-center">Funcionalidades</div>
+    <div className="pt-8 m-8 mt-16 max-w-xl mx-auto">
+    <div className="text-2xl sm:text-3xl font-semibold mb-6 mx-auto text-center">Funcionalidades</div>
     <div className="sm:flex flex-wrap justify-around">
       <div className="sm:w-full md:w-1/2 pt-4 px-4 pb-0 mx-auto md:p-8">
         <div className="flex">
           <div className="wt-1/3 p-2">
-            <div className="bg-green w-16 h-16 rounded-full shadow-md">
-              <FaBuildingO className="mt-4 ml-4 text-3xl text-white text-center" />
+            <div className="bg-green w-12 h-12 sm:w-16 sm:h-16 rounded-full shadow-md">
+              <FaBuildingO className="mt-3 ml-3 sm:mt-4 sm:ml-4 text-2xl sm:text-3xl text-white text-center" />
             </div>
           </div>
           <div className="wt-2/3 p-2">
@@ -98,8 +94,8 @@ const IndexPage = ({ data }) => (
         </div>
         <div className="flex">
           <div className="wt-1/3 p-2 pb-0">
-            <div className="bg-green w-16 h-16 rounded-full shadow-md">
-              <FaLightbulbO className="mt-4 ml-4 text-3xl text-white text-center" />
+              <div className="bg-green w-12 h-12 sm:w-16 sm:h-16 rounded-full shadow-md">
+                <FaLightbulbO className="mt-3 ml-3 sm:mt-4 sm:ml-4 text-2xl sm:text-3xl text-white text-center" />
             </div>
           </div>
           <div className="wt-2/3 p-2">
@@ -111,8 +107,8 @@ const IndexPage = ({ data }) => (
       <div className="sm:w-full md:w-1/2 mx-auto pl-4 py-4 md:p-8">
         <div className="flex">
           <div className="wt-1/3 p-2">
-            <div className="bg-green w-16 h-16 rounded-full shadow-md">
-              <FaList className="mt-4 ml-4 text-3xl text-white text-center" />
+              <div className="bg-green w-12 h-12 sm:w-16 sm:h-16 rounded-full shadow-md">
+                <FaList className="mt-3 ml-3 sm:mt-4 sm:ml-4 text-2xl sm:text-3xl text-white text-center" />
             </div>
           </div>
           <div className="wt-2/3 p-2">
@@ -122,8 +118,8 @@ const IndexPage = ({ data }) => (
         </div>
         <div className="flex">
           <div className="wt-1/3 p-2">
-            <div className="bg-green w-16 h-16 rounded-full shadow-md">
-              <FaLineChart className="mt-4 ml-4 text-3xl text-white text-center" />
+              <div className="bg-green w-12 h-12 sm:w-16 sm:h-16 rounded-full shadow-md">
+                <FaLineChart className="mt-3 ml-3 sm:mt-4 sm:ml-4 text-2xl sm:text-3xl text-white text-center" />
             </div>
           </div>
           <div className="wt-2/3 p-2">
@@ -135,24 +131,24 @@ const IndexPage = ({ data }) => (
     </div>
     </div>
 
-    <div className="bg-grey-lightest md:flex justify-center items-center">
-      <div className="md:w-1/2 p-8 mx-auto"><Img sizes={ data.seguridadImage.sizes} /></div>
-        <div className="text-center md:text-left md:w-1/2 leading-normal max-w-xs mx-auto lg:mr-64 pt-8 pb-16">
+  <div className="bg-blue-lightest md:py-16">
+    <div className="md:flex mx-auto justify-center items-center max-w-xl p-4">
+      <div className="md:w-1/2 pt-8 sm:pb-8 mx-auto max-w-md"><Img sizes={ data.seguridadImage.sizes} /></div>
+        <div className="text-center md:text-left md:w-1/2 leading-normal max-w-sm md:max-w-sm mx-auto pb-16 sm:px-4 md:px-16">
           <h3>Tu dinero seguro. Siempre.</h3>
           <p>Al registrate en Übank, aperturaremos automáticamente una cuenta de ahorros en un banco partner. Tus ahorros siempre estarán seguros y disponibles para usarlos cuando quieras. Dile adiós a ahorrar en la misma cuenta bancaria que no genera interés.</p>
         </div>
     </div>
+  </div>
 
-    <div className="text-center mx-auto text-3xl font-semibold sm:text-4xl mb-8 mt-8">Prensa</div>
-    <ul className="list-reset sm:flex flex-wrap items-center mx-auto justify-center max-w-xs sm:max-w-sm md:max-w-lg mb-16">
-      <li className="px-3 py-4 md:py-2 sm:w-1/3 md:w-1/5 text-center mx-auto w-32"><a href='https://www.forbes.com.mx/estas-son-las-9-empresas-de-fintech-de-startupbootcamp-en-latam/' target="_blank"><img src={Forbes}/></a></li>
-      <li className="px-3 py-4 md:py-2 sm:w-1/3 md:w-1/5 text-center mx-auto w-48"><a href='http://www.fintechlatam.net/2017/04/18/ubank-la-app-que-te-ayuda-a-ahorrar-de-forma-automatica/' target="_blank"><img src={FintechLatam}/></a></li>
-      <li className="px-3 py-4 md:py-2 sm:w-1/3 md:w-1/5 text-center mx-auto w-48"><a href='https://www.df.cl/noticias/empresas/innovacion-y-emprendimiento/noticias/ubank-la-app-que-permite-ahorrar-gano-competencia-regional/2017-03-15/173937.html' target="_blank"><img src={DiarioFinaciero} /></a></li>
-      <li className="px-3 py-4 md:py-2 sm:w-1/3 md:w-1/5 text-center mx-auto w-32"><a href='http://www.soychile.cl/Santiago/Tecnologia/2017/04/19/456377/Con-foco-en-los-millennials-chilenos-crean-una-app-para-ahorrar-dinero-de-forma-entretenida.aspx' target="_blank"><img src={SoyChile}/></a></li>
-      <li className="px-3 py-4 md:py-2 sm:w-1/3 md:w-1/5 text-center mx-auto w-48"><a href='https://www.entrepreneur.com/article/299189' target="_blank"><img src={Entrepeneur}/></a></li>
+    <div className="text-center mx-auto text-2xl font-semibold sm:text-3xl mb-8 mt-8">Prensa</div>
+    <ul className="list-reset flex flex-wrap items-center mx-auto justify-center max-w-xs sm:max-w-sm md:max-w-lg mb-16">
+      {data.prensaQuery.edges.map(post => (
+      <li className="px-3 py-4 sm:py-4 md:py-2 w-1/2 sm:w-1/3 md:w-1/5 text-center mx-auto w-32"><a href={post.node.frontmatter.link} target="_blank"><Img resolutions={post.node.frontmatter.imagen.childImageSharp.resolutions}/></a></li>
+      ))}
     </ul>
 
-    <div className="text-3xl sm:text-4xl font-semibold mb-8 mt-16 mx-auto text-center">Testimonios</div>
+    <div className="text-2xl sm:text-3xl font-semibold mb-8 mt-16 mx-auto text-center">Testimonios</div>
     <ul className="flex flex-wrap justify-center max-w-xl mx-auto list-reset">{data.datosTestimonios.edges.map(post => (
       <li className="sm:w-1/2 lg:w-1/3 p-4 mx-auto text-center">
           <Img resolutions={post.node.frontmatter.imagen.childImageSharp.resolutions} className="rounded-full shadow-md" />
@@ -167,7 +163,7 @@ const IndexPage = ({ data }) => (
       </ul>
 
       <div className="bg-grey-lightest rounded shadow-md mx-auto mt-16 py-8">
-        <div className="text-center mx-auto text-3xl font-semibold sm:text-4xl mb-8">Hablemos</div>
+        <div className="text-center mx-auto text-2xl font-semibold sm:text-3xl mb-8">Hablemos</div>
         <StandardForm />
       </div>
       
@@ -245,8 +241,31 @@ export const query = graphql`
       }
     }
   }
-  seguridadImage: imageSharp(id: { regex: "/seguridad_tres/"}){
-      sizes(maxWidth:1200 quality:80){
+  prensaQuery: allMarkdownRemark(
+    filter: {fields:{slug: {regex: "/home-prensa/"}}}
+  ){
+    edges {
+      node {
+        frontmatter {
+          link
+          imagen {
+            childImageSharp {
+              resolutions(
+                width: 100
+                duotone: {
+                    highlight: "#ffffff",
+                    shadow: "#316099"  },
+                ){
+                  ...GatsbyImageSharpResolutions_noBase64
+                }
+            }
+          }
+        }
+      }
+    }
+  }
+  seguridadImage: imageSharp(id: { regex: "/tres_capas_seguridad/"}){
+      sizes(maxWidth:1200){
         ...GatsbyImageSharpSizes_noBase64
       }
     }

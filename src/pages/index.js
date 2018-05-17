@@ -11,6 +11,7 @@ import FaLightbulbO from 'react-icons/lib/fa/lightbulb-o'
 import FaList from 'react-icons/lib/fa/list'
 import Img from 'gatsby-image'
 import StandardForm from '../components/StandardForm'
+import AunNoLoTienes from "../components/AunNoLoTienes";
 
 const IndexPage = ({ data }) => (
   <div>
@@ -31,8 +32,8 @@ const IndexPage = ({ data }) => (
 
     <div className="flex pt-8 px-8 pb-4 mx-auto text-grey-darkest max-w-xl mt-8 lg:mt-12">
       <div className="sm:w-full md:w-1/2 mx-auto">
-        <div className="text-3xl sm:text-4xl font-bold pb-3 leading-tight">Por qué ahorrar en automático.</div>
-        <p className="max-w-sm leading-normal"><strong>Übank</strong> es la aplicación que te permite ahorrar según tu estilo de vida. A través de las <em>Reglas de Ahorro Automático</em>, puedes elegir cuándo ahorrar y seguir haciendo tu vida. Los ahorros se acumularán sin que te des cuenta.</p>
+        <div className="text-3xl sm:text-4xl font-bold pb-3 leading-tight text-center">Por qué ahorrar en automático.</div>
+        <p className="max-w-sm leading-normal text-center"><strong>Übank</strong> es la aplicación que te permite ahorrar según tu estilo de vida. A través de las <em>Reglas de Ahorro Automático</em>, puedes elegir cuándo ahorrar y seguir haciendo tu vida. Los ahorros se acumularán sin que te des cuenta.</p>
       </div>
     </div>
     <div className="flex flex-wrap p-4 max-w-xl mx-auto items-baseline mb-8">
@@ -53,20 +54,20 @@ const IndexPage = ({ data }) => (
       </div>
     </div>
 
-    <div className="bg-white sm:bg-green-lightest">
+    <div className="bg-white">
       
-      <ul className="list-reset mt-16 lg:mt-24 border-t-2 border-b-2 bg-white border-green-lightest max-w-xl mx-auto">
+      <ul className="list-reset mt-16 lg:mt-24 border-t-2 border-b-2 bg-white border-green-lightest mx-auto">
         {data.pasosHome.edges.map(post => (
-        <li className="container m-0 p-0 w-full md:border-b-2 md:border-green-lightest py-2 sm:py-0">
+        <li className="m-0 p-0 w-full md:border-b-2 md:border-green-lightest py-2 sm:py-0">
           <div className="sm:flex sm:flex-row items-center">
             <div className="sm:w-1/3">
-                <div className="z-20 my-8 sm:my-0 sm:mt-16 sm:ml-4 md:ml-16 lg:ml-24 sm:absolute mx-auto sm:flex justify-around items-center max-w-xl">
-                <div className="sm:w-1/3 sm:flex-shrink items-center text-center sm:text-left mx-auto sm:mx-0 sm:px-4 md:px-8 lg:px-16 xl:px-24 py-2">
+                <div className="z-20 my-8 sm:my-0 sm:mt-16 sm:ml-16 md:ml-24 lg:ml-32 xl:ml-1/5 sm:absolute mx-auto sm:flex justify-around items-center max-w-xl">
+                <div className="sm:w-1/3 sm:flex-shrink items-center text-center sm:text-left mx-auto sm:mx-0 sm:px-4 md:px-8 lg:px-8 xl:px-24 py-2">
                   <Img resolutions={post.node.frontmatter.imagenApp.childImageSharp.resolutions}/>
                   </div>
-                  <div className="sm:w-2/3 max-w-md sm:ml-16 sm:max-w-xs text-center sm:text-left w-full">
+                  <div className="sm:w-2/3 max-w-md sm:ml-24 md:ml-16 sm:max-w-xs text-center sm:text-left w-full">
                     <h4 className="max-w-xs md:max-w-sm mx-auto py-4 px-2">{post.node.frontmatter.subtitulo}</h4>
-                    <p className="max-w-xs md:max-w-sm leading-normal mx-auto px-2">{post.node.excerpt}</p>
+                    <div dangerouslySetInnerHTML={{ __html: post.node.html }} className="max-w-xs md:max-w-sm leading-normal mx-auto px-2"/>
                   </div>
                 </div>
                 <Img sizes={post.node.frontmatter.imagenFondo.childImageSharp.sizes} className="sm:h-160 z-10 sm:relative hidden sm:block fadeIn:false" />
@@ -77,8 +78,8 @@ const IndexPage = ({ data }) => (
       </ul>
     </div>
 
-    <div className="pt-8 m-8 max-w-xl mx-auto">
-    <div className="text-2xl sm:text-3xl font-semibold mb-6 mx-auto text-center">Funcionalidades</div>
+    <div className="py-16 m-16 max-w-xl mx-auto">
+    <div className="text-2xl sm:text-3xl font-semibold mb-4 mx-auto text-center">Funcionalidades</div>
     <div className="sm:flex flex-wrap justify-around">
       <div className="sm:w-full md:w-1/2 pt-4 px-4 pb-0 mx-auto md:p-8">
         <div className="flex items-center">
@@ -87,7 +88,7 @@ const IndexPage = ({ data }) => (
               <FaBuildingO className="mt-3 ml-3 sm:mt-4 sm:ml-4 text-2xl sm:text-3xl text-white text-center" />
             </div>
           </div>
-          <div className="wt-2/3 p-2">
+          <div className="wt-2/3 p-2 m-4">
               <div className="leading-normal font-normal text-xl font-medium">Multibanco</div>
             <p className="max-w-sm leading-normal">Conecta tus cuentas y tarjetas de tus bancos y elige desde cuáles quieres ahorrar.</p>
           </div>
@@ -98,7 +99,7 @@ const IndexPage = ({ data }) => (
                 <FaLightbulbO className="mt-3 ml-3 sm:mt-4 sm:ml-4 text-2xl sm:text-3xl text-white text-center" />
             </div>
           </div>
-          <div className="wt-2/3 p-2">
+          <div className="wt-2/3 p-2 m-4">
               <div className="leading-normal font-normal text-xl font-medium">Recomendaciones</div>
             <p className="max-w-sm leading-normal">Recibe recomendaciones de <em>Reglas</em> que podrías activar en base a tu estilo de vida.</p>
           </div>
@@ -111,7 +112,7 @@ const IndexPage = ({ data }) => (
                 <FaList className="mt-3 ml-3 sm:mt-4 sm:ml-4 text-2xl sm:text-3xl text-white text-center" />
             </div>
           </div>
-          <div className="wt-2/3 p-2">
+          <div className="wt-2/3 p-2 m-4">
               <div className="leading-normal font-normal text-xl font-medium">Claridad</div>
             <p className="max-w-sm leading-normal">Mira todas tus transacciones por categoría. Ahorra más, gasta mejor.</p>
           </div>
@@ -122,7 +123,7 @@ const IndexPage = ({ data }) => (
                 <FaLineChart className="mt-3 ml-3 sm:mt-4 sm:ml-4 text-2xl sm:text-3xl text-white text-center" />
             </div>
           </div>
-          <div className="wt-2/3 p-2">
+          <div className="wt-2/3 p-2 m-4">
               <div className="leading-normal font-normal text-xl font-medium">Rentabilidad</div>
             <p className="max-w-sm leading-normal">Ahorrar fácil no es suficiente. Genera interés de todos los fondos que guardes mediante <strong>Übank</strong>.</p>
           </div>
@@ -131,18 +132,18 @@ const IndexPage = ({ data }) => (
     </div>
     </div>
 
-  <div className="bg-blue-lightest md:py-16">
-    <div className="md:flex mx-auto justify-center items-center max-w-xl p-4">
-      <div className="md:w-1/2 pt-8 sm:pb-8 mx-auto max-w-sm"><Img sizes={ data.seguridadImage.sizes} /></div>
-        <div className="text-center md:text-left md:w-1/2 leading-normal max-w-xs md:max-w-sm mx-auto pb-24 sm:px-4 md:px-16 pt-4">
+  <div className="bg-grey-lightest md:py-16 border-1 border-t-grey-lighter border-b-grey-lighter">
+    <div className="md:flex mx-auto justify-center items-center max-w-xl p-2">
+      <div className="md:w-2/3 pt-8 sm:pb-8 mx-auto max-w-md px-8"><Img sizes={ data.seguridadImage.sizes} /></div>
+        <div className="text-center md:text-left md:w-1/3 leading-normal max-w-xs md:max-w-sm mx-auto pb-24 sm:px-4 md:px-4 pt-4">
           <h4>Tu dinero seguro. Siempre.</h4>
           <p>Al registrate en Übank, aperturaremos automáticamente una cuenta de ahorros en un banco partner. Tus ahorros siempre estarán seguros y disponibles para usarlos cuando quieras. Dile adiós a ahorrar en la misma cuenta bancaria que no genera interés.</p>
         </div>
     </div>
   </div>
 
-    <div className="text-center mx-auto text-2xl font-semibold sm:text-3xl mb-8 mt-8">Prensa</div>
-    <ul className="list-reset flex flex-wrap items-center mx-auto justify-center max-w-xs sm:max-w-sm md:max-w-lg mb-16">
+    <div className="text-center mx-auto text-2xl font-semibold sm:text-3xl my-12">Prensa</div>
+    <ul className="list-reset flex flex-wrap items-center mx-auto justify-around max-w-xs sm:max-w-sm md:max-w-xl mb-16">
       {data.prensaQuery.edges.map(post => (
       <li className="px-3 py-4 sm:py-4 md:py-2 w-1/2 sm:w-1/3 md:w-1/5 text-center mx-auto w-32"><a href={post.node.frontmatter.link} target="_blank"><Img resolutions={post.node.frontmatter.imagen.childImageSharp.resolutions}/></a></li>
       ))}
@@ -168,7 +169,7 @@ const IndexPage = ({ data }) => (
       </div>
       
       
-      
+      <AunNoLoTienes />
   </div>
 );
 
@@ -208,7 +209,7 @@ export const query = graphql`
                 }
               }
             }
-            excerpt(pruneLength:300)
+            html
           }
         }
       }
@@ -251,7 +252,7 @@ export const query = graphql`
           imagen {
             childImageSharp {
               resolutions(
-                width: 100
+                width: 150
                 duotone: {
                     highlight: "#ffffff",
                     shadow: "#316099"  },
@@ -264,8 +265,8 @@ export const query = graphql`
       }
     }
   }
-  seguridadImage: imageSharp(id: { regex: "/tres_capas_seguridad/"}){
-      sizes(maxWidth:1200){
+  seguridadImage: imageSharp(id: { regex: "/tres_capas_seguridad_fondo/"}){
+      sizes(maxWidth:1200 quality:80){
         ...GatsbyImageSharpSizes_noBase64
       }
     }

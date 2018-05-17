@@ -46,13 +46,13 @@ h6,
 hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  width: 3rem;
   border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 6px solid #17C671;
 }
 
 
 @tailwind utilities;
-
 
 @responsive {
   .bg-gradient-green-dark-to-green {
@@ -60,5 +60,8 @@ hr {
   }
   .bg-gradient-blue-dark-to-blue {
     background-image: linear-gradient(to right, config('colors.blue'), config('colors.blue-darker'));
+  }
+  .relative-margin {
+    margin-left: 33%;
   }
 }

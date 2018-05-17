@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import IconoCafe from '../img/iconos-colores/icono-placer-culpable.png'
 import ReglaCompletandose from '../img/fotos_reglas/regla_completandose.png'
 import FlechaAbajo from '../img/fotos_reglas/flechaAbajo.png'
+import IdeaRegla from '../components/IdeaRegla';
 
 const Reglas = ({ data }) => (
   <div>
@@ -19,15 +20,15 @@ const Reglas = ({ data }) => (
       <Img sizes={data.surfImage.sizes} className="h-160 m-0" />
     </div>
     <div className="shadow-sm">
-      <div className="mt-8 p-4 mx-auto leading-normal text-black max-w-xs sm:max-w-sm md:max-w-md">
+      <div className="mt-8 p-4 mx-auto leading-normal text-black max-w-xs sm:max-w-sm md:max-w-md text-center">
         <div className="text-3xl sm:text-4xl font-bold pb-3 leading-tight">Por qué ahorrar en automático.</div>
-        <p className="leading-normal">Ahorrar siempre ha sido difícil y solo unos pocos han conseguido hacerlo de manera constante. Hasta ahora.</p>
-        <p className="leading-normal">Las <em>Reglas de Ahorro</em> son la mejor forma de ahorrar de manera entretenida y sin esfuerzo. Configura las <em>Reglas</em> según tu estilo de vida y deja que te lleven hacia tus sueños y metas.</p>
+        <hr />
+        <p className="py-3 leading-normal">Ahorrar siempre ha sido difícil y solo unos pocos han conseguido hacerlo de manera constante. Hasta ahora. Las <em>Reglas de Ahorro</em> son la mejor forma de ahorrar de manera entretenida y sin esfuerzo. Configura las <em>Reglas</em> según tu estilo de vida y deja que te lleven hacia tus sueños y metas.</p>
         
 
       </div>
-      <div className="max-w-xs sm:max-w-sm mx-auto bg-blue-lightest rounded-lg mt-4 shadow-md">
-        <div className="italic p-4 ">Las reglas son condiciones que se componen de dos partes: un evento y un ahorro.</div>
+      <div className="max-w-xs sm:max-w-sm mx-auto mt-4">
+        <div className="italic p-4 text-center">Las reglas son condiciones que se componen de dos partes: un evento y un ahorro.</div>
       <div className="flex mb-8">
       <div className="w-4/5 mx-auto">
         <ul className="list-reset mx-auto text-black max-w-sm">
@@ -45,14 +46,14 @@ const Reglas = ({ data }) => (
             </li>
         </ul>
         </div>
-        <div className="flex flex-col justify-center -ml-8 pt-4">
+        <div className="flex flex-col justify-center -ml-8 pt-8">
           <div><img src={FlechaAbajo} width="25" className="pb-8 pt-12 mr-16 sm:mr-32"/></div>
           <div><img src={FlechaAbajo} width="25" className="pb-8 -mt-2 mr-16 sm:mr-32"/></div>
         </div>
       </div>
     </div>
     </div>
-    <div className="bg-grey-lightest border-t-1 border-grey">
+    <div className="bg-grey-lightest border-t-1 border-grey pb-8">
       <ul className="flex flex-wrap px-3 sm:px-8 mx-auto justify-center py-16 max-w-3xl">
         {data.datosReglas.edges.map(post => (
           <li className="flex m-3 md:w-1/2 lg:w-1/3 max-w-xs rounded-lg shadow-md overflow-hidden ">
@@ -60,14 +61,15 @@ const Reglas = ({ data }) => (
               <Img resolutions={post.node.frontmatter.featuredImage.childImageSharp.resolutions} />
               <div className="flex px-4 pt-4 pb-2 items-center">
                 <Img resolutions={post.node.frontmatter.icono.childImageSharp.resolutions} />
-                <h3 className="font-medium pl-2 leading-tight">{post.node.frontmatter.nombre}</h3>
+                <h4 className="font-medium pl-2 leading-tight">{post.node.frontmatter.nombre}</h4>
               </div>
-              <p className="px-4 pb-2 text-grey-darker max-w-xs leading-normal">
+              <p className="px-6 max-w-xs leading-normal pt-2 pb-4">
                 {post.node.excerpt}
               </p>
+              <hr/>
               <div className="flex justify-center items-center">
-                <Img resolutions={post.node.frontmatter.miniIcono.childImageSharp.resolutions} className="m-4" />
-                <p className="p-4 text-sm italic font-light">{post.node.frontmatter.requerimento}</p>
+                <Img resolutions={post.node.frontmatter.miniIcono.childImageSharp.resolutions} className="my-4" />
+                <p className="p-2 text-xs font-light">{post.node.frontmatter.requerimento}</p>
 
               </div>
             </div>
@@ -75,6 +77,7 @@ const Reglas = ({ data }) => (
         ))}
       </ul>
     </div>
+    <IdeaRegla/>
   </div>
 )
 
@@ -116,7 +119,7 @@ export const queryReglas = graphql`
                     shadow: "#117c41",
                     opacity: 1  }
                   width: 400
-                  height: 300
+                  height: 200
                   cropFocus: ENTROPY
                 ){
                   ...GatsbyImageSharpResolutions_noBase64
@@ -142,8 +145,8 @@ export const queryReglas = graphql`
              icono{
               childImageSharp{
                 resolutions(
-                  width: 50
-                  height: 50
+                  width: 35
+                  height: 35
                 ){
                   ...GatsbyImageSharpResolutions_noBase64
                 }

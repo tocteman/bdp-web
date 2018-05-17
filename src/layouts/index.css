@@ -683,8 +683,9 @@ h6,
 hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  width: 3rem;
   border: 0;
-  border-top: 1px solid rgba(0, 0, 0, .1);
+  border-top: 6px solid #17c671;
 }
 
 .list-reset {
@@ -716,6 +717,10 @@ hr {
   background-color: #191b1c;
 }
 
+.bg-pure-black {
+  background-color: #151616;
+}
+
 .bg-grey-darkest {
   background-color: #2d3342;
 }
@@ -741,7 +746,7 @@ hr {
 }
 
 .bg-grey-lightest {
-  background-color: #eff2f1;
+  background-color: #f7f7f7;
 }
 
 .bg-white {
@@ -852,6 +857,10 @@ hr {
   background-color: #191b1c;
 }
 
+.hover\:bg-pure-black:hover {
+  background-color: #151616;
+}
+
 .hover\:bg-grey-darkest:hover {
   background-color: #2d3342;
 }
@@ -877,7 +886,7 @@ hr {
 }
 
 .hover\:bg-grey-lightest:hover {
-  background-color: #eff2f1;
+  background-color: #f7f7f7;
 }
 
 .hover\:bg-white:hover {
@@ -1052,6 +1061,10 @@ hr {
   border-color: #191b1c;
 }
 
+.border-pure-black {
+  border-color: #151616;
+}
+
 .border-grey-darkest {
   border-color: #2d3342;
 }
@@ -1077,7 +1090,7 @@ hr {
 }
 
 .border-grey-lightest {
-  border-color: #eff2f1;
+  border-color: #f7f7f7;
 }
 
 .border-white {
@@ -1188,6 +1201,10 @@ hr {
   border-color: #191b1c;
 }
 
+.hover\:border-pure-black:hover {
+  border-color: #151616;
+}
+
 .hover\:border-grey-darkest:hover {
   border-color: #2d3342;
 }
@@ -1213,7 +1230,7 @@ hr {
 }
 
 .hover\:border-grey-lightest:hover {
-  border-color: #eff2f1;
+  border-color: #f7f7f7;
 }
 
 .hover\:border-white:hover {
@@ -2070,6 +2087,10 @@ hr {
   margin: 2rem;
 }
 
+.m-12 {
+  margin: 3rem;
+}
+
 .m-16 {
   margin: 4rem;
 }
@@ -2108,6 +2129,22 @@ hr {
 
 .m-px {
   margin: 1px;
+}
+
+.m-1\/5 {
+  margin: 20%;
+}
+
+.m-1\/4 {
+  margin: 25%;
+}
+
+.m-1\/3 {
+  margin: 33%;
+}
+
+.m-1\/2 {
+  margin: 50%, ;
 }
 
 .my-0 {
@@ -2178,6 +2215,16 @@ hr {
 .mx-8 {
   margin-left: 2rem;
   margin-right: 2rem;
+}
+
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.mx-12 {
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 .my-16 {
@@ -2278,6 +2325,46 @@ hr {
 .mx-px {
   margin-left: 1px;
   margin-right: 1px;
+}
+
+.my-1\/5 {
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+
+.mx-1\/5 {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.my-1\/4 {
+  margin-top: 25%;
+  margin-bottom: 25%;
+}
+
+.mx-1\/4 {
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.my-1\/3 {
+  margin-top: 33%;
+  margin-bottom: 33%;
+}
+
+.mx-1\/3 {
+  margin-left: 33%;
+  margin-right: 33%;
+}
+
+.my-1\/2 {
+  margin-top: 50%, ;
+  margin-bottom: 50%, ;
+}
+
+.mx-1\/2 {
+  margin-left: 50%, ;
+  margin-right: 50%, ;
 }
 
 .mt-0 {
@@ -2390,6 +2477,22 @@ hr {
 
 .ml-8 {
   margin-left: 2rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
+}
+
+.mr-12 {
+  margin-right: 3rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.ml-12 {
+  margin-left: 3rem;
 }
 
 .mt-16 {
@@ -2550,6 +2653,70 @@ hr {
 
 .ml-px {
   margin-left: 1px;
+}
+
+.mt-1\/5 {
+  margin-top: 20%;
+}
+
+.mr-1\/5 {
+  margin-right: 20%;
+}
+
+.mb-1\/5 {
+  margin-bottom: 20%;
+}
+
+.ml-1\/5 {
+  margin-left: 20%;
+}
+
+.mt-1\/4 {
+  margin-top: 25%;
+}
+
+.mr-1\/4 {
+  margin-right: 25%;
+}
+
+.mb-1\/4 {
+  margin-bottom: 25%;
+}
+
+.ml-1\/4 {
+  margin-left: 25%;
+}
+
+.mt-1\/3 {
+  margin-top: 33%;
+}
+
+.mr-1\/3 {
+  margin-right: 33%;
+}
+
+.mb-1\/3 {
+  margin-bottom: 33%;
+}
+
+.ml-1\/3 {
+  margin-left: 33%;
+}
+
+.mt-1\/2 {
+  margin-top: 50%, ;
+}
+
+.mr-1\/2 {
+  margin-right: 50%, ;
+}
+
+.mb-1\/2 {
+  margin-bottom: 50%, ;
+}
+
+.ml-1\/2 {
+  margin-left: 50%, ;
 }
 
 .max-h-full {
@@ -3630,6 +3797,10 @@ hr {
   color: #191b1c;
 }
 
+.text-pure-black {
+  color: #151616;
+}
+
 .text-grey-darkest {
   color: #2d3342;
 }
@@ -3655,7 +3826,7 @@ hr {
 }
 
 .text-grey-lightest {
-  color: #eff2f1;
+  color: #f7f7f7;
 }
 
 .text-white {
@@ -3766,6 +3937,10 @@ hr {
   color: #191b1c;
 }
 
+.hover\:text-pure-black:hover {
+  color: #151616;
+}
+
 .hover\:text-grey-darkest:hover {
   color: #2d3342;
 }
@@ -3791,7 +3966,7 @@ hr {
 }
 
 .hover\:text-grey-lightest:hover {
-  color: #eff2f1;
+  color: #f7f7f7;
 }
 
 .hover\:text-white:hover {
@@ -4276,6 +4451,10 @@ hr {
   background-image: linear-gradient(to right, #388dd1, #296699);
 }
 
+.relative-margin {
+  margin-left: 33%;
+}
+
 @media (min-width: 576px) {
   .sm\:list-reset {
     list-style: none;
@@ -4306,6 +4485,10 @@ hr {
     background-color: #191b1c;
   }
 
+  .sm\:bg-pure-black {
+    background-color: #151616;
+  }
+
   .sm\:bg-grey-darkest {
     background-color: #2d3342;
   }
@@ -4331,7 +4514,7 @@ hr {
   }
 
   .sm\:bg-grey-lightest {
-    background-color: #eff2f1;
+    background-color: #f7f7f7;
   }
 
   .sm\:bg-white {
@@ -4442,6 +4625,10 @@ hr {
     background-color: #191b1c;
   }
 
+  .sm\:hover\:bg-pure-black:hover {
+    background-color: #151616;
+  }
+
   .sm\:hover\:bg-grey-darkest:hover {
     background-color: #2d3342;
   }
@@ -4467,7 +4654,7 @@ hr {
   }
 
   .sm\:hover\:bg-grey-lightest:hover {
-    background-color: #eff2f1;
+    background-color: #f7f7f7;
   }
 
   .sm\:hover\:bg-white:hover {
@@ -4642,6 +4829,10 @@ hr {
     border-color: #191b1c;
   }
 
+  .sm\:border-pure-black {
+    border-color: #151616;
+  }
+
   .sm\:border-grey-darkest {
     border-color: #2d3342;
   }
@@ -4667,7 +4858,7 @@ hr {
   }
 
   .sm\:border-grey-lightest {
-    border-color: #eff2f1;
+    border-color: #f7f7f7;
   }
 
   .sm\:border-white {
@@ -4778,6 +4969,10 @@ hr {
     border-color: #191b1c;
   }
 
+  .sm\:hover\:border-pure-black:hover {
+    border-color: #151616;
+  }
+
   .sm\:hover\:border-grey-darkest:hover {
     border-color: #2d3342;
   }
@@ -4803,7 +4998,7 @@ hr {
   }
 
   .sm\:hover\:border-grey-lightest:hover {
-    border-color: #eff2f1;
+    border-color: #f7f7f7;
   }
 
   .sm\:hover\:border-white:hover {
@@ -5660,6 +5855,10 @@ hr {
     margin: 2rem;
   }
 
+  .sm\:m-12 {
+    margin: 3rem;
+  }
+
   .sm\:m-16 {
     margin: 4rem;
   }
@@ -5698,6 +5897,22 @@ hr {
 
   .sm\:m-px {
     margin: 1px;
+  }
+
+  .sm\:m-1\/5 {
+    margin: 20%;
+  }
+
+  .sm\:m-1\/4 {
+    margin: 25%;
+  }
+
+  .sm\:m-1\/3 {
+    margin: 33%;
+  }
+
+  .sm\:m-1\/2 {
+    margin: 50%, ;
   }
 
   .sm\:my-0 {
@@ -5768,6 +5983,16 @@ hr {
   .sm\:mx-8 {
     margin-left: 2rem;
     margin-right: 2rem;
+  }
+
+  .sm\:my-12 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .sm\:mx-12 {
+    margin-left: 3rem;
+    margin-right: 3rem;
   }
 
   .sm\:my-16 {
@@ -5868,6 +6093,46 @@ hr {
   .sm\:mx-px {
     margin-left: 1px;
     margin-right: 1px;
+  }
+
+  .sm\:my-1\/5 {
+    margin-top: 20%;
+    margin-bottom: 20%;
+  }
+
+  .sm\:mx-1\/5 {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .sm\:my-1\/4 {
+    margin-top: 25%;
+    margin-bottom: 25%;
+  }
+
+  .sm\:mx-1\/4 {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+  .sm\:my-1\/3 {
+    margin-top: 33%;
+    margin-bottom: 33%;
+  }
+
+  .sm\:mx-1\/3 {
+    margin-left: 33%;
+    margin-right: 33%;
+  }
+
+  .sm\:my-1\/2 {
+    margin-top: 50%, ;
+    margin-bottom: 50%, ;
+  }
+
+  .sm\:mx-1\/2 {
+    margin-left: 50%, ;
+    margin-right: 50%, ;
   }
 
   .sm\:mt-0 {
@@ -5980,6 +6245,22 @@ hr {
 
   .sm\:ml-8 {
     margin-left: 2rem;
+  }
+
+  .sm\:mt-12 {
+    margin-top: 3rem;
+  }
+
+  .sm\:mr-12 {
+    margin-right: 3rem;
+  }
+
+  .sm\:mb-12 {
+    margin-bottom: 3rem;
+  }
+
+  .sm\:ml-12 {
+    margin-left: 3rem;
   }
 
   .sm\:mt-16 {
@@ -6140,6 +6421,70 @@ hr {
 
   .sm\:ml-px {
     margin-left: 1px;
+  }
+
+  .sm\:mt-1\/5 {
+    margin-top: 20%;
+  }
+
+  .sm\:mr-1\/5 {
+    margin-right: 20%;
+  }
+
+  .sm\:mb-1\/5 {
+    margin-bottom: 20%;
+  }
+
+  .sm\:ml-1\/5 {
+    margin-left: 20%;
+  }
+
+  .sm\:mt-1\/4 {
+    margin-top: 25%;
+  }
+
+  .sm\:mr-1\/4 {
+    margin-right: 25%;
+  }
+
+  .sm\:mb-1\/4 {
+    margin-bottom: 25%;
+  }
+
+  .sm\:ml-1\/4 {
+    margin-left: 25%;
+  }
+
+  .sm\:mt-1\/3 {
+    margin-top: 33%;
+  }
+
+  .sm\:mr-1\/3 {
+    margin-right: 33%;
+  }
+
+  .sm\:mb-1\/3 {
+    margin-bottom: 33%;
+  }
+
+  .sm\:ml-1\/3 {
+    margin-left: 33%;
+  }
+
+  .sm\:mt-1\/2 {
+    margin-top: 50%, ;
+  }
+
+  .sm\:mr-1\/2 {
+    margin-right: 50%, ;
+  }
+
+  .sm\:mb-1\/2 {
+    margin-bottom: 50%, ;
+  }
+
+  .sm\:ml-1\/2 {
+    margin-left: 50%, ;
   }
 
   .sm\:max-h-full {
@@ -7212,6 +7557,10 @@ hr {
     color: #191b1c;
   }
 
+  .sm\:text-pure-black {
+    color: #151616;
+  }
+
   .sm\:text-grey-darkest {
     color: #2d3342;
   }
@@ -7237,7 +7586,7 @@ hr {
   }
 
   .sm\:text-grey-lightest {
-    color: #eff2f1;
+    color: #f7f7f7;
   }
 
   .sm\:text-white {
@@ -7348,6 +7697,10 @@ hr {
     color: #191b1c;
   }
 
+  .sm\:hover\:text-pure-black:hover {
+    color: #151616;
+  }
+
   .sm\:hover\:text-grey-darkest:hover {
     color: #2d3342;
   }
@@ -7373,7 +7726,7 @@ hr {
   }
 
   .sm\:hover\:text-grey-lightest:hover {
-    color: #eff2f1;
+    color: #f7f7f7;
   }
 
   .sm\:hover\:text-white:hover {
@@ -7857,6 +8210,10 @@ hr {
   .sm\:bg-gradient-blue-dark-to-blue {
     background-image: linear-gradient(to right, #388dd1, #296699);
   }
+
+  .sm\:relative-margin {
+    margin-left: 33%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -7889,6 +8246,10 @@ hr {
     background-color: #191b1c;
   }
 
+  .md\:bg-pure-black {
+    background-color: #151616;
+  }
+
   .md\:bg-grey-darkest {
     background-color: #2d3342;
   }
@@ -7914,7 +8275,7 @@ hr {
   }
 
   .md\:bg-grey-lightest {
-    background-color: #eff2f1;
+    background-color: #f7f7f7;
   }
 
   .md\:bg-white {
@@ -8025,6 +8386,10 @@ hr {
     background-color: #191b1c;
   }
 
+  .md\:hover\:bg-pure-black:hover {
+    background-color: #151616;
+  }
+
   .md\:hover\:bg-grey-darkest:hover {
     background-color: #2d3342;
   }
@@ -8050,7 +8415,7 @@ hr {
   }
 
   .md\:hover\:bg-grey-lightest:hover {
-    background-color: #eff2f1;
+    background-color: #f7f7f7;
   }
 
   .md\:hover\:bg-white:hover {
@@ -8225,6 +8590,10 @@ hr {
     border-color: #191b1c;
   }
 
+  .md\:border-pure-black {
+    border-color: #151616;
+  }
+
   .md\:border-grey-darkest {
     border-color: #2d3342;
   }
@@ -8250,7 +8619,7 @@ hr {
   }
 
   .md\:border-grey-lightest {
-    border-color: #eff2f1;
+    border-color: #f7f7f7;
   }
 
   .md\:border-white {
@@ -8361,6 +8730,10 @@ hr {
     border-color: #191b1c;
   }
 
+  .md\:hover\:border-pure-black:hover {
+    border-color: #151616;
+  }
+
   .md\:hover\:border-grey-darkest:hover {
     border-color: #2d3342;
   }
@@ -8386,7 +8759,7 @@ hr {
   }
 
   .md\:hover\:border-grey-lightest:hover {
-    border-color: #eff2f1;
+    border-color: #f7f7f7;
   }
 
   .md\:hover\:border-white:hover {
@@ -9243,6 +9616,10 @@ hr {
     margin: 2rem;
   }
 
+  .md\:m-12 {
+    margin: 3rem;
+  }
+
   .md\:m-16 {
     margin: 4rem;
   }
@@ -9281,6 +9658,22 @@ hr {
 
   .md\:m-px {
     margin: 1px;
+  }
+
+  .md\:m-1\/5 {
+    margin: 20%;
+  }
+
+  .md\:m-1\/4 {
+    margin: 25%;
+  }
+
+  .md\:m-1\/3 {
+    margin: 33%;
+  }
+
+  .md\:m-1\/2 {
+    margin: 50%, ;
   }
 
   .md\:my-0 {
@@ -9351,6 +9744,16 @@ hr {
   .md\:mx-8 {
     margin-left: 2rem;
     margin-right: 2rem;
+  }
+
+  .md\:my-12 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .md\:mx-12 {
+    margin-left: 3rem;
+    margin-right: 3rem;
   }
 
   .md\:my-16 {
@@ -9451,6 +9854,46 @@ hr {
   .md\:mx-px {
     margin-left: 1px;
     margin-right: 1px;
+  }
+
+  .md\:my-1\/5 {
+    margin-top: 20%;
+    margin-bottom: 20%;
+  }
+
+  .md\:mx-1\/5 {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .md\:my-1\/4 {
+    margin-top: 25%;
+    margin-bottom: 25%;
+  }
+
+  .md\:mx-1\/4 {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+  .md\:my-1\/3 {
+    margin-top: 33%;
+    margin-bottom: 33%;
+  }
+
+  .md\:mx-1\/3 {
+    margin-left: 33%;
+    margin-right: 33%;
+  }
+
+  .md\:my-1\/2 {
+    margin-top: 50%, ;
+    margin-bottom: 50%, ;
+  }
+
+  .md\:mx-1\/2 {
+    margin-left: 50%, ;
+    margin-right: 50%, ;
   }
 
   .md\:mt-0 {
@@ -9563,6 +10006,22 @@ hr {
 
   .md\:ml-8 {
     margin-left: 2rem;
+  }
+
+  .md\:mt-12 {
+    margin-top: 3rem;
+  }
+
+  .md\:mr-12 {
+    margin-right: 3rem;
+  }
+
+  .md\:mb-12 {
+    margin-bottom: 3rem;
+  }
+
+  .md\:ml-12 {
+    margin-left: 3rem;
   }
 
   .md\:mt-16 {
@@ -9723,6 +10182,70 @@ hr {
 
   .md\:ml-px {
     margin-left: 1px;
+  }
+
+  .md\:mt-1\/5 {
+    margin-top: 20%;
+  }
+
+  .md\:mr-1\/5 {
+    margin-right: 20%;
+  }
+
+  .md\:mb-1\/5 {
+    margin-bottom: 20%;
+  }
+
+  .md\:ml-1\/5 {
+    margin-left: 20%;
+  }
+
+  .md\:mt-1\/4 {
+    margin-top: 25%;
+  }
+
+  .md\:mr-1\/4 {
+    margin-right: 25%;
+  }
+
+  .md\:mb-1\/4 {
+    margin-bottom: 25%;
+  }
+
+  .md\:ml-1\/4 {
+    margin-left: 25%;
+  }
+
+  .md\:mt-1\/3 {
+    margin-top: 33%;
+  }
+
+  .md\:mr-1\/3 {
+    margin-right: 33%;
+  }
+
+  .md\:mb-1\/3 {
+    margin-bottom: 33%;
+  }
+
+  .md\:ml-1\/3 {
+    margin-left: 33%;
+  }
+
+  .md\:mt-1\/2 {
+    margin-top: 50%, ;
+  }
+
+  .md\:mr-1\/2 {
+    margin-right: 50%, ;
+  }
+
+  .md\:mb-1\/2 {
+    margin-bottom: 50%, ;
+  }
+
+  .md\:ml-1\/2 {
+    margin-left: 50%, ;
   }
 
   .md\:max-h-full {
@@ -10795,6 +11318,10 @@ hr {
     color: #191b1c;
   }
 
+  .md\:text-pure-black {
+    color: #151616;
+  }
+
   .md\:text-grey-darkest {
     color: #2d3342;
   }
@@ -10820,7 +11347,7 @@ hr {
   }
 
   .md\:text-grey-lightest {
-    color: #eff2f1;
+    color: #f7f7f7;
   }
 
   .md\:text-white {
@@ -10931,6 +11458,10 @@ hr {
     color: #191b1c;
   }
 
+  .md\:hover\:text-pure-black:hover {
+    color: #151616;
+  }
+
   .md\:hover\:text-grey-darkest:hover {
     color: #2d3342;
   }
@@ -10956,7 +11487,7 @@ hr {
   }
 
   .md\:hover\:text-grey-lightest:hover {
-    color: #eff2f1;
+    color: #f7f7f7;
   }
 
   .md\:hover\:text-white:hover {
@@ -11440,6 +11971,10 @@ hr {
   .md\:bg-gradient-blue-dark-to-blue {
     background-image: linear-gradient(to right, #388dd1, #296699);
   }
+
+  .md\:relative-margin {
+    margin-left: 33%;
+  }
 }
 
 @media (min-width: 992px) {
@@ -11472,6 +12007,10 @@ hr {
     background-color: #191b1c;
   }
 
+  .lg\:bg-pure-black {
+    background-color: #151616;
+  }
+
   .lg\:bg-grey-darkest {
     background-color: #2d3342;
   }
@@ -11497,7 +12036,7 @@ hr {
   }
 
   .lg\:bg-grey-lightest {
-    background-color: #eff2f1;
+    background-color: #f7f7f7;
   }
 
   .lg\:bg-white {
@@ -11608,6 +12147,10 @@ hr {
     background-color: #191b1c;
   }
 
+  .lg\:hover\:bg-pure-black:hover {
+    background-color: #151616;
+  }
+
   .lg\:hover\:bg-grey-darkest:hover {
     background-color: #2d3342;
   }
@@ -11633,7 +12176,7 @@ hr {
   }
 
   .lg\:hover\:bg-grey-lightest:hover {
-    background-color: #eff2f1;
+    background-color: #f7f7f7;
   }
 
   .lg\:hover\:bg-white:hover {
@@ -11808,6 +12351,10 @@ hr {
     border-color: #191b1c;
   }
 
+  .lg\:border-pure-black {
+    border-color: #151616;
+  }
+
   .lg\:border-grey-darkest {
     border-color: #2d3342;
   }
@@ -11833,7 +12380,7 @@ hr {
   }
 
   .lg\:border-grey-lightest {
-    border-color: #eff2f1;
+    border-color: #f7f7f7;
   }
 
   .lg\:border-white {
@@ -11944,6 +12491,10 @@ hr {
     border-color: #191b1c;
   }
 
+  .lg\:hover\:border-pure-black:hover {
+    border-color: #151616;
+  }
+
   .lg\:hover\:border-grey-darkest:hover {
     border-color: #2d3342;
   }
@@ -11969,7 +12520,7 @@ hr {
   }
 
   .lg\:hover\:border-grey-lightest:hover {
-    border-color: #eff2f1;
+    border-color: #f7f7f7;
   }
 
   .lg\:hover\:border-white:hover {
@@ -12826,6 +13377,10 @@ hr {
     margin: 2rem;
   }
 
+  .lg\:m-12 {
+    margin: 3rem;
+  }
+
   .lg\:m-16 {
     margin: 4rem;
   }
@@ -12864,6 +13419,22 @@ hr {
 
   .lg\:m-px {
     margin: 1px;
+  }
+
+  .lg\:m-1\/5 {
+    margin: 20%;
+  }
+
+  .lg\:m-1\/4 {
+    margin: 25%;
+  }
+
+  .lg\:m-1\/3 {
+    margin: 33%;
+  }
+
+  .lg\:m-1\/2 {
+    margin: 50%, ;
   }
 
   .lg\:my-0 {
@@ -12934,6 +13505,16 @@ hr {
   .lg\:mx-8 {
     margin-left: 2rem;
     margin-right: 2rem;
+  }
+
+  .lg\:my-12 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .lg\:mx-12 {
+    margin-left: 3rem;
+    margin-right: 3rem;
   }
 
   .lg\:my-16 {
@@ -13034,6 +13615,46 @@ hr {
   .lg\:mx-px {
     margin-left: 1px;
     margin-right: 1px;
+  }
+
+  .lg\:my-1\/5 {
+    margin-top: 20%;
+    margin-bottom: 20%;
+  }
+
+  .lg\:mx-1\/5 {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .lg\:my-1\/4 {
+    margin-top: 25%;
+    margin-bottom: 25%;
+  }
+
+  .lg\:mx-1\/4 {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+  .lg\:my-1\/3 {
+    margin-top: 33%;
+    margin-bottom: 33%;
+  }
+
+  .lg\:mx-1\/3 {
+    margin-left: 33%;
+    margin-right: 33%;
+  }
+
+  .lg\:my-1\/2 {
+    margin-top: 50%, ;
+    margin-bottom: 50%, ;
+  }
+
+  .lg\:mx-1\/2 {
+    margin-left: 50%, ;
+    margin-right: 50%, ;
   }
 
   .lg\:mt-0 {
@@ -13146,6 +13767,22 @@ hr {
 
   .lg\:ml-8 {
     margin-left: 2rem;
+  }
+
+  .lg\:mt-12 {
+    margin-top: 3rem;
+  }
+
+  .lg\:mr-12 {
+    margin-right: 3rem;
+  }
+
+  .lg\:mb-12 {
+    margin-bottom: 3rem;
+  }
+
+  .lg\:ml-12 {
+    margin-left: 3rem;
   }
 
   .lg\:mt-16 {
@@ -13306,6 +13943,70 @@ hr {
 
   .lg\:ml-px {
     margin-left: 1px;
+  }
+
+  .lg\:mt-1\/5 {
+    margin-top: 20%;
+  }
+
+  .lg\:mr-1\/5 {
+    margin-right: 20%;
+  }
+
+  .lg\:mb-1\/5 {
+    margin-bottom: 20%;
+  }
+
+  .lg\:ml-1\/5 {
+    margin-left: 20%;
+  }
+
+  .lg\:mt-1\/4 {
+    margin-top: 25%;
+  }
+
+  .lg\:mr-1\/4 {
+    margin-right: 25%;
+  }
+
+  .lg\:mb-1\/4 {
+    margin-bottom: 25%;
+  }
+
+  .lg\:ml-1\/4 {
+    margin-left: 25%;
+  }
+
+  .lg\:mt-1\/3 {
+    margin-top: 33%;
+  }
+
+  .lg\:mr-1\/3 {
+    margin-right: 33%;
+  }
+
+  .lg\:mb-1\/3 {
+    margin-bottom: 33%;
+  }
+
+  .lg\:ml-1\/3 {
+    margin-left: 33%;
+  }
+
+  .lg\:mt-1\/2 {
+    margin-top: 50%, ;
+  }
+
+  .lg\:mr-1\/2 {
+    margin-right: 50%, ;
+  }
+
+  .lg\:mb-1\/2 {
+    margin-bottom: 50%, ;
+  }
+
+  .lg\:ml-1\/2 {
+    margin-left: 50%, ;
   }
 
   .lg\:max-h-full {
@@ -14378,6 +15079,10 @@ hr {
     color: #191b1c;
   }
 
+  .lg\:text-pure-black {
+    color: #151616;
+  }
+
   .lg\:text-grey-darkest {
     color: #2d3342;
   }
@@ -14403,7 +15108,7 @@ hr {
   }
 
   .lg\:text-grey-lightest {
-    color: #eff2f1;
+    color: #f7f7f7;
   }
 
   .lg\:text-white {
@@ -14514,6 +15219,10 @@ hr {
     color: #191b1c;
   }
 
+  .lg\:hover\:text-pure-black:hover {
+    color: #151616;
+  }
+
   .lg\:hover\:text-grey-darkest:hover {
     color: #2d3342;
   }
@@ -14539,7 +15248,7 @@ hr {
   }
 
   .lg\:hover\:text-grey-lightest:hover {
-    color: #eff2f1;
+    color: #f7f7f7;
   }
 
   .lg\:hover\:text-white:hover {
@@ -15023,6 +15732,10 @@ hr {
   .lg\:bg-gradient-blue-dark-to-blue {
     background-image: linear-gradient(to right, #388dd1, #296699);
   }
+
+  .lg\:relative-margin {
+    margin-left: 33%;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -15055,6 +15768,10 @@ hr {
     background-color: #191b1c;
   }
 
+  .xl\:bg-pure-black {
+    background-color: #151616;
+  }
+
   .xl\:bg-grey-darkest {
     background-color: #2d3342;
   }
@@ -15080,7 +15797,7 @@ hr {
   }
 
   .xl\:bg-grey-lightest {
-    background-color: #eff2f1;
+    background-color: #f7f7f7;
   }
 
   .xl\:bg-white {
@@ -15191,6 +15908,10 @@ hr {
     background-color: #191b1c;
   }
 
+  .xl\:hover\:bg-pure-black:hover {
+    background-color: #151616;
+  }
+
   .xl\:hover\:bg-grey-darkest:hover {
     background-color: #2d3342;
   }
@@ -15216,7 +15937,7 @@ hr {
   }
 
   .xl\:hover\:bg-grey-lightest:hover {
-    background-color: #eff2f1;
+    background-color: #f7f7f7;
   }
 
   .xl\:hover\:bg-white:hover {
@@ -15391,6 +16112,10 @@ hr {
     border-color: #191b1c;
   }
 
+  .xl\:border-pure-black {
+    border-color: #151616;
+  }
+
   .xl\:border-grey-darkest {
     border-color: #2d3342;
   }
@@ -15416,7 +16141,7 @@ hr {
   }
 
   .xl\:border-grey-lightest {
-    border-color: #eff2f1;
+    border-color: #f7f7f7;
   }
 
   .xl\:border-white {
@@ -15527,6 +16252,10 @@ hr {
     border-color: #191b1c;
   }
 
+  .xl\:hover\:border-pure-black:hover {
+    border-color: #151616;
+  }
+
   .xl\:hover\:border-grey-darkest:hover {
     border-color: #2d3342;
   }
@@ -15552,7 +16281,7 @@ hr {
   }
 
   .xl\:hover\:border-grey-lightest:hover {
-    border-color: #eff2f1;
+    border-color: #f7f7f7;
   }
 
   .xl\:hover\:border-white:hover {
@@ -16409,6 +17138,10 @@ hr {
     margin: 2rem;
   }
 
+  .xl\:m-12 {
+    margin: 3rem;
+  }
+
   .xl\:m-16 {
     margin: 4rem;
   }
@@ -16447,6 +17180,22 @@ hr {
 
   .xl\:m-px {
     margin: 1px;
+  }
+
+  .xl\:m-1\/5 {
+    margin: 20%;
+  }
+
+  .xl\:m-1\/4 {
+    margin: 25%;
+  }
+
+  .xl\:m-1\/3 {
+    margin: 33%;
+  }
+
+  .xl\:m-1\/2 {
+    margin: 50%, ;
   }
 
   .xl\:my-0 {
@@ -16517,6 +17266,16 @@ hr {
   .xl\:mx-8 {
     margin-left: 2rem;
     margin-right: 2rem;
+  }
+
+  .xl\:my-12 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .xl\:mx-12 {
+    margin-left: 3rem;
+    margin-right: 3rem;
   }
 
   .xl\:my-16 {
@@ -16617,6 +17376,46 @@ hr {
   .xl\:mx-px {
     margin-left: 1px;
     margin-right: 1px;
+  }
+
+  .xl\:my-1\/5 {
+    margin-top: 20%;
+    margin-bottom: 20%;
+  }
+
+  .xl\:mx-1\/5 {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .xl\:my-1\/4 {
+    margin-top: 25%;
+    margin-bottom: 25%;
+  }
+
+  .xl\:mx-1\/4 {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+  .xl\:my-1\/3 {
+    margin-top: 33%;
+    margin-bottom: 33%;
+  }
+
+  .xl\:mx-1\/3 {
+    margin-left: 33%;
+    margin-right: 33%;
+  }
+
+  .xl\:my-1\/2 {
+    margin-top: 50%, ;
+    margin-bottom: 50%, ;
+  }
+
+  .xl\:mx-1\/2 {
+    margin-left: 50%, ;
+    margin-right: 50%, ;
   }
 
   .xl\:mt-0 {
@@ -16729,6 +17528,22 @@ hr {
 
   .xl\:ml-8 {
     margin-left: 2rem;
+  }
+
+  .xl\:mt-12 {
+    margin-top: 3rem;
+  }
+
+  .xl\:mr-12 {
+    margin-right: 3rem;
+  }
+
+  .xl\:mb-12 {
+    margin-bottom: 3rem;
+  }
+
+  .xl\:ml-12 {
+    margin-left: 3rem;
   }
 
   .xl\:mt-16 {
@@ -16889,6 +17704,70 @@ hr {
 
   .xl\:ml-px {
     margin-left: 1px;
+  }
+
+  .xl\:mt-1\/5 {
+    margin-top: 20%;
+  }
+
+  .xl\:mr-1\/5 {
+    margin-right: 20%;
+  }
+
+  .xl\:mb-1\/5 {
+    margin-bottom: 20%;
+  }
+
+  .xl\:ml-1\/5 {
+    margin-left: 20%;
+  }
+
+  .xl\:mt-1\/4 {
+    margin-top: 25%;
+  }
+
+  .xl\:mr-1\/4 {
+    margin-right: 25%;
+  }
+
+  .xl\:mb-1\/4 {
+    margin-bottom: 25%;
+  }
+
+  .xl\:ml-1\/4 {
+    margin-left: 25%;
+  }
+
+  .xl\:mt-1\/3 {
+    margin-top: 33%;
+  }
+
+  .xl\:mr-1\/3 {
+    margin-right: 33%;
+  }
+
+  .xl\:mb-1\/3 {
+    margin-bottom: 33%;
+  }
+
+  .xl\:ml-1\/3 {
+    margin-left: 33%;
+  }
+
+  .xl\:mt-1\/2 {
+    margin-top: 50%, ;
+  }
+
+  .xl\:mr-1\/2 {
+    margin-right: 50%, ;
+  }
+
+  .xl\:mb-1\/2 {
+    margin-bottom: 50%, ;
+  }
+
+  .xl\:ml-1\/2 {
+    margin-left: 50%, ;
   }
 
   .xl\:max-h-full {
@@ -17961,6 +18840,10 @@ hr {
     color: #191b1c;
   }
 
+  .xl\:text-pure-black {
+    color: #151616;
+  }
+
   .xl\:text-grey-darkest {
     color: #2d3342;
   }
@@ -17986,7 +18869,7 @@ hr {
   }
 
   .xl\:text-grey-lightest {
-    color: #eff2f1;
+    color: #f7f7f7;
   }
 
   .xl\:text-white {
@@ -18097,6 +18980,10 @@ hr {
     color: #191b1c;
   }
 
+  .xl\:hover\:text-pure-black:hover {
+    color: #151616;
+  }
+
   .xl\:hover\:text-grey-darkest:hover {
     color: #2d3342;
   }
@@ -18122,7 +19009,7 @@ hr {
   }
 
   .xl\:hover\:text-grey-lightest:hover {
-    color: #eff2f1;
+    color: #f7f7f7;
   }
 
   .xl\:hover\:text-white:hover {
@@ -18605,5 +19492,9 @@ hr {
 
   .xl\:bg-gradient-blue-dark-to-blue {
     background-image: linear-gradient(to right, #388dd1, #296699);
+  }
+
+  .xl\:relative-margin {
+    margin-left: 33%;
   }
 }

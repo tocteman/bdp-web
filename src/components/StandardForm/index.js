@@ -12,7 +12,7 @@ function encode(data) {
   return formData;
 }
 
-export default class FileUploadForm extends React.Component {
+export default class StandardForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};

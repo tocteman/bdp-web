@@ -64,9 +64,9 @@ const IndexPage = ({ data }) => (
     </div>
     <div className="bg-white">
       
-      <ul className="list-reset border-t-2 border-b-2 bg-white border-green-lightest mx-auto">
+      <ul className="list-reset border-t-2 border-b-2 bg-white border-grey-lightest mx-auto">
         {data.pasosHome.edges.map(post => (
-        <li className="m-0 p-0 w-full md:border-b-2 md:border-green-lightest py-2 sm:py-0">
+        <li className="m-0 p-0 w-full md:border-b-2 md:border-grey-lightest py-2 sm:py-0">
           <div className="sm:flex sm:flex-row items-center">
             <div className="sm:w-1/3">
                 <div className="z-20 my-8 sm:my-0 sm:mt-16 sm:ml-16 md:ml-24 lg:ml-32 xl:ml-1/5 sm:absolute mx-auto sm:flex justify-around items-center max-w-xl">
@@ -76,7 +76,7 @@ const IndexPage = ({ data }) => (
                   <div className="sm:w-2/3 max-w-md sm:ml-24 md:ml-16 sm:max-w-xs text-center sm:text-left w-full">
                     <h3 className="px-2 pb-3">{post.node.frontmatter.titulo}</h3>
                     <div className="mx-auto sm:mx-2 border-t-6 border-green w-12" />
-                    <h5 className="max-w-xs md:max-w-sm mx-auto mt-16 mb-2 px-2">{post.node.frontmatter.subtitulo}</h5>
+                    <h5 className="max-w-xs md:max-w-sm mx-auto mt-8 sm:mt-16 mb-2 px-2">{post.node.frontmatter.subtitulo}</h5>
                     <div dangerouslySetInnerHTML={{ __html: post.node.html }} className="max-w-xs md:max-w-sm leading-normal mx-auto px-2"/>
                   </div>
                 </div>

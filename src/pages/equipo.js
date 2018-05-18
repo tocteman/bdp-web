@@ -7,14 +7,13 @@ import QuieresTrabajar from '../components/QuieresTrabajar';
 const Equipo = ({ data }) => (
 <div>
     <div>
-      <div className="flex absolute z-10 text-white flex-wrap h-160 justify-end content-end items-end w-full">
-        <div className="flex-1"></div>
-        <div className="flex-2 p-8 md:p-32 max-w-md">
-          <div className="p-1 text-3xl sm:text-4xl leading-tight text-right bg-gradient-green-dark-to-green mb-2 font-semibold">Nuestra misión es que consigas la independencia financiera.</div>
-          <p className="p-1 text-xl leading-normal text-right bg-gradient-green-dark-to-green ">Empecemos por el ahorro. Conoce al equipo y por qué estamos haciendo esto.</p>
+      <div className="flex flex-col w-full absolute z-10 text-white h-americano justify-center">
+        <div className="mx-auto lg:max-w-xl md:ml-1/5 w-3/4">
+          <h1 className="text-2xl sm:text-5xl pb-4 p-1 mb-2 leading-tight tracking-tight max-w-lg text-white">Nuestra misión es ayudarte a lograr tu independencia financiera, comenzando por el ahorro.</h1>
+          <p className="text-xl text-grey-lighter leading-normal p-1 max-w-sm ">Conoce al equipo y por qué estamos haciendo esto.</p>
         </div>
       </div>
-      <Img sizes={data.columpioImage.sizes} className="h-160 m-0" />
+      <Img sizes={data.columpioImage.sizes} className="h-americano m-0" />
     </div>
     <div className="shadow-sm">
       <div className="m-8 p-4 mx-auto leading-normal max-w-xs sm:max-w-sm md:max-w-md text-center">
@@ -127,10 +126,10 @@ query IntegrantesQuery {
     }
   }
   columpioImage: imageSharp(id: {regex: "/header_columpio/"}){
-      sizes(maxWidth: 1920, cropFocus: ENTROPY, duotone: {
-    highlight: "#388dd1",
-    shadow: "#327dba",
-    opacity: 10
+      sizes(maxWidth: 3840, cropFocus: ENTROPY, duotone: {
+    highlight: "#151616",
+    shadow: "#151616",
+    opacity: 50
   }){
       ...GatsbyImageSharpSizes_noBase64
       }

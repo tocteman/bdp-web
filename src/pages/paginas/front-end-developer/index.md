@@ -3,6 +3,8 @@ path: "/frontend-developer"
 date: "2018-04-27"
 title: "Front-End Developer"
 puesto: "Desarrollo México"
+categoria: "Cargo"
+featuredImage: "../../../img/header_escritorio.jpg"
 ---
 
 ###Requisitos

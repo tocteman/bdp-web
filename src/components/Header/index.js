@@ -15,7 +15,6 @@ const Header = () => {
   const handleClickHome = function(e){
     e.preventDefault();
     navigateTo('/')
-    document.getElementById("nav").classList.toggle("hidden");
   }
 
   const handleClickReglas = function (e) {
@@ -38,29 +37,31 @@ const Header = () => {
   }
 
   return (
-    <Headroom className="z-40">
-      <nav className="bg-gradient-green-dark-to-green shadow-md">
-        <div className="flex flex-wrap items-center justify-between max-w-xl mx-auto p-4 md:p-4">
-          <div className="flex items-center no-underline text-white hover:text-grey-lightest cursor-pointer" onClick={handleClickHome}>
+    <Headroom className="z-40"
+      
+    >
+      <nav className="bg-grey-darkest">
+        <div className="flex flex-wrap items-center justify-between max-w-xl mx-auto px-4">
+          <div className="block md:inline-block md:mt-0 mr-6 no-underline text-grey-lightest hover:text-white py-3 hover:border-b-2 border-transparent border-b-2 cursor-pointer font-medium  hover:border-white" onClick={handleClickHome}>
             <span className="font-bold text-xl tracking-tight">
               Übank
           </span>
           </div>
 
 
-          <button className="block md:hidden flex items-center px-3 py-2 text-white" onClick={handleClick}>
+          <button className="block md:hidden flex items-center px-3 py-2 text-grey-lightest" onClick={handleClick}>
             <FaBars />
           </button>
 
           <div id="nav" className="hidden md:flex md:items-center w-full md:w-auto">
             <div className="text">
-              <div className="block md:inline-block mt-4 md:mt-0 mr-6 no-underline text-grey-lightest hover:text-grey-lightest cursor-pointer" onClick={handleClickReglas}>
+              <div className="block md:inline-block md:mt-0 mr-6 no-underline text-grey-lightest hover:text-white py-4 hover:border-b-2 border-transparent border-b-2 cursor-pointer font-medium hover:border-b-2 hover:border-white" onClick={handleClickReglas}>
                 Reglas
             </div>
-              <div className="block md:inline-block mt-4 md:mt-0 mr-6 no-underline text-grey-lightest hover:text-grey-lightest cursor-pointer" onClick={handleClickEquipo}>
+              <div className="block md:inline-block md:mt-0 mr-6 no-underline text-grey-lightest hover:text-white py-4 hover:border-b-2 border-transparent border-b-2 cursor-pointer font-medium hover:border-b-2 hover:border-white" onClick={handleClickEquipo}>
                 Equipo
               </div>
-              <div className="block md:inline-block mt-4 md:mt-0 mr-6 no-underline text-grey-lightest hover:text-grey-lightest cursor-pointer" onClick={handleClickUnete} id="unete">
+              <div className="block md:inline-block md:mt-0 mr-6 no-underline text-grey-lightest hover:text-white py-4 hover:border-b-2 border-transparent border-b-2 cursor-pointer font-medium hover:border-b-2 hover:border-white" onClick={handleClickUnete} id="unete">
                 Ünete
             </div>
             </div>

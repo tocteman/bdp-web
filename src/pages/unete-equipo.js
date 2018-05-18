@@ -6,14 +6,13 @@ const UneteEquipo = ({ data }) => (
 
 <div>
     <div>
-      <div className="flex absolute z-10 flex-wrap h-160  w-full">
-        <div className="flex-1"></div>
-        <div className="flex-2 p-8 md:p-32 max-w-md mt-8">
-          <h1 className="p-1 leading-tight text-right mb-2 bg-grey-lightest sm:bg-transparent">Ünete a nuestro equipo.</h1>
-          <p className="p-1 font-medium text-xl leading-normal text-right bg-grey-lightest sm:bg-transparent">Ayúdanos a construir esta nueva forma de ahorrar e invertir.</p>
+      <div className="flex flex-col w-full absolute z-10 text-white h-medio justify-center">
+        <div className="mx-auto lg:max-w-xl md:ml-1/5 w-3/4">
+          <h1 className="text-4xl sm:text-5xl pb-4 p-1 mb-2 leading-tight tracking-tight max-w-md text-white">Ünete a nuestro equipo.</h1>
+          <p className="text-xl text-grey-lighter leading-normal p-1 max-w-md">Ayúdanos a construir esta nueva forma de ahorrar e invertir.</p>
         </div>
       </div>
-      <Img sizes={data.escritorioImage.sizes} className="h-160 m-0" />
+      <Img sizes={data.escritorioImage.sizes} className="h-medio m-0" />
     </div>
     <div className="mb-16">
     <h3 className="mt-8 mb-4 mx-auto py-4 text-center pb-3">Ünete a la familia</h3>
@@ -61,10 +60,10 @@ export const uneteQuery = graphql`
         }
       }
     escritorioImage: imageSharp(id: {regex: "/header_escritorio/"}){
-      sizes(maxWidth: 1920, cropFocus: ENTROPY, duotone: {
-   highlight: "#184059",
+      sizes(maxWidth: 3840, cropFocus: ENTROPY, duotone: {
+   highlight: "#151616",
     shadow: "#191b1c",
-    opacity: 5
+    opacity: 60
   }){
       ...GatsbyImageSharpSizes_noBase64
       }

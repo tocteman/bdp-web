@@ -6,7 +6,6 @@ import GooglePlay from '../img/aunNoTienes/google_play.svg'
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "./index.css";
-require("typeface-ibm-plex-sans")
 import Img from 'gatsby-image'
 
 const TemplateWrapper = ({ children, data }) => (

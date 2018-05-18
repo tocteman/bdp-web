@@ -9,15 +9,13 @@ import IdeaRegla from '../components/IdeaRegla';
 const Reglas = ({ data }) => (
   <div>
     <div>
-      <div className="flex absolute z-10 text-white max-w-xl flex-wrap h-160 sm:h-128 lg:items-center">
-        <div className="mt-84 sm:mt-4 md:flex-2 sm:ml-4 mt-4 p-4 max-w-sm lg:ml-16 xl:ml-32 lg:p-16">
-          <p className="text-3xl sm:text-4xl font-semibold pb-4 p-1 bg-gradient-blue-dark-to-blue mb-2">Transforma tu vida con ahorros automáticos.</p>
-          <p className="text-xl leading-normal bg-gradient-blue-dark-to-blue p-1">Conoce las <strong>Reglas de Ahorro autómatico</strong> y descubre las miles de formas en las que puedes ahorrar sin esfuerzo.</p>
+      <div className="flex flex-col w-full absolute z-10 text-white h-americano justify-center">
+        <div className="mx-auto lg:max-w-xl md:ml-1/5 w-3/4">
+          <h1 className="text-4xl sm:text-5xl pb-4 p-1 mb-2 leading-tight tracking-tight max-w-sm text-white">Transforma tu vida en ahorros automáticos.</h1>
+          <p className="text-xl text-grey-lighter leading-normal p-1 max-w-sm">Conoce las <strong>Reglas de Ahorro autómatico</strong> y descubre las miles de formas en las que puedes ahorrar sin esfuerzo.</p>
         </div>
-        <div className="flex-1"></div>
       </div>
-
-      <Img sizes={data.surfImage.sizes} className="h-160 m-0" />
+      <Img sizes={data.surfImage.sizes} className="h-americano m-0" />
     </div>
     <div className="shadow-sm">
       <div className="mt-8 p-4 mx-auto leading-normal text-black max-w-xs sm:max-w-sm md:max-w-md text-center">
@@ -132,7 +130,11 @@ export const queryReglas = graphql`
       }
     }
     surfImage: imageSharp(id: {regex: "/header_surf/"}){
-      sizes(maxWidth: 1920, cropFocus: ENTROPY){
+      sizes(maxWidth: 3840, quality:80, cropFocus: ENTROPY 
+                    duotone: {
+                    highlight: "#151616",
+                    shadow: "#191b1c",
+                    opacity: 50  }){
       ...GatsbyImageSharpSizes_noBase64
       }
     }

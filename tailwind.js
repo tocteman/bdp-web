@@ -153,7 +153,17 @@ module.exports = {
 
   fonts: {
     'sans': [
-      'IBM Plex Sans',
+      'system-ui',
+      'BlinkMacSystemFont',
+      '-apple-system',
+      'Segoe UI',
+      'Roboto',
+      'Oxygen',
+      'Ubuntu',
+      'Cantarell',
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
       'sans-serif',
     ],
     'serif': [
@@ -338,7 +348,9 @@ module.exports = {
     default: '1px',
     '0': '0',
     '2': '2px',
+    '3': '3px',
     '4': '4px',
+    '6': '6px',
     '8': '8px',
   },
 
@@ -482,8 +494,23 @@ module.exports = {
     '200': '50rem',
     '240': '60rem',
     '320': '80rem',
+    '1/3': '33%',
+    '1/2': '50%',
+    '2/3': '66%',
+    '3/4': '75%',
+    '4/5': '80%',
     'full': '100%',
-    'screen': '100vh'
+    'fullymiedo': '150%',
+    'fulldostercios': '166%',
+    'cuarto': '25vh',
+    'medio': '50vh',
+    'americano': '75vh',
+    'casitoda': '87vh',
+    'screen': '100vh',
+    'screen1/2': '150vh',
+    'screen2/3': '167vh',
+    'screen2': '200vh'
+
   },
 
 
@@ -554,6 +581,10 @@ module.exports = {
     '3xl': '80rem',
     '4xl': '90rem',
     '5xl': '100rem',
+    '1/2': '50%',
+    '2/3': '66%',
+    '3/4': '75%',
+    '4/5': '80%',
     'full': '100%',
   },
 
@@ -703,6 +734,7 @@ module.exports = {
   shadows: {
     default: '0 2px 4px 0 rgba(49,96,153,0.10)',
     'md': '0 4px 8px 0 rgba(49,96,153,0.12), 0 2px 4px 0 rgba(49,96,153,0.08)',
+    'light': '0 2px 4px 0 rgba(247,247,247,0.2), 0 2px 4px 0 rgba(247,247,247,0.08)',
     'lg': '0 15px 30px 0 rgba(49,96,153,0.11), 0 5px 15px 0 rgba(49,96,153,0.08)',
     'inner': 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
     'none': 'none',
@@ -821,8 +853,8 @@ module.exports = {
     backgroundSize: ['responsive'],
     borderColors: ['responsive', 'hover'],
     borderRadius: ['responsive'],
-    borderStyle: ['responsive'],
-    borderWidths: ['responsive'],
+    borderStyle: ['responsive', 'hover'],
+    borderWidths: ['responsive', 'hover'],
     cursor: ['responsive'],
     display: ['responsive'],
     flexbox: ['responsive'],

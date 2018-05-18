@@ -11,7 +11,7 @@ const Reglas = ({ data }) => (
     <div>
       <div className="flex flex-col w-full absolute z-10 text-white h-americano justify-center">
         <div className="mx-auto lg:max-w-xl md:ml-1/5 w-3/4">
-          <h1 className="text-4xl sm:text-5xl pb-4 p-1 mb-2 leading-tight tracking-tight max-w-sm text-white">Transforma tu vida en ahorros automáticos.</h1>
+          <h1 className="text-4xl sm:text-5xl pb-4 p-1 mb-2 leading-tight max-w-sm text-white">Transforma tu vida en ahorros automáticos.</h1>
           <p className="text-xl text-grey-lighter leading-normal p-1 max-w-sm">Conoce las <strong>Reglas de Ahorro autómatico</strong> y descubre las miles de formas en las que puedes ahorrar sin esfuerzo.</p>
         </div>
       </div>

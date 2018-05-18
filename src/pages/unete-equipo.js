@@ -8,7 +8,7 @@ const UneteEquipo = ({ data }) => (
     <div>
       <div className="flex flex-col w-full absolute z-10 text-white h-medio justify-center">
         <div className="mx-auto lg:max-w-xl md:ml-1/5 w-3/4">
-          <h1 className="text-4xl sm:text-5xl pb-4 p-1 mb-2 leading-tight tracking-tight max-w-md text-white">Ünete a nuestro equipo.</h1>
+          <h1 className="text-4xl sm:text-5xl pb-4 p-1 mb-2 leading-tight max-w-md text-white">Ünete a nuestro equipo.</h1>
           <p className="text-xl text-grey-lighter leading-normal p-1 max-w-md">Ayúdanos a construir esta nueva forma de ahorrar e invertir.</p>
         </div>
       </div>

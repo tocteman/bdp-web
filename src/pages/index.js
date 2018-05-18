@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => (
        <div className="flex flex-col w-full absolute z-10 h-screen2/3 sm:h-screen1/2 md:h-screen xl:h-casitoda justify-around md:justify-center items-center">
         <div className="sm:flex items-center justify-around mx-auto w-full max-w-xl">
           <div className="md:w-3/5 max-w-sm mx-auto text-center">
-            <h1 className="text-4xl lg:text-5xl p-2 mb-2 leading-tight tracking-tight max-w-sm text-white">Tu vida. Tus reglas. <br/> Tus ahorros.</h1>
+            <h1 className="text-4xl lg:text-5xl p-2 mb-2 leading-tight max-w-sm text-white">Tu vida. Tus reglas. <br/> Tus ahorros.</h1>
             <p className="text-base lg:text-xl text-grey-lighter leading-normal max-w-xs mx-auto text-center lg:max-w-sm p-2">Übank es la forma más fácil y entretenida para ahorrar y hacer tus sueños realidad.</p>
             <button className="rounded-full bg-green text-white mx-2 px-3 py-2 my-3 hover:bg-green-dark shadow-light">Download</button>
             <div className="sm:flex justify-between py-4 max-w-xs text-center mx-auto w-3/5">

@@ -10,7 +10,7 @@ export default function VacanteTemplate({ data }) {
 
   return (
     <div>
-      <div>
+      {/* <div>
         <div className="flex flex-col w-full absolute z-10 text-white h-medio justify-center">
           <div className="mx-auto lg:max-w-xl md:ml-1/5 w-3/4">
             <h1 className="text-4xl sm:text-5xl pb-4 p-1 mb-2 leading-tight tracking-tight max-w-sm text-white">Ünete a nuestro equipo.</h1>
@@ -18,7 +18,7 @@ export default function VacanteTemplate({ data }) {
           </div>
         </div>
         <Img sizes={post.frontmatter.featuredImage.childImageSharp.sizes} className="h-medio m-0" />
-      </div>
+      </div> */}
     <div className="mx-auto font-light leading-normal m-8 p-4 sm:max-w-sm md:max-w-md">
       <Link to="/unete-equipo" className="no-underline py-12 text-grey-darker hover:text-green-darker">
         <TiArrowBack className="text-3xl" /> Regresar</Link>

@@ -1,9 +1,8 @@
 ---
-    nombre: "Quinton"
-    apellido: "Bruce"
-    cargo: "CFO at Megacorp"
+    nombre: "Felipe"
+    cargo: "Primeros Usuarios"
     relacion: "testimonio"
-    imagen: "../../../img/home-testimonios/Corporate-portrait-photography.jpg"
+    imagen: "../../../img/home-testimonios/10882359_10152542748488231_2774785315377170598_n.jpg"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae temporibus aliquam natus laborum iste, nobis est, aliquid sapiente assumenda. Dicta consectetur distinctio ex. Quasi tempora repudiandae praesentium aspernatur in qui, laborum modi minus sed vero.
+¡He ahorrado mucho más de lo que hubiera conseguido por mi cuenta! ¡Ni lo he notado!

@@ -168,7 +168,7 @@ const IndexPage = ({ data }) => (
     <hr />
     <ul className="pt-3 flex flex-wrap justify-center max-w-xl mx-auto list-reset">{data.datosTestimonios.edges.map(post => (
       <li className="sm:w-1/2 lg:w-1/3 p-4 mx-auto text-center">
-          <Img resolutions={post.node.frontmatter.imagen.childImageSharp.resolutions} className="rounded-full shadow-md" />
+          <Img resolutions={post.node.frontmatter.imagen.childImageSharp.resolutions} className="rounded shadow-md" />
           <div className="max-w-sm mx-auto p-4">
           <div className="font-semibold text-xl sm:text-2xl mt-2 leading-tight text-center">{post.node.frontmatter.nombre} {post.node.frontmatter.apellido}</div>
             <p className="text-grey-darker font-light pb-2">{post.node.frontmatter.cargo}</p>
@@ -180,7 +180,7 @@ const IndexPage = ({ data }) => (
       </ul>
 
       <div className="bg-grey-lightest rounded shadow-md mx-auto mt-16 py-16">
-        <div className="text-center mx-auto text-2xl font-semibold sm:text-3xl pb-3">Hablemos</div>
+        <div className="text-center mx-auto text-2xl font-semibold sm:text-3xl pb-3">Solicita tu invitación</div>
         <hr className="pb-3"/>
         <RegistroForm />
       </div>

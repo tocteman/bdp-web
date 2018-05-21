@@ -172,7 +172,7 @@ const IndexPage = ({ data }) => (
           <div className="max-w-sm mx-auto p-4">
           <div className="font-semibold text-xl sm:text-2xl mt-2 leading-tight text-center">{post.node.frontmatter.nombre} {post.node.frontmatter.apellido}</div>
             <p className="text-grey-darker font-light pb-2">{post.node.frontmatter.cargo}</p>
-            <p className="max-w-xs leading-normal mx-auto text-sm">{post.node.excerpt}</p>
+            <p className="max-w-xs leading-normal mx-auto text-sm italic font-light">{post.node.excerpt}</p>
           </div>
           
           </li>

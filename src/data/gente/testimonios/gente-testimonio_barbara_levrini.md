@@ -6,4 +6,4 @@
     imagen: "../../../img/home-testimonios/Barbara Levrini.jpg"
 ---
 
-¡En realidad ayuda a ahorrar! Lo mejor es que es sin darnos cuenta. Es automático, eficiente, ¡fácil!
+¡En realidad ayuda a ahorrar! Es automático, eficiente, ¡fácil!

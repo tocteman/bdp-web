@@ -5,4 +5,4 @@
     imagen: "../../../img/home-testimonios/pablo.jpg"
 ---
 
-Estoy muy satisfecho con Übank: es práctico. Fácil de usar. Nos quedamos sin excusas para no ahorrar.
+Es práctico y fácil de usar. Estoy muy satisfecho. Ya no hay excusas para no ahorrar.

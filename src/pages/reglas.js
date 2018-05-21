@@ -22,34 +22,37 @@ const Reglas = ({ data }) => (
         <div className="text-3xl sm:text-4xl font-bold pb-3 leading-tight">Por qué ahorrar en automático.</div>
         <hr />
         <p className="py-3 leading-normal">Ahorrar siempre ha sido difícil y solo unos pocos han conseguido hacerlo de manera constante. Hasta ahora. Las <em>Reglas de Ahorro</em> son la mejor forma de ahorrar de manera entretenida y sin esfuerzo. Configura las <em>Reglas</em> según tu estilo de vida y deja que te lleven hacia tus sueños y metas.</p>
-        
-
+        <hr className="py-3"/>
+        <p className="py-4">Cada regla está compuesta de una condición y una resolución.</p>
       </div>
-      <div className="max-w-xs sm:max-w-sm mx-auto mt-4">
-        <div className="italic p-4 text-center">Las reglas son condiciones que se componen de dos partes: un evento y un ahorro.</div>
-      <div className="flex mb-8">
-      <div className="w-4/5 mx-auto">
-        <ul className="list-reset mx-auto text-black max-w-sm">
-          <li className="p-4 m-4 rounded-lg bg-white shadow-md flex items-center justify-around">
-              <div>Cada que compro un</div>
-              <div><img src={IconoCafe} width="50" className="ml-2"/></div>
+      
+      <div className="flex flex-col max-w-xl mx-auto mb-8 pb-8">
+        <ul className="list-reset">
+          {data.explicacionDatos.edges.map(post => (
+            <li className="py-4 mx-auto">
+              <div className="md:flex w-xl mx-auto text-center">
+              <div className="flex items-center justify-around md:justify-around md:w-1/2">
+                <div className="text-3xl md:text-4xl font-semibold">{post.node.frontmatter.condicionTexto}</div>
+                    <div className="flex flex-col items-center justify-center text-center">
+                      <Img resolutions={post.node.frontmatter.fotoRegla.childImageSharp.resolutions} />
+                      <div className="text-grey-dark text-sm">{post.node.frontmatter.explicacionRegla}</div>
+                      </div>
+                </div>
+                <div className="flex items-center justify-around md:justify-around py-4 md:py-2 md:w-1/2">
+                    <div className="text-3xl md:text-4xl font-semibold text-center">ahorro para</div> 
+                    <div className="flex flex-col items-center text-center mr-2">
+                    <Img resolutions={post.node.frontmatter.fotoResolucion.childImageSharp.resolutions} className="rounded"/>
+                    <div className="text-grey-dark text-sm">{post.node.frontmatter.explicacionResolucion}</div>
+                    </div>
+                </div>
+              </div>
+              <hr className="py-4" />
             </li>
-            <li className="p-4 m-4 rounded-lg bg-white shadow-md flex items-center justify-around">
-              <div>ahorro</div>  
-              <div><span className="text-green text-4xl font-bold">$30</span></div>
-            </li>
-            <li className="p-4 m-4 rounded-lg bg-white shadow-md flex items-center justify-around">
-              <div>para mi meta.</div>
-              <div><img src={ReglaCompletandose} width="50" className="ml-4"/></div>
-            </li>
+          ))}
         </ul>
-        </div>
-        <div className="flex flex-col justify-center -ml-8 pt-8">
-          <div><img src={FlechaAbajo} width="25" className="pb-8 pt-12 mr-16 sm:mr-32"/></div>
-          <div><img src={FlechaAbajo} width="25" className="pb-8 -mt-2 mr-16 sm:mr-32"/></div>
-        </div>
       </div>
-    </div>
+
+    
     </div>
     <div className="bg-grey-lightest border-t-1 border-grey pb-8">
       <ul className="flex flex-wrap px-3 sm:px-8 mx-auto justify-center py-16 max-w-3xl">
@@ -80,9 +83,9 @@ const Reglas = ({ data }) => (
 )
 
 export const queryReglas = graphql`
-  query indexReglasQuery {
+query indexReglasQuery {
     datosReglas: allMarkdownRemark(
-    filter: {fields: {slug:{regex:"/regla_/"} }}
+    filter: {fields: {slug:{regex:"/ejemplo-regla_/"} }}
   ){
       edges {
         node{
@@ -138,27 +141,42 @@ export const queryReglas = graphql`
       ...GatsbyImageSharpSizes_noBase64
       }
     }
-     cafeImage: allMarkdownRemark(
-       filter: {fields: {slug:{regex:"/regla_placer-culposo/"} }}
-     ){
-       edges{
-         node{
-           frontmatter{
-             icono{
-              childImageSharp{
-                resolutions(
-                  width: 35
-                  height: 35
+     explicacionDatos: allMarkdownRemark(filter:{fields:{slug:{regex:"/explicacion-regla_/"}}}){
+    edges {
+      node {
+        frontmatter{
+          fotoRegla {
+              childImageSharp {
+                resolutions (
+                  quality:90
+                  width: 125
+                  height: 125
+                  cropFocus: ENTROPY
                 ){
                   ...GatsbyImageSharpResolutions_noBase64
                 }
               }
             }
-           }
-         }
-       }
-     }
+          fotoResolucion {
+              childImageSharp {
+                resolutions (
+                  quality:90
+                  width: 125
+                  height: 125
+                  cropFocus: ENTROPY
+                ){
+                  ...GatsbyImageSharpResolutions_noBase64
+                }
+              }
+            }
+          explicacionRegla
+          explicacionResolucion
+          condicionTexto
+        }
+      }
+    }
   }
+}
 `
 
 export default Reglas

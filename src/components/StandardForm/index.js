@@ -57,30 +57,30 @@ export default class StandardForm extends React.Component {
               <label className="mb-4">
                 Nombre:<br />
               </label>
-              <input type="text" name="name" onChange={this.handleChange} className="appearance-none text-blue-darkest bg-white focus:bg-blue-lighest border-green-lightest  rounded-lg shadow py-3 px-4 text-sm my-2" /> 
+              <input type="text" name="name" onChange={this.handleChange} className="appearance-none text-grey-darkest focus:bg-grey-light bg-grey-lightest rounded-lg shadow py-3 px-4 text-sm my-2" /> 
             </div>
 
             <div className="md:w-1/2 py-3 px-2 px-4 text-center">
               <label className="mb-4">
                 Apellido:<br />
               </label>
-              <input type="text" name="name" onChange={this.handleChange} className="appearance-none text-blue-darkest bg-white focus:bg-blue-lighest border-green-lightest  rounded-lg shadow py-3 px-4 text-sm my-2" />
+              <input type="text" name="name" onChange={this.handleChange} className="appearance-none text-grey-darkest bg-grey-lightest focus:bg-grey-light rounded-lg shadow py-3 px-4 text-sm my-2" />
             </div>
 
             <div className="py-3 px-2 px-4 md:max-w-lg text-center">
               <label>
                 Email:<br />
               </label>
-              <input type="email" name="name" onChange={this.handleChange} className="appearance-none text-blue-darkest bg-white focus:bg-blue-lighest border-green-lightest  rounded-lg shadow py-3 px-4 text-sm md:w-128 my-2" />
+              <input type="email" name="name" onChange={this.handleChange} className="appearance-none text-grey-darkest bg-grey-lightest  focus:bg-blue-lighest rounded-lg shadow py-3 px-4 text-sm md:w-128 my-2" />
             </div>
 
             <div className="w-full py-3 px-4 max-w-lg text-center">
               <label>Cuéntanos<br/></label>
-              <textarea type="message" name="message" onChange={this.handleChange} className="appearance-none text-blue-darkest bg-white focus:bg-blue-lightest border-green-lightest rounded-lg shadow py-3 px-4 text-sm md:w-128 my-2"></textarea>
+              <textarea type="message" name="message" onChange={this.handleChange} className="appearance-none text-grey-darkest bg-grey-lightest  focus:bg-blue-lightest border-green-lightest rounded-lg shadow py-3 px-4 text-sm md:w-128 my-2"></textarea>
             </div>
 
             <div className="text-center">
-              <button type="submit" className="mt-4 mx-2 sm:mx-4 rounded text-white bg-green-dark hover:bg-green px-6 py-3 shadow-md" onSubmit={this.handleSubmit}>Enviar</button>
+              <button type="submit" className="mt-4 mx-2 sm:mx-4 rounded text-white bg-green hover:bg-green-dark px-6 py-3 shadow-md" onSubmit={this.handleSubmit}>Enviar</button>
             </div>
           </div>
         </form>

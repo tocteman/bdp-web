@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
+import ModalForm from '../components/ModalForm'
 
 const UneteEquipo = ({ data }) => (
 
@@ -17,7 +18,7 @@ const UneteEquipo = ({ data }) => (
     <div className="mb-16">
     <h3 className="mt-8 mb-4 mx-auto py-4 text-center pb-3">Ünete a la familia</h3>
     <hr/>
-    <p className="pt-3 pb-8 text-center">Estamos buscando personas que quieran cambiar el mundo, un paso a la vez.</p>
+      <p className="pt-3 pb-8 text-center">Estamos buscando personas que quieran cambiar el mundo, un paso a la vez.</p>
     {data.vacanteIndexQuery.edges.map(post => (
       <div className="flex mx-auto max-w-xl">
         <div className="w-full">
@@ -34,7 +35,7 @@ const UneteEquipo = ({ data }) => (
         <br/>
       </div>
     ))}
-    <p className="text-center mx-auto py-12">¿No encuentras lo que estás buscando? <span className="text-green">Escríbenos</span> y veremos algo para ti.</p>
+      <p className="text-center mx-auto py-12">¿No encuentras lo que estás buscando? <ModalForm /> y veremos algo para ti.</p>
     </div>
   </div>
 )

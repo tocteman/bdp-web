@@ -52,32 +52,38 @@ export default class RegistroForm extends React.Component {
               Don’t fill this out: <input name="bot-field" onChange={this.handleChange} />
             </label>
           </p>
-          <div className="md:flex flex-wrap justify-center mx-3">
-            <div className="md:w-1/2 py-3 px-4 text-center">
-              <label className="mb-2 font-medium">
+
+          <div className="flex flex-col items-center md:items-stretch ">
+          <div className="md:flex justify-around">
+            <div className=" py-3 px-4">
+              <label className="font-medium">
                 Nombre:<br />
               </label>
-              <input type="text" name="name" onChange={this.handleChange} className="appearance-none text-grey-darkest bg-white focus:bg-grey-lighest rounded-lg shadow py-3 px-4 text-sm my-2" />
+              <input type="text" name="name" onChange={this.handleChange} className="appearance-none text-grey-darkest bg-white focus:bg-grey-lighest rounded-lg shadow py-3 px-4 text-sm my-2 w-48" />
             </div>
 
-            <div className="md:w-1/2 py-3 px-2 px-4 text-center">
-              <label className="mb-2 font-medium">
+            <div className="py-3 px-2 px-4">
+              <label className="font-medium">
                 Apellido:<br />
               </label>
-              <input type="text" name="name" onChange={this.handleChange} className="appearance-none text-grey-darkest bg-white focus:bg-grey-lighest  rounded-lg shadow py-3 px-4 text-sm my-2" />
+                <input type="text" name="name" onChange={this.handleChange} className="appearance-none text-grey-darkest bg-white focus:bg-grey-lightest rounded-lg shadow py-3 px-4 w-48 text-sm my-2" />
             </div>
             </div>
+          </div>
 
-            <div className="py-3 px-2 px-4 md:max-w-lg text-center">
-              <label className="font-medium">
+            <div className="flex flex-col items-center md:items-stretch">
+            <div className="py-3 px-2 px-4">
+              <label className="font-medium mx-auto md:ml-12">
                 Email:<br />
               </label>
               <input type="email" name="name" onChange={this.handleChange} className="appearance-none text-grey-darkest bg-white focus:bg-grey-lighest border-green-lightest block rounded-lg shadow py-3 px-4 text-sm md:w-128 my-2 mx-auto" />
             </div>
+          </div>
+            
 
-            <div className="flex flex-col items-center md:items-stretch">
+            <div className="flex flex-col items-center md:items-stretch ">
               <div className="md:flex justify-around">
-                <div className="text-center py-3">
+                <div className="py-3">
                   <label className="font-medium">
                     País:<br />
                   </label>
@@ -100,7 +106,7 @@ export default class RegistroForm extends React.Component {
                 </div>
               </div>
 
-                <div className="text-center py-3">
+                <div className="py-3">
                   <label className="font-medium">
                     Dispositivo:<br />
                   </label>
@@ -117,7 +123,7 @@ export default class RegistroForm extends React.Component {
               </div>
           </div>
           <div className="flex flex-col items-center">
-            <div className="py-3 px-2 px-4 max-w-sm md:max-w-lg text-center py-3">
+            <div className="py-3 px-2 px-4 max-w-sm md:max-w-lg py-3">
               <label className="font-medium">
                 Banco:<br />
               </label>
@@ -151,13 +157,8 @@ export default class RegistroForm extends React.Component {
             </div>
           </div>
 
-            <div className="w-full py-3 px-4 max-w-lg text-center">
-              <label className="font-medium">Cuéntanos<br /></label>
-              <textarea type="message" name="message" onChange={this.handleChange} className="appearance-none text-grey-darkest bg-white focus:bg-grey-lightest border-green-lightest rounded-lg shadow py-3 px-4 text-sm md:w-128 my-2"></textarea>
-            </div>
-
             <div className="text-center">
-              <button type="submit" className="mt-4 mx-2 sm:mx-4 rounded text-white bg-green hover:bg-green-dark px-6 py-3 shadow-md" onSubmit={this.handleSubmit}>Enviar</button>
+              <button type="submit" className="mt-4 mx-2 sm:mx-4 rounded text-white bg-green hover:bg-green-dark px-8 py-3 shadow-md" onSubmit={this.handleSubmit}>Enviar</button>
             </div>
 
         </form>

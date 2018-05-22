@@ -15,17 +15,18 @@ import RegistroForm from '../components/RegistroForm'
 import AunNoLoTienes from "../components/AunNoLoTienes";
 import AppleStore from "../img/aunNoTienes/apple_store.svg"
 import GooglePlay from '../img/aunNoTienes/google_play.svg'
+import {navigateTo} from "gatsby-link"
 
 const IndexPage = ({ data }) => (
   <div>
      <div>
        <div className="flex flex-col w-full absolute z-10 h-screen2/3 sm:h-screen1/2 md:h-screen xl:h-casitoda justify-around md:justify-center items-center">
         <div className="sm:flex items-center justify-around mx-auto w-full max-w-xl">
-          <div className="md:w-3/5 max-w-sm mx-auto text-center">
+          <div className="md:w-3/5 max-w-sm mx-auto">
             <h1 className="text-4xl lg:text-5xl p-2 py-4 mb-2 leading-tight max-w-sm text-white">Tu vida. Tus reglas. Tus ahorros.</h1>
-            <p className="text-base lg:text-xl text-grey-lighter leading-normal max-w-xs mx-auto text-center lg:max-w-sm p-2">Übank es la forma más fácil y entretenida para ahorrar y hacer tus sueños realidad.</p>
-            <button className="rounded-full bg-green text-white mx-2 px-3 py-2 my-3 hover:bg-green-dark shadow-light">Download</button>
-            <div className="sm:flex justify-between py-4 max-w-xs text-center mx-auto w-3/5">
+            <p className="text-base lg:text-xl text-grey-lighter leading-normal max-w-xs mx-auto lg:max-w-sm p-2">Übank es la forma más fácil y entretenida para ahorrar y hacer tus sueños realidad.</p>
+            <a href="/#solicitud"><button className="rounded bg-green text-white mx-2 px-8 py-4 my-3 hover:bg-green-dark shadow-light"> Descargar</button></a>
+            <div className="sm:flex justify-between py-4 max-w-xs w-3/5">
               <img src={GooglePlay} className="w-32" />
               <img src={AppleStore} className="w-32" />
             </div>
@@ -168,7 +169,7 @@ const IndexPage = ({ data }) => (
     <hr />
     <ul className="pt-3 flex flex-wrap justify-center max-w-xl mx-auto list-reset">{data.datosTestimonios.edges.map(post => (
       <li className="sm:w-1/2 lg:w-1/3 p-4 mx-auto text-center">
-          <Img resolutions={post.node.frontmatter.imagen.childImageSharp.resolutions} className="rounded shadow-md" />
+          <Img resolutions={post.node.frontmatter.imagen.childImageSharp.resolutions} className="rounded-full shadow-md" />
           <div className="max-w-sm mx-auto p-4">
           <div className="font-semibold text-xl sm:text-2xl mt-2 leading-tight text-center">{post.node.frontmatter.nombre} {post.node.frontmatter.apellido}</div>
             <p className="text-grey-darker font-light pb-2">{post.node.frontmatter.cargo}</p>
@@ -178,7 +179,7 @@ const IndexPage = ({ data }) => (
           </li>
       ))}
       </ul>
-
+    <a name="solicitud" />
       <div className="bg-grey-lightest rounded shadow-md mx-auto mt-16 py-16">
         <div className="text-center mx-auto text-2xl font-semibold sm:text-3xl pb-3">Solicita tu invitación</div>
         <hr className="pb-3"/>
@@ -303,12 +304,12 @@ export const query = graphql`
         ...GatsbyImageSharpResolutions_noBase64
       }
     }
-    creceImage: imageSharp(id: { regex: "/crece/"}){
+    creceImage: imageSharp(id: { regex: "/icono-crece/"}){
       resolutions(width:90){
         ...GatsbyImageSharpResolutions_noBase64
       }
     }
-    coctelImage: imageSharp(id: { regex: "/coctel/"}){
+    coctelImage: imageSharp(id: { regex: "/icono-coctel/"}){
       resolutions(width:90){
         ...GatsbyImageSharpResolutions_noBase64
       }

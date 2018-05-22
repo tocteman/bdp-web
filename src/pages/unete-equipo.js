@@ -61,7 +61,7 @@ export const uneteQuery = graphql`
         }
       }
     escritorioImage: imageSharp(id: {regex: "/header_escritorio/"}){
-      sizes(maxWidth: 3840, cropFocus: ENTROPY, duotone: {
+      sizes(maxWidth: 1920, cropFocus: ENTROPY, duotone: {
    highlight: "#151616",
     shadow: "#191b1c",
     opacity: 60

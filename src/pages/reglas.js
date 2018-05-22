@@ -133,7 +133,7 @@ query indexReglasQuery {
       }
     }
     surfImage: imageSharp(id: {regex: "/header_surf/"}){
-      sizes(maxWidth: 3840, quality:80, cropFocus: ENTROPY 
+      sizes(maxWidth: 1920, cropFocus: ENTROPY 
                     duotone: {
                     highlight: "#151616",
                     shadow: "#191b1c",

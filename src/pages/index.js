@@ -284,7 +284,7 @@ export const query = graphql`
     }
   }
   headerEstrellas: imageSharp(id: { regex: "/header_estrellas/"}){
-      sizes(maxWidth:3840, quality:75, duotone: {highlight: "#151616", shadow: "#191b1c", opacity: 45} )
+      sizes(maxWidth:1920, duotone: {highlight: "#151616", shadow: "#191b1c", opacity: 45} )
       {
         ...GatsbyImageSharpSizes_noBase64
       }

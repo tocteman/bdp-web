@@ -126,7 +126,7 @@ query IntegrantesQuery {
     }
   }
   columpioImage: imageSharp(id: {regex: "/header_columpio/"}){
-      sizes(maxWidth: 3840, cropFocus: ENTROPY, duotone: {
+      sizes(maxWidth: 1920, cropFocus: ENTROPY, duotone: {
     highlight: "#151616",
     shadow: "#151616",
     opacity: 50

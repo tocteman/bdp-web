@@ -15,7 +15,9 @@ function encode(data) {
 export default class StandardForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+   this.state = {value: ''};
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange = e => {
@@ -29,7 +31,7 @@ export default class StandardForm extends React.Component {
   handleSubmit = e => {
     fetch("/", {
       method: "POST",
-      body: encode({ "form-name": "file-upload", ...this.state })
+      body: encode({ "form-name": "standard-form", ...this.state })
     })
       .then(() => alert("Hemos recibido tu formulario"))
       .catch(error => alert(error));
@@ -41,7 +43,7 @@ export default class StandardForm extends React.Component {
     return (
       <div className="mx-auto sm:max-w-sm md:max-w-md">
         <form
-          name="file-upload"
+          name="standard-form"
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"

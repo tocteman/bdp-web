@@ -690,6 +690,23 @@ hr {
   border-top: 6px solid #17c671;
 }
 
+@keyframes bajan {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(-60%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
 .list-reset {
   list-style: none;
   padding: 0;
@@ -804,7 +821,7 @@ hr {
 }
 
 .bg-green-dark {
-  background-color: #1aaf5d;
+  background-color: #14a860;
 }
 
 .bg-green {
@@ -944,7 +961,7 @@ hr {
 }
 
 .hover\:bg-green-dark:hover {
-  background-color: #1aaf5d;
+  background-color: #14a860;
 }
 
 .hover\:bg-green:hover {
@@ -1148,7 +1165,7 @@ hr {
 }
 
 .border-green-dark {
-  border-color: #1aaf5d;
+  border-color: #14a860;
 }
 
 .border-green {
@@ -1288,7 +1305,7 @@ hr {
 }
 
 .hover\:border-green-dark:hover {
-  border-color: #1aaf5d;
+  border-color: #14a860;
 }
 
 .hover\:border-green:hover {
@@ -2255,6 +2272,14 @@ hr {
 
 .h-full {
   height: 100%;
+}
+
+.h-fullymiedo {
+  height: 150%;
+}
+
+.h-fulldostercios {
+  height: 166%;
 }
 
 .h-cuarto {
@@ -4148,7 +4173,7 @@ hr {
 }
 
 .text-green-dark {
-  color: #1aaf5d;
+  color: #14a860;
 }
 
 .text-green {
@@ -4288,7 +4313,7 @@ hr {
 }
 
 .hover\:text-green-dark:hover {
-  color: #1aaf5d;
+  color: #14a860;
 }
 
 .hover\:text-green:hover {
@@ -4725,6 +4750,10 @@ hr {
   margin-left: 33%;
 }
 
+.bajan-suave {
+  animation: bajan 1s 0s ease-out;
+}
+
 @media (min-width: 576px) {
   .sm\:list-reset {
     list-style: none;
@@ -4840,7 +4869,7 @@ hr {
   }
 
   .sm\:bg-green-dark {
-    background-color: #1aaf5d;
+    background-color: #14a860;
   }
 
   .sm\:bg-green {
@@ -4980,7 +5009,7 @@ hr {
   }
 
   .sm\:hover\:bg-green-dark:hover {
-    background-color: #1aaf5d;
+    background-color: #14a860;
   }
 
   .sm\:hover\:bg-green:hover {
@@ -5184,7 +5213,7 @@ hr {
   }
 
   .sm\:border-green-dark {
-    border-color: #1aaf5d;
+    border-color: #14a860;
   }
 
   .sm\:border-green {
@@ -5324,7 +5353,7 @@ hr {
   }
 
   .sm\:hover\:border-green-dark:hover {
-    border-color: #1aaf5d;
+    border-color: #14a860;
   }
 
   .sm\:hover\:border-green:hover {
@@ -6291,6 +6320,14 @@ hr {
 
   .sm\:h-full {
     height: 100%;
+  }
+
+  .sm\:h-fullymiedo {
+    height: 150%;
+  }
+
+  .sm\:h-fulldostercios {
+    height: 166%;
   }
 
   .sm\:h-cuarto {
@@ -8176,7 +8213,7 @@ hr {
   }
 
   .sm\:text-green-dark {
-    color: #1aaf5d;
+    color: #14a860;
   }
 
   .sm\:text-green {
@@ -8316,7 +8353,7 @@ hr {
   }
 
   .sm\:hover\:text-green-dark:hover {
-    color: #1aaf5d;
+    color: #14a860;
   }
 
   .sm\:hover\:text-green:hover {
@@ -8752,6 +8789,10 @@ hr {
   .sm\:relative-margin {
     margin-left: 33%;
   }
+
+  .sm\:bajan-suave {
+    animation: bajan 1s 0s ease-out;
+  }
 }
 
 @media (min-width: 768px) {
@@ -8869,7 +8910,7 @@ hr {
   }
 
   .md\:bg-green-dark {
-    background-color: #1aaf5d;
+    background-color: #14a860;
   }
 
   .md\:bg-green {
@@ -9009,7 +9050,7 @@ hr {
   }
 
   .md\:hover\:bg-green-dark:hover {
-    background-color: #1aaf5d;
+    background-color: #14a860;
   }
 
   .md\:hover\:bg-green:hover {
@@ -9213,7 +9254,7 @@ hr {
   }
 
   .md\:border-green-dark {
-    border-color: #1aaf5d;
+    border-color: #14a860;
   }
 
   .md\:border-green {
@@ -9353,7 +9394,7 @@ hr {
   }
 
   .md\:hover\:border-green-dark:hover {
-    border-color: #1aaf5d;
+    border-color: #14a860;
   }
 
   .md\:hover\:border-green:hover {
@@ -10320,6 +10361,14 @@ hr {
 
   .md\:h-full {
     height: 100%;
+  }
+
+  .md\:h-fullymiedo {
+    height: 150%;
+  }
+
+  .md\:h-fulldostercios {
+    height: 166%;
   }
 
   .md\:h-cuarto {
@@ -12205,7 +12254,7 @@ hr {
   }
 
   .md\:text-green-dark {
-    color: #1aaf5d;
+    color: #14a860;
   }
 
   .md\:text-green {
@@ -12345,7 +12394,7 @@ hr {
   }
 
   .md\:hover\:text-green-dark:hover {
-    color: #1aaf5d;
+    color: #14a860;
   }
 
   .md\:hover\:text-green:hover {
@@ -12781,6 +12830,10 @@ hr {
   .md\:relative-margin {
     margin-left: 33%;
   }
+
+  .md\:bajan-suave {
+    animation: bajan 1s 0s ease-out;
+  }
 }
 
 @media (min-width: 992px) {
@@ -12898,7 +12951,7 @@ hr {
   }
 
   .lg\:bg-green-dark {
-    background-color: #1aaf5d;
+    background-color: #14a860;
   }
 
   .lg\:bg-green {
@@ -13038,7 +13091,7 @@ hr {
   }
 
   .lg\:hover\:bg-green-dark:hover {
-    background-color: #1aaf5d;
+    background-color: #14a860;
   }
 
   .lg\:hover\:bg-green:hover {
@@ -13242,7 +13295,7 @@ hr {
   }
 
   .lg\:border-green-dark {
-    border-color: #1aaf5d;
+    border-color: #14a860;
   }
 
   .lg\:border-green {
@@ -13382,7 +13435,7 @@ hr {
   }
 
   .lg\:hover\:border-green-dark:hover {
-    border-color: #1aaf5d;
+    border-color: #14a860;
   }
 
   .lg\:hover\:border-green:hover {
@@ -14349,6 +14402,14 @@ hr {
 
   .lg\:h-full {
     height: 100%;
+  }
+
+  .lg\:h-fullymiedo {
+    height: 150%;
+  }
+
+  .lg\:h-fulldostercios {
+    height: 166%;
   }
 
   .lg\:h-cuarto {
@@ -16234,7 +16295,7 @@ hr {
   }
 
   .lg\:text-green-dark {
-    color: #1aaf5d;
+    color: #14a860;
   }
 
   .lg\:text-green {
@@ -16374,7 +16435,7 @@ hr {
   }
 
   .lg\:hover\:text-green-dark:hover {
-    color: #1aaf5d;
+    color: #14a860;
   }
 
   .lg\:hover\:text-green:hover {
@@ -16810,6 +16871,10 @@ hr {
   .lg\:relative-margin {
     margin-left: 33%;
   }
+
+  .lg\:bajan-suave {
+    animation: bajan 1s 0s ease-out;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -16927,7 +16992,7 @@ hr {
   }
 
   .xl\:bg-green-dark {
-    background-color: #1aaf5d;
+    background-color: #14a860;
   }
 
   .xl\:bg-green {
@@ -17067,7 +17132,7 @@ hr {
   }
 
   .xl\:hover\:bg-green-dark:hover {
-    background-color: #1aaf5d;
+    background-color: #14a860;
   }
 
   .xl\:hover\:bg-green:hover {
@@ -17271,7 +17336,7 @@ hr {
   }
 
   .xl\:border-green-dark {
-    border-color: #1aaf5d;
+    border-color: #14a860;
   }
 
   .xl\:border-green {
@@ -17411,7 +17476,7 @@ hr {
   }
 
   .xl\:hover\:border-green-dark:hover {
-    border-color: #1aaf5d;
+    border-color: #14a860;
   }
 
   .xl\:hover\:border-green:hover {
@@ -18378,6 +18443,14 @@ hr {
 
   .xl\:h-full {
     height: 100%;
+  }
+
+  .xl\:h-fullymiedo {
+    height: 150%;
+  }
+
+  .xl\:h-fulldostercios {
+    height: 166%;
   }
 
   .xl\:h-cuarto {
@@ -20263,7 +20336,7 @@ hr {
   }
 
   .xl\:text-green-dark {
-    color: #1aaf5d;
+    color: #14a860;
   }
 
   .xl\:text-green {
@@ -20403,7 +20476,7 @@ hr {
   }
 
   .xl\:hover\:text-green-dark:hover {
-    color: #1aaf5d;
+    color: #14a860;
   }
 
   .xl\:hover\:text-green:hover {
@@ -20838,5 +20911,9 @@ hr {
 
   .xl\:relative-margin {
     margin-left: 33%;
+  }
+
+  .xl\:bajan-suave {
+    animation: bajan 1s 0s ease-out;
   }
 }

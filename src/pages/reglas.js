@@ -5,6 +5,8 @@ import IconoCafe from '../img/iconos-colores/icono-placer-culpable.png'
 import ReglaCompletandose from '../img/fotos_reglas/regla_completandose.png'
 import FlechaAbajo from '../img/fotos_reglas/flechaAbajo.png'
 import IdeaRegla from '../components/IdeaRegla';
+import SliderReglas from '../components/SliderReglas'
+import CarouselOne from '../components/CarouselOne'
 
 const Reglas = ({ data }) => (
   <div>
@@ -26,31 +28,9 @@ const Reglas = ({ data }) => (
         <p className="py-4">Cada regla está compuesta de una condición y una resolución.</p>
       </div>
       
-      <div className="flex flex-col max-w-xl mx-auto mb-8 pb-8">
-        <ul className="list-reset">
-          {data.explicacionDatos.edges.map(post => (
-            <li className="py-4 mx-auto">
-              <div className="md:flex w-xl mx-auto text-center">
-              <div className="flex items-center justify-around md:justify-around md:w-1/2">
-                <div className="text-3xl md:text-4xl font-semibold">{post.node.frontmatter.condicionTexto}</div>
-                    <div className="flex flex-col items-center justify-center text-center">
-                      <Img resolutions={post.node.frontmatter.fotoRegla.childImageSharp.resolutions} />
-                      <div className="text-grey-dark text-sm">{post.node.frontmatter.explicacionRegla}</div>
-                      </div>
-                </div>
-                <div className="flex items-center justify-around md:justify-around py-4 md:py-2 md:w-1/2">
-                    <div className="text-3xl md:text-4xl font-semibold text-center">ahorro para</div> 
-                    <div className="flex flex-col items-center text-center mr-2">
-                    <Img resolutions={post.node.frontmatter.fotoResolucion.childImageSharp.resolutions} className="rounded"/>
-                    <div className="text-grey-dark text-sm">{post.node.frontmatter.explicacionResolucion}</div>
-                    </div>
-                </div>
-              </div>
-              <hr className="py-4" />
-            </li>
-          ))}
-        </ul>
-      </div>
+
+      
+          <SliderReglas animDuration={1}/>
 
     
     </div>
@@ -141,41 +121,6 @@ query indexReglasQuery {
       ...GatsbyImageSharpSizes_noBase64
       }
     }
-     explicacionDatos: allMarkdownRemark(filter:{fields:{slug:{regex:"/explicacion-regla_/"}}}){
-    edges {
-      node {
-        frontmatter{
-          fotoRegla {
-              childImageSharp {
-                resolutions (
-                  quality:90
-                  width: 125
-                  height: 125
-                  cropFocus: ENTROPY
-                ){
-                  ...GatsbyImageSharpResolutions_noBase64
-                }
-              }
-            }
-          fotoResolucion {
-              childImageSharp {
-                resolutions (
-                  quality:90
-                  width: 125
-                  height: 125
-                  cropFocus: ENTROPY
-                ){
-                  ...GatsbyImageSharpResolutions_noBase64
-                }
-              }
-            }
-          explicacionRegla
-          explicacionResolucion
-          condicionTexto
-        }
-      }
-    }
-  }
 }
 `
 

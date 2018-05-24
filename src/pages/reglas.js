@@ -31,7 +31,7 @@ const Reglas = ({ data }) => (
       </div>
       
       <div className="bg-white">
-      <Carousel autoPlay={true} infiniteLoop={true} width="100%" interval={4000} transitionTime={400} showStatus={false} showIndicators={false} showArrows={false} showThumbs={false} axis="vertical" className="bg-white">
+      <Carousel autoPlay={true} infiniteLoop={true} width="100%" interval={4000} transitionTime={400} showStatus={false} showIndicators={false} showArrows={false} showThumbs={false} axis="vertical" dynamicHeight={true} swipeable={false} stopOnHover={false} className="bg-white">
         {data.explicacionesDatos.edges.map(post => (
           <div className="py-4 mx-auto bg-white max-w-xl">
             <div className="md:flex w-xl mx-auto text-center">
@@ -39,7 +39,7 @@ const Reglas = ({ data }) => (
                 <div className="text-3xl md:text-4xl font-semibold">{post.node.frontmatter.condicionTexto}</div>
                 <div className="flex flex-col items-center justify-center text-center">
                   <img src={post.node.frontmatter.fotoRegla.childImageSharp.resolutions.src} />
-                  <div className="text-grey-dark text-sm">{post.node.frontmatter.explicacionRegla}</div>
+                  <div className="text-grey-dark text-sm py-2">{post.node.frontmatter.explicacionRegla}</div>
                 </div>
                 <div></div>
               </div>
@@ -47,7 +47,7 @@ const Reglas = ({ data }) => (
                 <div className="text-3xl md:text-4xl font-semibold text-center">ahorro para</div>
                 <div className="flex flex-col items-center text-center mr-2">
                   <img src={post.node.frontmatter.fotoResolucion.childImageSharp.resolutions.src} className="rounded" />
-                  <div className="text-grey-dark text-sm">{post.node.frontmatter.explicacionResolucion}</div>
+                  <div className="text-grey-dark text-sm py-2">{post.node.frontmatter.explicacionResolucion}</div>
                 </div>
               </div>
             </div>
@@ -157,9 +157,9 @@ query indexReglasQuery {
         fotoRegla {
               childImageSharp {
                 resolutions (
-                  quality:90
-                  width: 125
-                  height: 125
+                  quality:100
+                  width: 200
+                  height: 200
                   cropFocus: ENTROPY
                 ){
                   ...GatsbyImageSharpResolutions_noBase64
@@ -169,9 +169,9 @@ query indexReglasQuery {
             fotoResolucion {
             childImageSharp {
               resolutions (
-                quality:90
-                width: 125
-                height: 125
+                quality:100
+                width: 200
+                height: 200
                 cropFocus: ENTROPY
               ){
                 ...GatsbyImageSharpResolutions_noBase64

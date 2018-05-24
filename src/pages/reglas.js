@@ -7,7 +7,8 @@ import FlechaAbajo from '../img/fotos_reglas/flechaAbajo.png'
 import IdeaRegla from '../components/IdeaRegla';
 import SliderReglas from '../components/SliderReglas'
 import {Carousel} from 'react-responsive-carousel'
-import "react-responsive-carousel/lib/styles/carousel.min.css"
+import "../../src/layouts/carousel.min.css"
+// import "react-responsive-carousel/lib/styles/carousel.min.css"
 
 const Reglas = ({ data }) => (
   <div>
@@ -30,7 +31,7 @@ const Reglas = ({ data }) => (
       </div>
       
       <div className="bg-white">
-      <Carousel autoPlay={true} infiniteLoop={true} width="100%" interval={5000} transitionTime={300} showStatus={false} showIndicators={false} showArrows={false} showThumbs={false} axis="vertical" className="bg-white">
+      <Carousel autoPlay={true} infiniteLoop={true} width="100%" interval={4000} transitionTime={400} showStatus={false} showIndicators={false} showArrows={false} showThumbs={false} axis="vertical" className="bg-white">
         {data.explicacionesDatos.edges.map(post => (
           <div className="py-4 mx-auto bg-white max-w-xl">
             <div className="md:flex w-xl mx-auto text-center">

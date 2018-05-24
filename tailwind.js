@@ -126,7 +126,8 @@ module.exports = {
   */
 
   screens: {
-    'sm': '576px',
+    'xs': '370px',
+    'sm': '600px',
     'md': '768px',
     'lg': '992px',
     'xl': '1200px',
@@ -507,6 +508,8 @@ module.exports = {
     'americano': '75vh',
     'casitoda': '87vh',
     'screen': '100vh',
+    'screen1/4': '125vh',
+    'screen1/3': '133vh',
     'screen1/2': '150vh',
     'screen2/3': '167vh',
     'screen2': '200vh'

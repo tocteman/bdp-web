@@ -30,23 +30,23 @@ const Reglas = ({ data }) => (
         <p className="py-4">Cada regla está compuesta de una condición y una resolución.</p>
       </div>
       
-      <div className="bg-white">
+      <div className="bg-white mx-6">
       <Carousel autoPlay={true} infiniteLoop={true} width="100%" interval={4000} transitionTime={400} showStatus={false} showIndicators={false} showArrows={false} showThumbs={false} axis="vertical" dynamicHeight={true} swipeable={false} stopOnHover={false} className="bg-white">
         {data.explicacionesDatos.edges.map(post => (
           <div className="py-4 mx-auto bg-white max-w-xl">
             <div className="md:flex w-xl mx-auto text-center">
-              <div className="flex items-center justify-around md:justify-around md:w-1/2">
+              <div className="flex items-center justify-end md:justify-around md:w-1/2">
                 <div className="text-3xl md:text-4xl font-semibold">{post.node.frontmatter.condicionTexto}</div>
-                <div className="flex flex-col items-center justify-center text-center">
-                  <img src={post.node.frontmatter.fotoRegla.childImageSharp.resolutions.src} />
+                <div className="flex flex-col items-center justify-center text-center mx-2">
+                  <img src={post.node.frontmatter.fotoRegla.childImageSharp.resolutions.src} width="250"/>
                   <div className="text-grey-dark text-sm py-2">{post.node.frontmatter.explicacionRegla}</div>
                 </div>
                 <div></div>
               </div>
-              <div className="flex items-center justify-around md:justify-around py-4 md:py-2 md:w-1/2">
+              <div className="flex items-center justify-end md:justify-around py-4 md:py-2 md:w-1/2">
                 <div className="text-3xl md:text-4xl font-semibold text-center">ahorro para</div>
-                <div className="flex flex-col items-center text-center mr-2">
-                  <img src={post.node.frontmatter.fotoResolucion.childImageSharp.resolutions.src} className="rounded" />
+                <div className="flex flex-col items-center text-center mx-2">
+                  <img src={post.node.frontmatter.fotoResolucion.childImageSharp.resolutions.src} className="rounded" width="250"/>
                   <div className="text-grey-dark text-sm py-2">{post.node.frontmatter.explicacionResolucion}</div>
                 </div>
               </div>

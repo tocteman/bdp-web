@@ -20,8 +20,8 @@ import { navigateTo } from "gatsby-link"
 const IndexPage = ({ data }) => (
   <div>
     <div>
-      <div className="flex flex-col w-full absolute z-10 h-screen2/3 sm:h-screen1/2 md:h-screen xl:h-casitoda justify-around md:justify-center items-center">
-        <div className="md:flex items-center justify-around mx-auto w-full max-w-xl">
+      <div className="flex flex-col w-full absolute z-10 h-screen2/3 xs:h-screen1/4 md:h-screen xl:h-casitoda justify-between xs:justify-around md:justify-center md:items-center">
+        <div className="md:flex md:items-center mx-auto w-full max-w-xl">
           <div className="md:w-3/5 max-w-sm mx-auto">
             <h1 className="text-center md:text-left md:ml-8 lg:ml-0 text-4xl lg:text-5xl p-2 py-4 mb-2 leading-tight max-w-sm text-white">Tu vida. Tus reglas. <br/> Tus ahorros.</h1>
             <p className="text-base text-center md:text-left lg:text-xl text-grey-lighter leading-normal max-w-sm lg:max-w-sm p-2 md:ml-8 lg:ml-0">Übank es la forma más fácil y entretenida para ahorrar y hacer tus sueños realidad.</p>
@@ -38,7 +38,7 @@ const IndexPage = ({ data }) => (
           </div>
         </div>
       </div>
-      <Img sizes={data.headerEstrellas.sizes} className="h-screen2/3 sm:h-screen1/2 md:h-screen xl:h-casitoda m-0" />
+      <Img sizes={data.headerEstrellas.sizes} className="h-screen2/3 xs:h-screen1/4 md:h-screen xl:h-casitoda m-0" />
     </div>
     <div className="w-full bg-grey-lightest">
       <div className="flex pt-16 px-8 pb-8 mx-auto text-grey-darkest max-w-xl bg-grey-lightest">

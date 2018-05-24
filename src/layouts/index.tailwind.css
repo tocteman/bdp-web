@@ -68,6 +68,24 @@ hr {
   }
 }
 
+@keyframes desaparecen {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  ,
+  50% {
+    transform: translateY(60%);
+    opacity: 0.5;
+  }
+  ,
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+
 @tailwind utilities;
 
 @responsive {
@@ -87,5 +105,9 @@ hr {
   .bajan-suave {
     animation: bajan 1s 0s ease-out;
   }
+
+   .desaparecen-suave {
+     animation: desaparecen 1s 0s ease-in;
+   }
 
 }

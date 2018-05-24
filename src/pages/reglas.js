@@ -6,7 +6,8 @@ import ReglaCompletandose from '../img/fotos_reglas/regla_completandose.png'
 import FlechaAbajo from '../img/fotos_reglas/flechaAbajo.png'
 import IdeaRegla from '../components/IdeaRegla';
 import SliderReglas from '../components/SliderReglas'
-import CarouselOne from '../components/CarouselOne'
+import {Carousel} from 'react-responsive-carousel'
+import "react-responsive-carousel/lib/styles/carousel.min.css"
 
 const Reglas = ({ data }) => (
   <div>
@@ -28,9 +29,33 @@ const Reglas = ({ data }) => (
         <p className="py-4">Cada regla está compuesta de una condición y una resolución.</p>
       </div>
       
-
+      <div className="bg-white">
+      <Carousel autoPlay={true} infiniteLoop={true} width="100%" interval={5000} transitionTime={300} showStatus={false} showIndicators={false} showArrows={false} showThumbs={false} axis="vertical" className="bg-white">
+        {data.explicacionesDatos.edges.map(post => (
+          <div className="py-4 mx-auto bg-white max-w-xl">
+            <div className="md:flex w-xl mx-auto text-center">
+              <div className="flex items-center justify-around md:justify-around md:w-1/2">
+                <div className="text-3xl md:text-4xl font-semibold">{post.node.frontmatter.condicionTexto}</div>
+                <div className="flex flex-col items-center justify-center text-center">
+                  <img src={post.node.frontmatter.fotoRegla.childImageSharp.resolutions.src} />
+                  <div className="text-grey-dark text-sm">{post.node.frontmatter.explicacionRegla}</div>
+                </div>
+                <div></div>
+              </div>
+              <div className="flex items-center justify-around md:justify-around py-4 md:py-2 md:w-1/2">
+                <div className="text-3xl md:text-4xl font-semibold text-center">ahorro para</div>
+                <div className="flex flex-col items-center text-center mr-2">
+                  <img src={post.node.frontmatter.fotoResolucion.childImageSharp.resolutions.src} className="rounded" />
+                  <div className="text-grey-dark text-sm">{post.node.frontmatter.explicacionResolucion}</div>
+                </div>
+              </div>
+            </div>
+            <hr className="py-4" />
+            </div>
+      ))}
+      </Carousel>
+      </div>
       
-          <SliderReglas animDuration={1}/>
 
     
     </div>
@@ -68,19 +93,19 @@ query indexReglasQuery {
     filter: {fields: {slug:{regex:"/ejemplo-regla_/"} }}
   ){
       edges {
-        node{
-          frontmatter {
-            nombre
-            requerimento
-            icono{
-              childImageSharp{
-                resolutions(
-                  width: 50
-                  height: 50
-                ){
-                  ...GatsbyImageSharpResolutions_noBase64
+          node{
+            frontmatter {
+              nombre
+              requerimento
+              icono{
+                childImageSharp{
+                  resolutions(
+                    width: 50
+                    height: 50
+                  ){
+                    ...GatsbyImageSharpResolutions_noBase64
+                  }
                 }
-              }
             }
             miniIcono{
               childImageSharp {
@@ -112,8 +137,8 @@ query indexReglasQuery {
         }
       }
     }
-    surfImage: imageSharp(id: {regex: "/header_surf/"}){
-      sizes(maxWidth: 1920, cropFocus: ENTROPY 
+     surfImage: imageSharp(id: {regex: "/header_surf/"}){
+      sizes(maxWidth: 1920, cropFocus: ENTROPY
                     duotone: {
                     highlight: "#151616",
                     shadow: "#191b1c",
@@ -121,6 +146,41 @@ query indexReglasQuery {
       ...GatsbyImageSharpSizes_noBase64
       }
     }
+    explicacionesDatos: allMarkdownRemark(filter:{fields:{slug:{regex:"/explicacion-regla_/"}}}){
+      edges {
+        node{
+                frontmatter {
+        explicacionRegla
+        explicacionResolucion
+        condicionTexto
+        fotoRegla {
+              childImageSharp {
+                resolutions (
+                  quality:90
+                  width: 125
+                  height: 125
+                  cropFocus: ENTROPY
+                ){
+                  ...GatsbyImageSharpResolutions_noBase64
+                }
+              }
+            }
+            fotoResolucion {
+            childImageSharp {
+              resolutions (
+                quality:90
+                width: 125
+                height: 125
+                cropFocus: ENTROPY
+              ){
+                ...GatsbyImageSharpResolutions_noBase64
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 `
 

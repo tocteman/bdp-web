@@ -1,50 +1,78 @@
 import React from "react"
 import Link from "gatsby-link"
 import Img from "gatsby-image"
-import cabify from "../../img/fotos_reglas/cabify_blanco.jpg"
-import escudoMexico from "../../img/fotos_reglas/escudo_mexico.jpg"
+import { Carousel } from 'react-responsive-carousel'
+import "react-responsive-carousel/lib/styles/carousel.min.css"
 
-class SliderReglas extends React.Component {
-  constructor(props ) {
-    super(props)
-    this.fotos = [cabify, escudoMexico]
-    this.state = { fotosIndex: 0 }
+const SliderReglas = ({ frontmatter: { condicionTexto, explicacionResolucion, fotoRegla, fotoResolucion, explicacionRegla}}) => (
+  <div className="flex flex-col max-w-xl mx-auto mb-8 pb-8">
+    
+      {/* {data.explicacionesDatos.edges.map(post => ( */}
+    <Carousel autoPlay={true} infiniteLoop={true} width="100%" interval={5000} transitionTime={300} showStatus={false} showIndicators={false} showArrows={false} axis="vertical">
+        <div>
+        <img src={fotoRegla.childImageSharp.resolutions.src} alt=""/>
+        </div>
+    </Carousel>
+  </div>
+)
 
-    this.cambiarFoto = this.cambiarFoto.bind(this)
-  }
-
-  componentDidMount() {
-    this.timeout = setTimeout(
-      this.cambiarFoto,
-      this.props.animDuration * 3000
-    )
-  }
-
-  componentWillUnmount() {
-    if (this.timeout) clearTimeout(this.timeout)
-  }
-
-  cambiarFoto() {
-    this.setState(function ({ fotosIndex }) {
-      const sigFotoIndex = ++fotosIndex % this.fotos.length
-      return { fotosIndex: sigFotoIndex }
-    }, function () {
-      this.timeout = setTimeout(
-        this.cambiarFoto,
-        this.props.animDuration * 2000
-      )
-    })
-  }
-
-  render() {
-    return (
-      <div>
-      <img src={this.fotos[this.state.fotosIndex]} width="300" height="300"/>
-      </div>
-    )
-  }
-
+export const queryExplicacion = graphql`
+fragment ExplicacionReglasFragment on MarkdownRemark{
+      frontmatter {
+        explicacionRegla
+        explicacionResolucion
+        condicionTexto
+        fotoRegla {
+              childImageSharp {
+                resolutions (
+                  quality:90
+                  width: 125
+                  height: 125
+                  cropFocus: ENTROPY
+                ){
+                  ...GatsbyImageSharpResolutions_noBase64
+                }
+              }
+            }
+            fotoResolucion {
+            childImageSharp {
+              resolutions (
+                quality:90
+                width: 125
+                height: 125
+                cropFocus: ENTROPY
+              ){
+                ...GatsbyImageSharpResolutions_noBase64
+              }
+            }
+          }
+      }
+      
 }
+`
 
 export default SliderReglas;
 
+
+
+{/* <div className="py-4 mx-auto">
+  <div className="md:flex w-xl mx-auto text-center">
+    <div className="flex items-center justify-around md:justify-around md:w-1/2">
+      <div className="text-3xl md:text-4xl font-semibold">{condicionTexto}</div>
+      <div className="flex flex-col items-center justify-center text-center">
+        <img src={fotoRegla.childImageSharp.resolutions.src} />
+        <div className="text-grey-dark text-sm">{explicacionRegla}</div>
+      </div>
+      <div></div>
+    </div>
+    <div className="flex items-center justify-around md:justify-around py-4 md:py-2 md:w-1/2">
+      <div className="text-3xl md:text-4xl font-semibold text-center">ahorro para</div>
+      <div className="flex flex-col items-center text-center mr-2">
+        <img src={fotoResolucion.childImageSharp.resolutions.src} className="rounded" />
+        <div className="text-grey-dark text-sm">{explicacionResolucion}</div>
+      </div>
+    </div>
+  </div>
+  <hr className="py-4" />
+  {/* ))} */}
+// </div> */}

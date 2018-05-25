@@ -1,7 +1,7 @@
 ---
-fotoRegla: "../../../img/fotos_reglas/starbucksUno.jpg"
-explicacionRegla: "que compro en Starbucks"
-fotoResolucion: "../../../img/fotos_reglas/iphone_cuadrado.jpg"
+fotoRegla: "../../../img/fotos_reglas/tazaCarton.jpg"
+explicacionRegla: "que compro un café"
+fotoResolucion: "../../../img/fotos_reglas/iPhoneX.jpg"
 explicacionResolucion: "mi teléfono nuevo"
 condicionTexto: "Cada café"
 ---

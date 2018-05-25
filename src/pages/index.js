@@ -13,7 +13,7 @@ import Img from 'gatsby-image'
 import StandardForm from '../components/StandardForm'
 import RegistroForm from '../components/RegistroForm'
 import AunNoLoTienes from "../components/AunNoLoTienes";
-import AppleStore from "../img/aunNoTienes/apple_store.svg"
+import AppleStore from "../img/aunNoTienes/app_store_alt.svg"
 import GooglePlay from '../img/aunNoTienes/google_play.svg'
 import { navigateTo } from "gatsby-link"
 
@@ -184,6 +184,7 @@ const IndexPage = ({ data }) => (
     <a name="solicitud" />
     <div className="bg-grey-lightest rounded shadow-md mx-auto mt-16 py-16">
       <div className="text-center mx-auto text-2xl font-semibold sm:text-3xl pb-3">Solicita tu invitación</div>
+      <div className="text-center max-w-sm p-3 leading-normal mx-auto">Se te acabaron las excusas para no ahorrar. Regístrate para ser el primero en usar Übank cuando esté disponible en tu país.</div>
       <hr className="pb-3" />
       <RegistroForm />
     </div>
@@ -296,7 +297,7 @@ export const query = graphql`
         ...GatsbyImageSharpSizes_noBase64
       }
     }
-  iphoneImage: imageSharp(id: { regex: "/home_welcome_iphone/"}){
+  iphoneImage: imageSharp(id: { regex: "/home_pasos_home/"}){
       resolutions(width:225){
         ...GatsbyImageSharpResolutions_noBase64
       }

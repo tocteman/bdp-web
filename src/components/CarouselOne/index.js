@@ -63,16 +63,18 @@ export default class CarouselOne extends React.Component {
 
     }
     return (
-      <div className="flex flex-col sm:block py-4  max-w-xl mx-auto ">
+      <div className="flex flex-col md:block py-4  max-w-xl mx-auto ">
         <div className="lg:flex justify-around text-center">
-          <div className="xs:flex items-center justify-around py-4 md:py-2 lg:w-1/2">
-            <div className="mask-texto bg-white py-4 font-semibold xs:w-2/5 w-48 mx-auto ">
-              <div className={`currentTexto font-semibold text-2xl sm:text-3xl w-48 text-center ${move}`}>
+          <div className="sm:flex items-center justify-around py-4 md:py-2 lg:w-1/2 mx-auto">
+            <div className="mask-texto bg-white py-4 font-semibold mx-auto">
+              
+              <div className={`currentTexto font-semibold text-2xl sm:text-3xl w-48 text-center relative mx-auto  ${move}`}>
                   {inicioEnunciado[this.state.index]}
                 </div>
-              <div className={`nextTexto texto font-semibold text-2xl sm:text-3xl w-48 text-center py-4 ${move}`}>
+              <div className={`nextTexto texto font-semibold text-2xl sm:text-3xl w-48 mx-auto ${move}`}>
                   {inicioEnunciado[this.state.next]}
                 </div>
+                
             </div>
         <div className="flex flex-col items-center mx-auto">
           <div className="mask mb-4">
@@ -99,8 +101,8 @@ export default class CarouselOne extends React.Component {
           </div>
         </div>
           </div>
-          <div className="xs:flex items-center justify-around md:py-2 lg:w-1/2 mx-auto">
-            <div className="text-2xl sm:text-3xl pb-8 sm:pb-0 font-semibold text-center mx-auto xs:w-2/5 w-48">ahorro para</div>
+          <div className="sm:flex items-center justify-around md:py-2 lg:w-1/2 mx-auto">
+            <div className="text-2xl sm:text-3xl py-8 md:py-0 font-semibold text-center mx-auto  w-48">ahorro para</div>
             <div className="flex flex-col items-center mx-auto">
               <div className="mask mb-4 xs:w-3/5">
               <div className="pic-wrapper">

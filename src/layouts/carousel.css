@@ -11,7 +11,6 @@
 
 .texto {
   position:absolute;
-  margin: 0 auto;
 }
 
 .current {
@@ -19,17 +18,7 @@
   opacity: 1;
 }
 
-.currentTexto{
-  top:0px;
-  opacity:1;
 
-}
-
-.currentTexto.move{
-  top: 0px;
-  opacity:0;
-  transition: all .5s ease;
-}
 
 .current.move {
   top: 200px;
@@ -38,20 +27,19 @@
   
 }
 
+.currentTexto {
+  top: 0px;
+  opacity: 1;
+}
+
+.currentTexto.move {
+  top: 200px;
+  opacity: 0.5;
+  transition: all .5s ease;
+}
 
 .next {
   top: 200px;
-}
-
-.nextTexto{
-  top: 200px;
-  opacity:0;
-}
-
-.nextTexto.move{
-  top: 0px;
-  opacity: 1;
-  transition: all .5s ease;
 }
 
 .next.move {
@@ -59,6 +47,20 @@
   top: 0px;
   transition: all .5s ease;
 }
+
+.nextTexto {
+  top: 200px;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.nextTexto.move{
+  top: 60px;
+  opacity: 0.5;
+  transition: all .5s ease;
+}
+
+
 
 .pic-wrapper {
   background: lightgray;

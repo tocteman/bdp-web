@@ -3,6 +3,8 @@ import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import ModalForm from '../components/ModalForm'
 
+
+
 const UneteEquipo = ({ data }) => (
 
 <div>
@@ -15,6 +17,7 @@ const UneteEquipo = ({ data }) => (
       </div>
       <Img sizes={data.escritorioImage.sizes} className="h-medio m-0" />
     </div>
+
     <div className="mb-16">
     <h3 className="mt-8 mb-4 mx-auto py-4 text-center pb-3">Ünete a la familia</h3>
     <hr/>

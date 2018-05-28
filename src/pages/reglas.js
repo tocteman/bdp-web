@@ -5,10 +5,9 @@ import IconoCafe from '../img/iconos-colores/icono-placer-culpable.png'
 import ReglaCompletandose from '../img/fotos_reglas/regla_completandose.png'
 import FlechaAbajo from '../img/fotos_reglas/flechaAbajo.png'
 import IdeaRegla from '../components/IdeaRegla';
-import SliderReglas from '../components/SliderReglas'
-import {Carousel} from 'react-responsive-carousel'
-import "../../src/layouts/carousel.min.css"
-// import "react-responsive-carousel/lib/styles/carousel.min.css"
+import CarouselOne from '../components/CarouselOne'
+import '../layouts/carousel.css'
+
 
 const Reglas = ({ data }) => (
   <div>
@@ -30,34 +29,11 @@ const Reglas = ({ data }) => (
         <p className="py-4">Cada regla está compuesta de una condición y una resolución.</p>
       </div>
       
-      <div className="bg-white mx-6">
-      <Carousel autoPlay={true} infiniteLoop={true} width="100%" interval={4000} transitionTime={400} showStatus={false} showIndicators={false} showArrows={false} showThumbs={false} axis="vertical" dynamicHeight={true} swipeable={false} stopOnHover={false} className="bg-white">
-        {data.explicacionesDatos.edges.map(post => (
-          <div className="py-4 mx-auto bg-white max-w-xl">
-            <div className="md:flex w-xl mx-auto text-center">
-              <div className="flex items-center justify-end md:justify-around md:w-1/2">
-                <div className="text-3xl md:text-4xl font-semibold">{post.node.frontmatter.condicionTexto}</div>
-                <div className="flex flex-col items-center justify-center text-center mx-2">
-                  <img src={post.node.frontmatter.fotoRegla.childImageSharp.resolutions.src} width="250"/>
-                  <div className="text-grey-dark text-sm py-2">{post.node.frontmatter.explicacionRegla}</div>
-                </div>
-                <div></div>
-              </div>
-              <div className="flex items-center justify-end md:justify-around py-4 md:py-2 md:w-1/2">
-                <div className="text-3xl md:text-4xl font-semibold text-center">ahorro para</div>
-                <div className="flex flex-col items-center text-center mx-2">
-                  <img src={post.node.frontmatter.fotoResolucion.childImageSharp.resolutions.src} className="rounded" width="250"/>
-                  <div className="text-grey-dark text-sm py-2">{post.node.frontmatter.explicacionResolucion}</div>
-                </div>
-              </div>
-            </div>
-            <hr className="py-4" />
-            </div>
-      ))}
-      </Carousel>
+      <div className="bg-white mx-2 sm:mx-4 md:mx-8">
+        <CarouselOne />
       </div>
       
-
+    
     
     </div>
     <div className="bg-grey-lightest border-t-1 border-grey pb-8">

@@ -1,34 +1,30 @@
-import React, { Component } from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import '../../layouts/carousel.css'
+import Cabify from '../../img/fotos_reglas/cabify_blanco.jpg'
+import Cerato from '../../img/fotos_reglas/cerato.jpg'
+import GoogleMaps from '../../img/fotos_reglas/google_maps.jpg'
+import VacacionesPalmeras from '../../img/fotos_reglas/vacaciones_palmeras.jpg'
+import TazaCarton from '../../img/fotos_reglas/tazaCarton.jpg'
+import IPhoneX from '../../img/fotos_reglas/iPhoneX.jpg'
+import SeleccionMexico from '../../img/fotos_reglas/escudo_mexico.jpg'
+import CopaMundo from '../../img/fotos_reglas/copaDelMundo.jpg'
 
+const pics = [Cabify, GoogleMaps, TazaCarton, SeleccionMexico ];
+const picsDos = [Cerato, VacacionesPalmeras, IPhoneX, CopaMundo];
+const inicioEnunciado = ['Cada viaje', 'Cada  vez que', 'Cada café', 'Cada gol',];
+const explicacionUno = ['en Cabify', 'llego a la oficina', 'en mi cafetería favorita', 'de la Selección',];
+const explicacionDos = ['comprar mi auto', 'mis vacaciones 2018', 'mi teléfono nuevo', 'ir al Mundial']
 
-const pics = [
-  'https://cdn.pixabay.com/photo/2017/06/19/07/12/water-lily-2418339__480.jpg',
-  'https://cdn.pixabay.com/photo/2017/07/18/18/24/dove-2516641__480.jpg',
-  'https://cdn.pixabay.com/photo/2017/07/14/17/44/frog-2504507__480.jpg',
-  'https://cdn.pixabay.com/photo/2016/09/04/13/08/bread-1643951__480.jpg',
-];
-
-class CarouselOne extends Component {
+export default class CarouselOne extends React.Component {
   constructor(props) {
     super(props);
     const idxStart = 0;
-    this.transitionSlide = this.transitionSlide.bind(this);
-    this.handlePrev = this.handlePrev.bind(this);
-    this.handleNext = this.handleNext.bind(this);
     this.state = {
-      current: idxStart,
-      prev: this.getPrevIndex(idxStart),
-      next: this.getNextIndex(idxStart)
+      index: idxStart,
+      next: this.getNextIndex(idxStart),
+      move: false,
     };
-    // enable for autoplay
-    // this.autoPlay = true;
-  }
-
-  getPrevIndex(idx) {
-    if (idx <= 0) {
-      return pics.length - 1;
-    }
-    return idx - 1;
   }
 
   getNextIndex(idx) {
@@ -38,78 +34,97 @@ class CarouselOne extends Component {
     return idx + 1;
   }
 
-  setIndexes(idx, dir) {
+  setIndexes(idx) {
     this.setState({
-      current: idx,
-      prev: this.getPrevIndex(idx),
-      next: this.getNextIndex(idx),
-      dir
+      index: idx,
+      next: this.getNextIndex(idx)
     });
   }
-
-  transitionSlide(direction) {
-    if (this.moving) return;
-    // start animation
-    this.setState({
-      dir: direction,
-      move: true
-    });
-    this.moving = true;
-
-    // stop animation
-    setTimeout(() => {
-      this.setState({
-        move: false
-      });
-      if (direction === 'next') {
-        this.setIndexes(this.getNextIndex(this.state.current), 'next');
-      } else {
-        this.setIndexes(this.getPrevIndex(this.state.current), 'prev');
-      }
-      this.moving = false;
-    }, 500);
-
-  }
-
   componentDidMount() {
-    if (this.autoPlay) {
-      setInterval(this.handleNext, 2000);
-    }
-  }
 
-  handlePrev() {
-    this.transitionSlide('prev');
-  }
+    setInterval(() => {
+      // on
+      this.setState({
+        move: true
+      });
+      // off
+      setTimeout(() => {
+        this.setState({
+          move: false
+        });
+        this.setIndexes(this.getNextIndex(this.state.index));
+      }, 500); // same delay as in the css transition here
 
-  handleNext() {
-    this.transitionSlide('next');
+    }, 5000);
   }
-
   render() {
     const move = this.state.move ? 'move' : '';
-    const dir = this.state.dir + '-dir';
+    if (this.state.move) {
+
+    }
     return (
-      <div>
-        <div className="carousel-mask">
-          <div className={`pic-wrapper ${dir} ${move}`}>
-            <div className="prev pic">
-              <img src={pics[this.state.prev]} alt="" />
+      <div className="flex flex-col sm:block py-4  max-w-xl mx-auto ">
+        <div className="lg:flex justify-around text-center">
+          <div className="xs:flex items-center justify-around py-4 md:py-2 lg:w-1/2">
+            <div className="mask-texto bg-white py-4 font-semibold xs:w-2/5 w-48 mx-auto ">
+              <div className={`currentTexto font-semibold text-2xl sm:text-3xl w-48 text-center ${move}`}>
+                  {inicioEnunciado[this.state.index]}
+                </div>
+              <div className={`nextTexto texto font-semibold text-2xl sm:text-3xl w-48 text-center py-4 ${move}`}>
+                  {inicioEnunciado[this.state.next]}
+                </div>
             </div>
-            <div className="current pic">
-              <img src={pics[this.state.current]} alt="" />
-            </div>
-            <div className="next pic">
-              <img src={pics[this.state.next]} alt="" />
+        <div className="flex flex-col items-center mx-auto">
+          <div className="mask mb-4">
+            <div className="pic-wrapper">
+              <div className={`current pic ${move}`}>
+                
+                <img src={pics[this.state.index]} alt="" />
+              </div>
+              <div className={`next pic ${move}`}>
+                
+                <img src={pics[this.state.next]} alt="" />
+              </div>
             </div>
           </div>
+          <div>
+            <div className="mask-texto items-center justify-center  flex flex-col">
+                  <div className={`currentTexto mx-auto text-grey-dark text-sm  w-48 ${move}`}>
+              {explicacionUno[this.state.index]}
+              </div>
+                  <div className={`nextTexto texto  text-grey-dark text-sm w-48  ${move}`}>
+              {explicacionUno[this.state.next]}
+              </div>
+           </div>
+          </div>
         </div>
-        <div className="nav">
-          <button onClick={this.handlePrev}>prev</button>
-          <button onClick={this.handleNext}>next</button>
+          </div>
+          <div className="xs:flex items-center justify-around md:py-2 lg:w-1/2 mx-auto">
+            <div className="text-2xl sm:text-3xl pb-8 sm:pb-0 font-semibold text-center mx-auto xs:w-2/5 w-48">ahorro para</div>
+            <div className="flex flex-col items-center mx-auto">
+              <div className="mask mb-4 xs:w-3/5">
+              <div className="pic-wrapper">
+                <div className={`current pic ${move}`}>
+                  <img src={picsDos[this.state.index]} alt="" />
+                </div>
+                <div className={`next pic ${move}`}>
+                  <img src={picsDos[this.state.next]} alt="" />
+                </div>
+              </div>
+            </div>
+              <div className="mask-texto items-center justify-center flex flex-col">
+                <div className={`currentTexto text-grey-dark w-48 text-sm ${move}`}>
+                  {explicacionDos[this.state.index]}
+                </div>
+                <div className={`nextTexto texto text-grey-dark w-48 text-sm ${move}`}>
+                  {explicacionDos[this.state.next]}
+                </div>
+              </div>
+            </div>
         </div>
+        </div>
+        <hr className="py-4" />
       </div>
     );
   }
 }
-
-export default CarouselOne;

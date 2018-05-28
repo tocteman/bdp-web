@@ -1,0 +1,79 @@
+.pic {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.texto {
+  position:absolute;
+  margin: 0 auto;
+}
+
+.current {
+  top: 0;
+  opacity: 1;
+}
+
+.currentTexto{
+  top:0px;
+  opacity:1;
+
+}
+
+.currentTexto.move{
+  top: 0px;
+  opacity:0;
+  transition: all .5s ease;
+}
+
+.current.move {
+  top: 200px;
+  opacity: 0;
+  transition: all .5s ease;
+  
+}
+
+
+.next {
+  top: 200px;
+}
+
+.nextTexto{
+  top: 200px;
+  opacity:0;
+}
+
+.nextTexto.move{
+  top: 0px;
+  opacity: 1;
+  transition: all .5s ease;
+}
+
+.next.move {
+  opacity: 1;
+  top: 0px;
+  transition: all .5s ease;
+}
+
+.pic-wrapper {
+  background: lightgray;
+  top: 0px;
+  position: absolute;
+}
+
+.mask {
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.mask-texto{
+  overflow: hidden;
+  position: relative;
+}

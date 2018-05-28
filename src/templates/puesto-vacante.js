@@ -19,8 +19,8 @@ export default function VacanteTemplate({ data }) {
         </div>
         <Img sizes={post.frontmatter.featuredImage.childImageSharp.sizes} className="h-medio m-0" />
       </div> */}
-    <div className="mx-auto font-light leading-normal m-8 p-4 sm:max-w-sm md:max-w-md">
-      <Link to="/unete-equipo" className="no-underline py-12 text-grey-darker hover:text-green-darker">
+    <div className="mx-auto font-light leading-normal m-12 sm:max-w-sm md:max-w-md">
+      <Link to="/unete-equipo" className="no-underline py-12 text-grey-darker hover:text-grey-darkest">
         <TiArrowBack className="text-3xl" /> Regresar</Link>
       <hr />
 

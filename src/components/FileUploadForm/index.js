@@ -58,24 +58,24 @@ export default class FileUploadForm extends React.Component {
           <p>
             <label>
               Nombre:<br />
-              <input type="text" name="name" onChange={this.handleChange} value={this.state.value} className="md:w-md block text-grey-darkest bg-green-lightest focus:bg-grey-light focus:text-grey-darkest rounded-lg shadow-md mb-4 p-3 text-sm" />
+              <input type="text" name="name" onChange={this.handleChange} value={this.state.value} className="md:w-md block text-grey-darkest bg-grey-lightest focus:bg-grey-light focus:text-grey-darkest rounded-lg shadow mb-4 p-3 text-sm" />
             </label>
           </p>
           <p>
             <label>
               Apellido:<br />
-              <input type="text" name="name" onChange={this.handleChange} value={this.state.value} className="md:w-md block  text-grey-darkest bg-green-lightest focus:bg-grey-light focus:text-grey-darkest  rounded-lg shadow-md mb-4 p-3 text-sm" />
+              <input type="text" name="name" onChange={this.handleChange} value={this.state.value} className="md:w-md block  text-grey-darkest bg-grey-lightest focus:bg-grey-light focus:text-grey-darkest  rounded-lg shadow mb-4 p-3 text-sm" />
             </label>
           </p>
           <p>
             <label>
               Email:<br />
-              <input type="email" name="name" onChange={this.handleChange} value={this.state.value} className="md:w-md block text-grey-darkest bg-green-lightest focus:bg-grey-light focus:text-grey-darkest rounded-lg shadow-md mb-4 p-3 text-sm" />
+              <input type="email" name="name" onChange={this.handleChange} value={this.state.value} className="md:w-md block text-grey-darkest bg-grey-lightest focus:bg-grey-light focus:text-grey-darkest rounded-lg shadow mb-4 p-3 text-sm" />
             </label>
           </p>
           <p>
             Sube tu CV:
-            <label for="file-upload" className="rounded-lg bg-green-lightest block cursor-pointer shadow-md p-2 max-w-xs">
+            <label for="file-upload" className="rounded-lg bg-grey-lightest block cursor-pointer shadow p-2 max-w-xs">
             <div id="guatita">...</div>
               <div>
               <input

@@ -2,7 +2,7 @@
 titulo: "Metas de Ahorro"
 subtitulo: "Tú eliges para qué quieres ahorrar."
 imagenFondo: "../../img/home-pasos/elizeu-dias-565661-unsplash.jpg"
-imagenApp: "../../img/home-pasos/home_pasos_ubicacion.png"
+imagenApp: "../../img/home-pasos/home_pasos_metas.png"
 pasoNro: 1
 ---
 

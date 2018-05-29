@@ -64,17 +64,17 @@ export default class CarouselOne extends React.Component {
     }
     return (
       <div className="flex flex-col md:block py-4  max-w-xl mx-auto ">
-        <div className="lg:flex justify-around text-center">
-          <div className="sm:flex items-center justify-around py-4 md:py-2 lg:w-1/2 mx-auto">
-            <div className="mask-texto bg-white py-4 font-semibold mx-auto">
-              
-              <div className={`currentTexto font-semibold text-2xl sm:text-3xl w-48 text-center relative mx-auto  ${move}`}>
-                  {inicioEnunciado[this.state.index]}
-                </div>
-              <div className={`nextTexto texto font-semibold text-2xl sm:text-3xl w-48 mx-auto ${move}`}>
-                  {inicioEnunciado[this.state.next]}
-                </div>
-                
+        <div className="lg:flex mx-auto text-center sm:text-left md:text-center lg:text-left">
+          <div className="sm:flex items-center py-4 md:py-2 mx-auto">
+            <div className="mask-texto font-semibold text-2xl sm:text-3xl mx-auto">
+              <div className="pic-wrapper">
+                <div className={`current texto ${move}`}>
+                    {inicioEnunciado[this.state.index]}
+                  </div>
+                <div className={`next texto ${move}`}>
+                    {inicioEnunciado[this.state.next]}
+                  </div>
+              </div> 
             </div>
         <div className="flex flex-col items-center mx-auto">
           <div className="mask mb-4">
@@ -90,21 +90,27 @@ export default class CarouselOne extends React.Component {
             </div>
           </div>
           <div>
-            <div className="mask-texto items-center justify-center  flex flex-col">
-                  <div className={`currentTexto mx-auto text-grey-dark text-sm  w-48 ${move}`}>
-              {explicacionUno[this.state.index]}
-              </div>
-                  <div className={`nextTexto texto  text-grey-dark text-sm w-48  ${move}`}>
-              {explicacionUno[this.state.next]}
-              </div>
+            <div className="mask-texto items-center text-center">
+            <div className="pic-wrapper">
+                  <div className={`current texto text-grey-dark text-sm  ${move}`}>
+                    {explicacionUno[this.state.index]}
+                  </div>
+                  <div className={`next texto text-grey-dark text-sm ${move}`}>
+                  {explicacionUno[this.state.next]}
+                  </div>
+                  </div>
            </div>
           </div>
         </div>
           </div>
-          <div className="sm:flex items-center justify-around md:py-2 lg:w-1/2 mx-auto">
-            <div className="text-2xl sm:text-3xl py-8 md:py-0 font-semibold text-center mx-auto  w-48">ahorro para</div>
+          <div className="sm:flex justify-around items-center md:py-2 mx-auto">
+            <div className="mask-texto font-semibold text-2xl sm:text-3xl mx-auto">
+              <div className="pic-wrapper">
+            <div className="texto current">ahorro para</div>
+              </div>
+            </div>
             <div className="flex flex-col items-center mx-auto">
-              <div className="mask mb-4 xs:w-3/5">
+              <div className="mask mb-4 ">
               <div className="pic-wrapper">
                 <div className={`current pic ${move}`}>
                   <img src={picsDos[this.state.index]} alt="" />
@@ -114,12 +120,14 @@ export default class CarouselOne extends React.Component {
                 </div>
               </div>
             </div>
-              <div className="mask-texto items-center justify-center flex flex-col">
-                <div className={`currentTexto text-grey-dark w-48 text-sm ${move}`}>
+              <div className="mask-texto items-center text-center">
+                <div className="pic-wrapper">
+                <div className={`current texto text-grey-dark text-sm ${move}`}>
                   {explicacionDos[this.state.index]}
                 </div>
-                <div className={`nextTexto texto text-grey-dark w-48 text-sm ${move}`}>
+                <div className={`next texto text-grey-dark text-sm ${move}`}>
                   {explicacionDos[this.state.next]}
+                  </div>
                 </div>
               </div>
             </div>

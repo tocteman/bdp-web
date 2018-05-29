@@ -123,41 +123,7 @@ query indexReglasQuery {
       ...GatsbyImageSharpSizes_noBase64
       }
     }
-    explicacionesDatos: allMarkdownRemark(filter:{fields:{slug:{regex:"/explicacion-regla_/"}}}){
-      edges {
-        node{
-                frontmatter {
-        explicacionRegla
-        explicacionResolucion
-        condicionTexto
-        fotoRegla {
-              childImageSharp {
-                resolutions (
-                  quality:100
-                  width: 200
-                  height: 200
-                  cropFocus: ENTROPY
-                ){
-                  ...GatsbyImageSharpResolutions_noBase64
-                }
-              }
-            }
-            fotoResolucion {
-            childImageSharp {
-              resolutions (
-                quality:100
-                width: 200
-                height: 200
-                cropFocus: ENTROPY
-              ){
-                ...GatsbyImageSharpResolutions_noBase64
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+   
 }
 `
 

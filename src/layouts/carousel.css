@@ -10,53 +10,34 @@
 }
 
 .texto {
+  display: inline-block;
+  height: 50px;
+  width: 200px;
   position:absolute;
 }
 
 .current {
-  top: 200px;
+  top: 0px;
   
 }
 
 
 
 .current.move {
-  top: 0px;
+  top: -200px;
   
   transition: all .5s ease;
   
 }
 
-.currentTexto {
-  top: 0px;
-  
-}
-
-.currentTexto.move {
-  top: 200px;
-  
-  transition: all .5s ease;
-}
 
 .next {
-  top: 400px;
+  top: 200px;
 }
 
 .next.move {
   
-  top: 200px;
-  transition: all .5s ease;
-}
-
-.nextTexto {
-  top: 200px;
-  
-  text-align: center;
-}
-
-.nextTexto.move{
   top: 0px;
-  
   transition: all .5s ease;
 }
 
@@ -64,12 +45,12 @@
 
 .pic-wrapper {
   background: lightgray;
-  top: -200px;
+  top: 0px;
   position: absolute;
 }
 
 .mask {
-  top:100px;
+  top:0px;
   overflow: hidden;
   width: 200px;
   height: 200px;
@@ -77,6 +58,9 @@
 }
 
 .mask-texto{
+  top: 0px;
+  width: 200px;
+  height: 50px;
   overflow: hidden;
   position: relative;
 }

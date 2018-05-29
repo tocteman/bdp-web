@@ -61,14 +61,14 @@ export default class RegistroForm extends React.Component {
               <label className="font-medium">
                 Nombre:<br />
               </label>
-              <input type="text" name="name" onChange={this.handleChange} className="appearance-none text-grey-darkest bg-white focus:bg-grey-lighest rounded-lg shadow py-3 px-4 text-sm my-2 w-48 xs:w-64 sm:w-96 md:w-48" />
+              <input type="text" name="Nombre" onChange={this.handleChange} className="appearance-none text-grey-darkest bg-white focus:bg-grey-lighest rounded-lg shadow py-3 px-4 text-sm my-2 w-48 xs:w-64 sm:w-96 md:w-48" />
             </div>
 
             <div className="py-3 px-2 px-4">
               <label className="font-medium">
                 Apellido:<br />
               </label>
-                <input type="text" name="name" onChange={this.handleChange} className="appearance-none text-grey-darkest bg-white focus:bg-grey-lightest rounded-lg shadow py-3 px-4 w-48 xs:w-64 sm:w-96 md:w-48 text-sm my-2" />
+                <input type="text" name="Apellido" onChange={this.handleChange} className="appearance-none text-grey-darkest bg-white focus:bg-grey-lightest rounded-lg shadow py-3 px-4 w-48 xs:w-64 sm:w-96 md:w-48 text-sm my-2" />
             </div>
             </div>
           </div>
@@ -78,7 +78,7 @@ export default class RegistroForm extends React.Component {
               <label className="font-medium mx-auto md:ml-12">
                 Email:<br />
               </label>
-              <input type="email" name="name" onChange={this.handleChange} className="appearance-none text-grey-darkest bg-white focus:bg-grey-lighest border-green-lightest block rounded-lg shadow py-3 px-4 text-sm md:w-128 my-2 mx-auto w-48 xs:w-64 sm:w-96" />
+              <input type="email" name="Email" onChange={this.handleChange} className="appearance-none text-grey-darkest bg-white focus:bg-grey-lighest border-green-lightest block rounded-lg shadow py-3 px-4 text-sm md:w-128 my-2 mx-auto w-48 xs:w-64 sm:w-96" />
             </div>
           </div>
             
@@ -130,7 +130,7 @@ export default class RegistroForm extends React.Component {
                 Banco:<br />
               </label>
               <div className="relative">
-                <input type="banco" name="name" onChange={this.handleChange} className="appearance-none text-grey-darkest bg-white focus:bg-grey-lighest border-green-lightest block rounded-lg shadow py-3 px-4 text-sm w-48 xs:w-64 sm:w-96 md:w-128 my-2 mx-auto" />
+                <input type="text" name="banco" onChange={this.handleChange} className="appearance-none text-grey-darkest bg-white focus:bg-grey-lighest border-green-lightest block rounded-lg shadow py-3 px-4 text-sm w-48 xs:w-64 sm:w-96 md:w-128 my-2 mx-auto" />
                 </div>
               </div>
             </div>

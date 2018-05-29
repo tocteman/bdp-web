@@ -45,21 +45,21 @@ const IndexPage = ({ data }) => (
         <div className="sm:w-full md:w-1/2 mx-auto">
           <div className="text-3xl sm:text-4xl font-semibold pb-3 leading-tight text-center">¿Qué es Übank?</div>
           <hr />
-          <p className="pt-3 max-w-sm leading-normal text-center"><strong>Übank</strong> es la aplicación que te permite ahorrar según tu estilo de vida. A través de las <em>Reglas de Ahorro Automático</em>, puedes elegir cuándo ahorrar y seguir haciendo tu vida. Los ahorros se acumularán sin que te des cuenta.</p>
+          <p className="pt-3 max-w-sm leading-normal mx-auto text-center"><strong>Übank</strong> es la aplicación que te permite ahorrar según tu estilo de vida. A través de las <em>Reglas de Ahorro Automático</em>, puedes elegir cuándo ahorrar y seguir haciendo tu vida. Los ahorros se acumularán sin que te des cuenta.</p>
         </div>
       </div>
       <div className="flex flex-wrap p-4 max-w-xl mx-auto items-baseline pb-16">
-        <div className="md:w-1/3 p-4 text-center">
+        <div className="md:w-1/3 p-4 text-center mx-auto">
           <Img resolutions={data.montaniaImage.resolutions} />
           <h4 className="leading-normal font-medium">Sueña</h4>
           <p className="max-w-sm leading-normal">Ahorra para las cosas que realmente te importan. Tú decides las <em>Reglas</em> que las harán realidad.</p>
         </div>
-        <div className="md:w-1/3 p-4 text-center">
+        <div className="md:w-1/3 p-4 text-center mx-auto">
           <Img resolutions={data.coctelImage.resolutions} />
           <h4 className="leading-normal font-medium">Vive</h4>
           <p className="max-w-sm leading-normal">Ahorrar no tiene por qué significar sacrificarte. Vive tu vida y deja que <strong>Übank</strong> haga el trabajo difícil.</p>
         </div>
-        <div className="md:w-1/3 p-4 text-center">
+        <div className="md:w-1/3 p-4 text-center mx-auto">
           <Img resolutions={data.creceImage.resolutions} />
           <h4 className="leading-normal font-medium">Crece</h4>
           <p className="max-w-sm leading-normal">Cuando las <em>Reglas</em> se activan, transferimos el dinero a una cuenta segura. Siempre estará disponible.</p>

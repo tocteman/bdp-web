@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "gatsby-link";
 import { navigateTo } from "gatsby-link";
 
 function encode(data) {
@@ -11,26 +10,27 @@ function encode(data) {
 export default class StandardForm extends React.Component {
   constructor(props) {
     super(props);
-   this.state = {};
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+     this.state = {};
   }
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
-  };
+};
 
   handleSubmit = e => {
+    e.preventDefault();
+    const form = e.target;
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": form.getAttribute("name"), ...this.state })
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...this.state
+      })
     })
-      .then(() => alert("Hemos recibido tu formulario"))
+      .then(() => navigateTo(form.getAttribute("action")))
       .catch(error => alert(error));
-
-    e.preventDefault();
-  };
+};
 
   render() {
     return (
@@ -42,6 +42,7 @@ export default class StandardForm extends React.Component {
           data-netlify-honeypot="bot-field"
           onSubmit={this.handleSubmit}
         >
+         <input type="hidden" name="form-name" value="standard-form" />
           <p hidden>
             <label>
               Don’t fill this out: <input name="bot-field" onChange={this.handleChange} />

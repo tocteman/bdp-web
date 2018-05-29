@@ -3,35 +3,28 @@ import Link from "gatsby-link";
 import Helmet from "react-helmet";
 
 function encode(data) {
-  const formData = new FormData();
-
-  for (const key of Object.keys(data)) {
-    formData.append(key, data[key]);
-  }
-
-  return formData;
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
 }
 
 export default class StandardForm extends React.Component {
   constructor(props) {
     super(props);
-   this.state = {value: ''};
+   this.state = {};
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange = e => {
-    if (e.target.files) {
-      this.setState({ [e.target.name]: e.target.files[0] });
-    } else {
-      this.setState({ [e.target.name]: e.target.value });
-    }
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   handleSubmit = e => {
     fetch("/", {
       method: "POST",
-      body: encode({ "form-name": "standard-form", ...this.state })
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": form.getAttribute("name"), ...this.state })
     })
       .then(() => alert("Hemos recibido tu formulario"))
       .catch(error => alert(error));

@@ -58,19 +58,19 @@ export default class FileUploadForm extends React.Component {
           <p>
             <label>
               Nombre:<br />
-              <input type="text" name="name" onChange={this.handleChange} value={this.state.value} className="md:w-md block text-grey-darkest bg-grey-lightest focus:bg-grey-light focus:text-grey-darkest rounded-lg shadow mb-4 p-3 text-sm" />
+              <input type="text" name="name" onChange={this.handleChange}  className="md:w-md block text-grey-darkest bg-grey-lightest focus:bg-grey-light rounded-lg shadow mb-4 p-3 text-sm" />
             </label>
           </p>
           <p>
             <label>
               Apellido:<br />
-              <input type="text" name="name" onChange={this.handleChange} value={this.state.value} className="md:w-md block  text-grey-darkest bg-grey-lightest focus:bg-grey-light focus:text-grey-darkest  rounded-lg shadow mb-4 p-3 text-sm" />
+              <input type="text" name="name" onChange={this.handleChange}  className="md:w-md block  text-grey-darkest bg-grey-lightest focus:bg-grey-light rounded-lg shadow mb-4 p-3 text-sm" />
             </label>
           </p>
           <p>
             <label>
               Email:<br />
-              <input type="email" name="name" onChange={this.handleChange} value={this.state.value} className="md:w-md block text-grey-darkest bg-grey-lightest focus:bg-grey-light focus:text-grey-darkest rounded-lg shadow mb-4 p-3 text-sm" />
+              <input type="email" name="name" onChange={this.handleChange}  className="md:w-md block text-grey-darkest bg-grey-lightest rounded-lg shadow mb-4 p-3 text-sm" />
             </label>
           </p>
           <p>
@@ -83,7 +83,7 @@ export default class FileUploadForm extends React.Component {
                 type="file"
                 name="attachment"
                 onChange={this.handleChange}
-                value={this.state.value}
+                
                 className="hidden"
               />
               </div>

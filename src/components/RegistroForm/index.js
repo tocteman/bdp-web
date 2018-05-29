@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
+import { navigateTo } from "gatsby-link";
 
 function encode(data) {
   const formData = new FormData();
@@ -16,8 +17,6 @@ export default class RegistroForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {value: ''};
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange = e => {
@@ -31,7 +30,7 @@ export default class RegistroForm extends React.Component {
   handleSubmit = e => {
     fetch("/", {
       method: "POST",
-      body: encode({ "form-name": "registro-form", ...this.state })
+      body: encode({ "form-name": form.getAttribute("name"), ...this.state })
     })
       .then(() => alert("Hemos recibido tu formulario"))
       .catch(error => alert(error));
@@ -49,6 +48,7 @@ export default class RegistroForm extends React.Component {
           data-netlify-honeypot="bot-field"
           onSubmit={this.handleSubmit}
         >
+          <input type="hidden" name="form-name" value="registro-form" />
           <p hidden>
             <label>
               Don’t fill this out: <input name="bot-field" onChange={this.handleChange} />
@@ -136,7 +136,7 @@ export default class RegistroForm extends React.Component {
             </div>
 
             <div className="text-center">
-              <button type="submit" className="mt-4 mx-2 sm:mx-4 rounded text-white bg-green hover:bg-green-dark px-8 py-3 shadow-md" onSubmit={this.handleSubmit}>Enviar</button>
+              <button type="submit" className="mt-4 mx-2 sm:mx-4 rounded text-white bg-green hover:bg-green-dark px-8 py-3 shadow-md">Enviar</button>
             </div>
 
         </form>

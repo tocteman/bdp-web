@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
-import Helmet from "react-helmet";
+import { navigateTo } from "gatsby-link";
 
 function encode(data) {
   return Object.keys(data)
@@ -75,7 +75,7 @@ export default class StandardForm extends React.Component {
             </div>
 
             <div className="text-center">
-              <button type="submit" className="mt-4 mx-2 sm:mx-4 rounded text-white bg-green hover:bg-green-dark px-6 py-3 shadow-md" onSubmit={this.handleSubmit}>Enviar</button>
+              <button type="submit" className="mt-4 mx-2 sm:mx-4 rounded text-white bg-green hover:bg-green-dark px-6 py-3 shadow-md" >Enviar</button>
             </div>
           </div>
         </form>

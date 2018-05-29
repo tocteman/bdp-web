@@ -55,7 +55,7 @@
 }
 
 .nextTexto.move{
-  top: 60px;
+  top: 0px;
   opacity: 0.5;
   transition: all .5s ease;
 }

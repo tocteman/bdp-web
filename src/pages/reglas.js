@@ -6,25 +6,65 @@ import ReglaCompletandose from '../img/fotos_reglas/regla_completandose.png'
 import FlechaAbajo from '../img/fotos_reglas/flechaAbajo.png'
 import IdeaRegla from '../components/IdeaRegla';
 import CarouselOne from '../components/CarouselOne'
-import '../layouts/carousel.css'
+import HeaderAlt from '../components/HeaderAlt'
 
 
 const Reglas = ({ data }) => (
   <div>
-    <div>
-      <div className="flex flex-col w-full absolute z-10 text-white h-americano justify-center">
-        <div className="mx-auto lg:max-w-xl md:ml-1/5 w-3/4">
-          <h1 className="text-4xl sm:text-5xl pb-4 p-1 mb-2 leading-tight max-w-sm text-white">Transforma tu vida en ahorros automáticos.</h1>
-          <p className="text-xl text-grey-lighter leading-normal p-1 max-w-sm">Conoce las <strong>Reglas de Ahorro autómatico</strong> y descubre las miles de formas en las que puedes ahorrar sin esfuerzo.</p>
+    <div className="pt-2 bg-solid-gradient-white-grey-lightest">
+      <HeaderAlt />
+      <div className="flex flex-col mx-auto max-w-xl text-center py-16">
+        <h1 className="text-2xl sm:text-5xl pb-4 p-1 mb-2 leading-tight max-w-sm mx-auto text-grey-darkest">Ahorra mientras vives tu vida.</h1>
+        <p className="text-xl text-grey-darkest leading-normal p-1 max-w-md mx-auto">Conoce las <strong>Reglas de Ahorro autómatico</strong> y descubre las miles de formas en las que puedes ahorrar sin esfuerzo.</p>
+      </div>
+      <div>
+
+          <div className="absolute hidden sm:block pin-x mx-auto">
+            <div className="mx-auto text-center">
+              <Img resolutions={data.iphoneImageReglas.resolutions}/>
+            </div>
+          </div>
+
+      <div className="relative mx-4 sm:mx-8 lg:mx-16"> 
+        <div className="flex flex-col mx-auto max-w-lg  z-20 mb-16 sm:mb-32">
+          <div className="flex max-w-lg justify-around sm:justify-between py-4">
+            <div className=""><Img resolutions={data.headerFacebookReglas.resolutions} /></div>
+              <div className="block sm:hidden"><Img resolutions={data.headerPlacerCulpableReglas.resolutions} /></div>
+            <div className="block sm:hidden"><Img resolutions={data.headerDesafioReglas.resolutions} /></div>
+            <div><Img resolutions={data.headerWeatherReglas.resolutions} /></div>
+          </div>
+          <div className="flex justify-around max-w-lg py-4">
+                <div><Img resolutions={data.headerSpotifyReglas.resolutions} /></div>
+                <div className="block sm:hidden"><Img resolutions={data.headerMontoFijoReglas.resolutions} /></div>
+                <div className="block sm:hidden"><Img resolutions={data.headerTwitterReglas.resolutions} /></div>
+                <div><Img resolutions={data.headerCabifyReglas.resolutions} /></div>
+              
+            </div>
+          <div className="flex max-w-lg justify-around py-4">
+              <div><Img resolutions={data.headerRunkeeperReglas.resolutions} /></div>
+              <div><Img resolutions={data.headerUberReglas.resolutions} /></div>
+              <div><Img resolutions={data.headerInstagramReglas.resolutions} /></div>
+              <div><Img resolutions={data.headerEspnReglas.resolutions} /></div>
+            </div>
+          <div className="flex max-w-lg justify-around sm:justify-between py-8">
+              <div><Img resolutions={data.headerCreditCardReglas.resolutions} /></div>
+              <div><Img resolutions={data.headerCoinsReglas.resolutions} /></div>
+              <div><Img resolutions={data.headerGoogleMapsReglas.resolutions} /></div>
+              <div className="block sm:hidden"><Img resolutions={data.headerFitbitReglas.resolutions} /></div>
+            </div>
+        
         </div>
       </div>
-      <Img sizes={data.surfImage.sizes} className="h-americano m-0" />
+
+      </div>
     </div>
+
+
     <div className="shadow-sm">
-      <div className="mt-8 p-4 mx-auto leading-normal text-black max-w-xs sm:max-w-sm md:max-w-md text-center">
+      <div className="mt-8 p-4 mx-auto leading-normal max-w-xs sm:max-w-sm md:max-w-md text-center">
         <div className="text-3xl sm:text-4xl font-bold pb-3 leading-tight">Por qué ahorrar en automático.</div>
         <hr />
-        <p className="py-3 leading-normal">Ahorrar siempre ha sido difícil y solo unos pocos han conseguido hacerlo de manera constante. Hasta ahora. Las <em>Reglas de Ahorro</em> son la mejor forma de ahorrar de manera entretenida y sin esfuerzo. Configura las <em>Reglas</em> según tu estilo de vida y deja que te lleven hacia tus sueños y metas.</p>
+        <p className="py-3 leading-normal">Las Reglas de Ahorro convierten tu estilo de vida y tus aplicaciones favoritas en ahorros automáticos. Con ellas podrás seguir haciendo lo que más te gusta y al mismo tiempo ahorrar para las cosas que más te importan.</p>
         <hr className="py-3"/>
         <p className="py-4">Cada regla está compuesta de una condición y una resolución.</p>
       </div>
@@ -77,8 +117,8 @@ query indexReglasQuery {
               icono{
                 childImageSharp{
                   resolutions(
-                    width: 50
-                    height: 50
+                    width: 65
+                    height: 65
                   ){
                     ...GatsbyImageSharpResolutions_noBase64
                   }
@@ -114,13 +154,89 @@ query indexReglasQuery {
         }
       }
     }
-     surfImage: imageSharp(id: {regex: "/header_surf/"}){
-      sizes(maxWidth: 1920, cropFocus: ENTROPY
-                    duotone: {
-                    highlight: "#151616",
-                    shadow: "#191b1c",
-                    opacity: 50  }){
-      ...GatsbyImageSharpSizes_noBase64
+  iphoneImageReglas: imageSharp(id: { regex: "/home_pasos_home/"}){
+      resolutions(width:225){
+        ...GatsbyImageSharpResolutions_noBase64
+      }
+    }
+  headerCabifyReglas: imageSharp(id: { regex: "/header_reglas_cabify/"}){
+      resolutions(width:65){
+        ...GatsbyImageSharpResolutions_noBase64
+      }
+    }
+  headerCoinsReglas: imageSharp(id: { regex: "/header_reglas_coins/"}){
+      resolutions(width:65){
+        ...GatsbyImageSharpResolutions_noBase64
+      }
+    }
+  headerCreditCardReglas: imageSharp(id: { regex: "/header_reglas_credit-card/"}){
+      resolutions(width:65){
+        ...GatsbyImageSharpResolutions_noBase64
+      }
+    }
+  headerEspnReglas: imageSharp(id: { regex: "/header_reglas_espn/"}){
+      resolutions(width:65){
+        ...GatsbyImageSharpResolutions_noBase64
+      }
+    }
+  headerFacebookReglas: imageSharp(id: { regex: "/header_reglas_facebook/"}){
+      resolutions(width:65){
+        ...GatsbyImageSharpResolutions_noBase64
+      }
+    }
+  headerGoogleMapsReglas: imageSharp(id: { regex: "/header_reglas_googlemaps/"}){
+      resolutions(width:65){
+        ...GatsbyImageSharpResolutions_noBase64
+      }
+    }
+  headerInstagramReglas: imageSharp(id: { regex: "/header_reglas_instagram/"}){
+      resolutions(width:65){
+        ...GatsbyImageSharpResolutions_noBase64
+      }
+    }
+  headerPlacerCulpableReglas: imageSharp(id: { regex: "/header_reglas_placer_culpable/"}){
+      resolutions(width:65){
+        ...GatsbyImageSharpResolutions_noBase64
+      }
+    }
+  headerRunkeeperReglas: imageSharp(id: { regex: "/header_reglas_runkeeper/"}){
+      resolutions(width:65){
+        ...GatsbyImageSharpResolutions_noBase64
+      }
+    }
+  headerSpotifyReglas: imageSharp(id: { regex: "/header_reglas_spotify/"}){
+      resolutions(width:65){
+        ...GatsbyImageSharpResolutions_noBase64
+      }
+    }
+  headerUberReglas: imageSharp(id: { regex: "/header_reglas_uber/"}){
+      resolutions(width:65){
+        ...GatsbyImageSharpResolutions_noBase64
+      }
+    }
+  headerWeatherReglas: imageSharp(id: { regex: "/header_reglas_weather/"}){
+      resolutions(width:65){
+        ...GatsbyImageSharpResolutions_noBase64
+      }
+    }
+  headerFitbitReglas: imageSharp(id: { regex: "/header_reglas_fitbit/"}){
+      resolutions(width:65){
+        ...GatsbyImageSharpResolutions_noBase64
+      }
+    }
+  headerTwitterReglas: imageSharp(id: { regex: "/header_reglas_twitter/"}){
+      resolutions(width:65){
+        ...GatsbyImageSharpResolutions_noBase64
+      }
+    }
+  headerDesafioReglas: imageSharp(id: { regex: "/header_reglas_desafio/"}){
+      resolutions(width:65){
+        ...GatsbyImageSharpResolutions_noBase64
+      }
+    }
+    headerMontoFijoReglas: imageSharp(id: { regex: "/header_reglas_monto-fijo/"}){
+      resolutions(width:65){
+        ...GatsbyImageSharpResolutions_noBase64
       }
     }
    

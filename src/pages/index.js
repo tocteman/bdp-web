@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
+import Header from "../components/Header";
 import ReactGranimCanvas from "../components/ReactGranimCanvas"
 import IPhone from "../img/iphone7.png"
 import FaLongArrowDown from 'react-icons/lib/fa/long-arrow-down'
@@ -20,10 +21,13 @@ import { navigateTo } from "gatsby-link"
 const IndexPage = ({ data }) => (
   <div>
     <div>
-      <div className="flex flex-col w-full absolute z-10 h-screen2/3 xs:h-screen1/4 md:h-screen xl:h-casitoda justify-between xs:justify-around md:justify-center md:items-center">
+      <div className="flex flex-col w-full absolute h-screen2/3 xs:h-screen1/4 xl:h-casitoda md:h-screen mt-2">
+      <Header />
+        <div className="flex flex-col justify-between xs:justify-around md:justify-center z-10 md:items-center h-screen2/3 xs:h-screen1/4 xl:h-casitoda -mt-2">
         <div className="md:flex md:items-center mx-auto w-full max-w-xl">
           <div className="md:w-3/5 max-w-sm mx-auto">
-            <h1 className="text-center md:text-left md:ml-8 lg:ml-0 text-4xl lg:text-5xl p-2 py-4 mb-2 leading-tight max-w-sm text-white">Tu vida. Tus reglas. <br/> Tus ahorros.</h1>
+            <p className="text-center font-semibold md:text-left md:ml-8 lg:ml-0 text-4xl lg:text-5xl px-2 pt-4 leading-tight max-w-sm text-white">Tu vida. Tus reglas. </p>
+            <p className="text-center font-semibold md:text-left md:ml-8 lg:ml-0 text-4xl lg:text-5xl px-2 mb-2 leading-tight max-w-sm text-white">Tus ahorros.</p>
             <p className="text-base text-center md:text-left lg:text-xl text-grey-lighter leading-normal max-w-sm lg:max-w-sm p-2 md:ml-8 lg:ml-0">Übank es la forma más fácil y entretenida para ahorrar y hacer tus sueños realidad.</p>
             <div className="flex justify-center md:justify-start md:ml-8 lg:ml-0">
               <a href="/#solicitud"><button className="rounded bg-green text-white px-8 py-4 my-3 hover:bg-green-dark shadow-light">Descargar</button></a>
@@ -37,6 +41,7 @@ const IndexPage = ({ data }) => (
             <Img resolutions={data.iphoneImage.resolutions} />
           </div>
         </div>
+      </div>
       </div>
       <Img sizes={data.headerEstrellas.sizes} className="h-screen2/3 xs:h-screen1/4 md:h-screen xl:h-casitoda m-0" />
     </div>
@@ -84,7 +89,7 @@ const IndexPage = ({ data }) => (
                     <div dangerouslySetInnerHTML={{ __html: post.node.html }} className="max-w-xs md:max-w-sm leading-normal mx-auto px-2" />
                   </div>
                 </div>
-                <Img sizes={post.node.frontmatter.imagenFondo.childImageSharp.sizes} className="sm:h-160 z-10 sm:relative hidden sm:block fadeIn:false" />
+                <Img sizes={post.node.frontmatter.imagenFondo.childImageSharp.sizes} className="sm:h-160 z-10 sm:relative hidden sm:block" fadeIn={false}/>
               </div>
             </div>
           </li>
@@ -287,8 +292,7 @@ export const query = graphql`
     }
   }
   headerEstrellas: imageSharp(id: { regex: "/header_estrellas/"}){
-      sizes(maxWidth:1920, duotone: {highlight: "#151616", shadow: "#191b1c", opacity: 45} )
-      {
+      sizes(maxWidth:1920, duotone: {highlight: "#151616", shadow: "#191b1c", opacity: 45} ){
         ...GatsbyImageSharpSizes_noBase64
       }
     }

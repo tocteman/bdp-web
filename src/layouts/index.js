@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import AppleStore from '../img/aunNoTienes/apple_store.svg'
 import GooglePlay from '../img/aunNoTienes/google_play.svg'
-import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "./index.css";
 import Img from 'gatsby-image'
@@ -18,7 +17,6 @@ const TemplateWrapper = ({ children, data }) => (
         { name: "keywords", content: "fintech, ahorro" },
       ]}
     />
-    <Header />
     
     
     <div className="flex flex-col flex-grow md:justify-center w-full">      {children()}

@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../../layouts/carousel.css'
 import Cabify from '../../img/fotos_reglas/cabify_blanco.jpg'
 import Cerato from '../../img/fotos_reglas/cerato.jpg'
 import GoogleMaps from '../../img/fotos_reglas/google_maps.jpg'
@@ -55,7 +54,7 @@ export default class CarouselOne extends React.Component {
         this.setIndexes(this.getNextIndex(this.state.index));
       }, 500); // same delay as in the css transition here
 
-    }, 5000);
+    }, 3500);
   }
   render() {
     const move = this.state.move ? 'move' : '';

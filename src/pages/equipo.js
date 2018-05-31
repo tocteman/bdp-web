@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Header from "../components/Header";
 import Img from 'gatsby-image'
 import QuieresTrabajar from '../components/QuieresTrabajar';
 
@@ -7,11 +8,14 @@ import QuieresTrabajar from '../components/QuieresTrabajar';
 const Equipo = ({ data }) => (
 <div>
     <div>
-      <div className="flex flex-col w-full absolute z-10 text-white h-americano justify-center">
+      <div className="flex flex-col w-full absolute h-americano mt-2">
+      <Header />
+      <div className="flex flex-col z-10 text-white h-americano justify-center -mt-2">
         <div className="mx-auto lg:max-w-xl md:ml-1/5 w-3/4">
           <h1 className="text-2xl sm:text-5xl pb-4 p-1 mb-2 leading-tight max-w-lg text-white">Nuestra misión es ayudarte a lograr tu independencia financiera, comenzando por el ahorro.</h1>
           <p className="text-xl text-grey-lighter leading-normal p-1 max-w-sm ">Conoce al equipo y por qué estamos haciendo esto.</p>
         </div>
+      </div>
       </div>
       <Img sizes={data.columpioImage.sizes} className="h-americano m-0" />
     </div>

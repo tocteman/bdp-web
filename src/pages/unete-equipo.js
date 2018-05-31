@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
+import Header from "../components/Header";
 import ModalForm from '../components/ModalForm'
 
 
@@ -9,13 +10,16 @@ const UneteEquipo = ({ data }) => (
 
 <div>
     <div>
-      <div className="flex flex-col w-full absolute z-10 text-white h-medio justify-center">
+      <div className="flex flex-col w-full absolute h-americano mt-2">
+      <Header/>
+      <div className="flex flex-col z-10 text-white h-americano justify-center -mt-2">
         <div className="mx-auto lg:max-w-xl md:ml-1/5 w-3/4">
           <h1 className="text-4xl sm:text-5xl pb-4 p-1 mb-2 leading-tight max-w-md text-white">Ünete a nuestro equipo.</h1>
           <p className="text-xl text-grey-lighter leading-normal p-1 max-w-md">Ayúdanos a construir esta nueva forma de ahorrar e invertir.</p>
         </div>
       </div>
-      <Img sizes={data.escritorioImage.sizes} className="h-medio m-0" />
+      </div>
+      <Img sizes={data.escritorioImage.sizes} className="h-americano m-0" />
     </div>
 
     <div className="mb-16">

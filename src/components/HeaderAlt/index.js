@@ -47,7 +47,7 @@ const HeaderAlt = () => {
           </div>
 
 
-          <button className="block md:hidden flex items-center px-3 py-2 text-grey-darkest" onClick={handleClick}>
+          <button className="block md:hidden flex items-center px-3 py-2" onClick={handleClick}>
             <FaBars />
           </button>
 

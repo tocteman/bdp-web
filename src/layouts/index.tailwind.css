@@ -53,6 +53,15 @@ hr {
   border-top: 6px solid #17C671;
 }
 
+ .headroom--unfixed {
+   background: transparent;
+ }
+
+ .headroom--pinned {
+   background: #2d3342;
+   color: white ;
+   z-index: 40 ;
+ }
 
 @tailwind utilities;
 
@@ -138,12 +147,3 @@ hr {
 
 }
 
- .headroom--unfixed {
-   background: transparent;
- }
-
- .headroom--pinned {
-   background: #2d3342 !important;
-   color: white !important;
-   z-index: 40 !important;
- }

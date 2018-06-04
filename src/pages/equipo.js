@@ -17,7 +17,7 @@ const Equipo = ({ data }) => (
         </div>
       </div>
       </div>
-      <Img sizes={data.columpioImage.sizes} className="h-americano m-0" />
+      <Img sizes={data.columpioImage.sizes} className="h-americano m-0" fadeIn={false} />
     </div>
     <div className="shadow-sm">
       <div className="m-8 p-4 mx-auto leading-normal max-w-xs sm:max-w-sm md:max-w-md text-center">
@@ -39,7 +39,7 @@ const Equipo = ({ data }) => (
           <ul className="flex flex-wrap items-stretch px-6 mx-auto justify-center mt-6 max-w-xl">
             {data.datosIntegrantes.edges.map(post => (
               <li className="m-6 max-w-sm overflow-hidden text-center">
-              <Img resolutions={post.node.frontmatter.imagen.childImageSharp.resolutions} className="rounded shadow-md "/>
+              <Img resolutions={post.node.frontmatter.imagen.childImageSharp.resolutions} className="rounded shadow-md" fadeIn={false}/>
                   <div className="font-medium text-2xl mt-2 max-w-xxs leading-normal">{post.node.frontmatter.nombre} {post.node.frontmatter.apellido}</div>
               <p className="font-light text-grey-darker">{post.node.frontmatter.cargo}</p>
               </li>
@@ -54,7 +54,7 @@ const Equipo = ({ data }) => (
       <ul className="flex flex-wrap items-stretch px-6 mx-auto justify-center mt-6 max-w-xl">
         {data.datosMentores.edges.map(post => (
           <li className="m-4 max-w-sm overflow-hidden text-center">
-            <Img resolutions={post.node.frontmatter.imagen.childImageSharp.resolutions} className="rounded shadow-md " />
+              <Img resolutions={post.node.frontmatter.imagen.childImageSharp.resolutions} className="rounded shadow-md" fadeIn={false} />
               <div className="font-semibold text-xl sm:text-2xl mt-2 max-w-xxs leading-tight">{post.node.frontmatter.nombre} {post.node.frontmatter.apellido}</div>
             <p className="font-light text-grey-darker">{post.node.frontmatter.cargo}</p>
           </li>

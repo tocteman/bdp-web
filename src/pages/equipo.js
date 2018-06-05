@@ -17,7 +17,7 @@ const Equipo = ({ data }) => (
         </div>
       </div>
       </div>
-      <Img sizes={data.columpioImage.sizes} className="h-americano m-0" fadeIn={false} />
+      <Img sizes={data.columpioImage.sizes} className="h-americano m-0" />
     </div>
     <div className="shadow-sm">
       <div className="m-8 p-4 mx-auto leading-normal max-w-xs sm:max-w-sm md:max-w-md text-center">
@@ -29,14 +29,14 @@ const Equipo = ({ data }) => (
       </div>
       </div>
     <div>
-        <div className="bg-grey-lightest border-t-1 border-grey py-8">
+        <div className="bg-grey-lightest border-grey py-8">
         <div>
           <div className="text-3xl sm:text-4xl mx-auto text-center mt-4 font-semibold pb-3">Equipo</div>
           <hr />
           <p className="mx-auto text-center max-w-xs sm:max-w-sm mt-4 leading-normal px-4 pt-3">Venimos de todo el mundo, con la misión de hacer tu vida más fácil y entretenida.</p>
         </div>
           
-          <ul className="flex flex-wrap items-stretch px-6 mx-auto justify-center mt-6 max-w-xl">
+          <ul className="flex flex-wrap items-stretch px-6 mx-auto justify-center mt-6 max-w-md xl:max-w-4xl">
             {data.datosIntegrantes.edges.map(post => (
               <li className="m-6 max-w-sm overflow-hidden text-center">
               <Img resolutions={post.node.frontmatter.imagen.childImageSharp.resolutions} className="rounded shadow-md" fadeIn={false}/>

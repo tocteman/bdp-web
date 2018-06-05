@@ -14,11 +14,10 @@ const Reglas = ({ data }) => (
     <div className="pt-2 bg-solid-gradient-white-grey-lightest">
       <HeaderAlt />
       <div className="flex flex-col mx-auto max-w-xl text-center py-16">
-        <h1 className="text-2xl sm:text-5xl pb-4 p-1 mb-2 leading-tight max-w-sm mx-auto text-grey-darkest">Ahorra mientras vives tu vida.</h1>
+        <h1 className="text-4xl sm:text-5xl pb-4 p-1 mb-2 leading-tight max-w-sm mx-auto text-grey-darkest">Ahorra mientras vives tu vida.</h1>
         <p className="text-xl text-grey-darkest leading-normal p-1 max-w-md mx-auto">Conoce las <strong>Reglas de Ahorro autómatico</strong> y descubre las miles de formas en las que puedes ahorrar sin esfuerzo.</p>
       </div>
       <div>
-
           <div className="absolute hidden sm:block pin-x mx-auto">
             <div className="mx-auto text-center">
               <Img resolutions={data.iphoneImageReglas.resolutions}/>
@@ -76,14 +75,14 @@ const Reglas = ({ data }) => (
     
     
     </div>
-    <div className="bg-grey-lightest border-t-1 border-grey pb-8">
-      <ul className="flex flex-wrap px-3 sm:px-8 mx-auto justify-center py-16 max-w-3xl">
+    <div className="bg-grey-lightest border-grey pb-8">
+      <ul className="flex flex-wrap px-3 sm:px-8 mx-auto justify-center py-16 max-w-3xl xl:max-w-4xl xl:py-24 xl:px-8">
         {data.datosReglas.edges.map(post => (
-          <li className="flex m-3 md:w-1/2 lg:w-1/3 max-w-xs rounded-lg shadow-md overflow-hidden ">
+          <li className="flex m-3 md:w-1/2 lg:w-1/3 xl:w-1/4 max-w-xs rounded-lg shadow-md overflow-hidden ">
             <div className="flex flex-col overflow-hidden bg-white overflow">
-              <Img resolutions={post.node.frontmatter.featuredImage.childImageSharp.resolutions} />
+              <Img resolutions={post.node.frontmatter.featuredImage.childImageSharp.resolutions} fadeIn={false} />
               <div className="flex px-4 pt-4 pb-2 items-center">
-                <Img resolutions={post.node.frontmatter.icono.childImageSharp.resolutions} />
+                <Img resolutions={post.node.frontmatter.icono.childImageSharp.resolutions} fadeIn={false} />
                 <h4 className="font-medium pl-2 leading-tight">{post.node.frontmatter.nombre}</h4>
               </div>
               <p className="px-6 max-w-xs leading-normal pt-2 pb-4">
@@ -91,7 +90,7 @@ const Reglas = ({ data }) => (
               </p>
               <hr/>
               <div className="flex justify-center items-center">
-                <Img resolutions={post.node.frontmatter.miniIcono.childImageSharp.resolutions} className="my-4" />
+                <Img resolutions={post.node.frontmatter.miniIcono.childImageSharp.resolutions} className="my-4" fadeIn={false} />
                 <p className="p-2 text-xs font-light">{post.node.frontmatter.requerimento}</p>
 
               </div>

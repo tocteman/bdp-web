@@ -7,8 +7,10 @@ import Headroom from 'react-headroom'
 const Header = () => {
   const handleClick = function (e) {
     const el = document.getElementById("nav");
+    const menuPrin = document.getElementById("menuPrincipal")
     e.preventDefault();
     el.classList.toggle("block");
+    menuPrin.classList.toggle("bg-grey-darkest-semiopaco");
     el.classList.toggle("hidden");
   };
 
@@ -37,7 +39,7 @@ const Header = () => {
   }
 
   return (
-    <Headroom className="z-40">
+    <Headroom className="z-40" id="menuPrincipal">
       <nav className="">
         <div className="flex flex-wrap items-center justify-between max-w-xl mx-auto px-4">
           <div className="block md:inline-block md:mt-0 mr-6 no-underline text-grey-lightest font-medium hover:text-white py-3 hover:border-b-2 border-transparent border-b-2 cursor-pointer font-medium  hover:border-white" onClick={handleClickHome}>

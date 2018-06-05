@@ -30,15 +30,15 @@ const IndexPage = ({ data }) => (
             <p className="text-center font-semibold md:text-left md:ml-8 lg:ml-0 text-4xl lg:text-5xl px-2 mb-2 leading-tight max-w-sm text-white">Tus ahorros.</p>
             <p className="text-base text-center md:text-left lg:text-xl text-grey-lighter leading-normal max-w-sm lg:max-w-sm p-2 md:ml-8 lg:ml-0">Übank es la forma más fácil y entretenida para ahorrar y hacer tus sueños realidad.</p>
             <div className="flex justify-center md:justify-start md:ml-8 lg:ml-0">
-              <a href="/#solicitud"><button className="rounded bg-green text-white px-8 py-4 my-3 hover:bg-green-dark shadow-light">Descargar</button></a>
+              <a href="/#solicitud"><button className="rounded bg-green text-white px-8 mx-2 py-4 my-3 hover:bg-green-dark shadow-light">Descargar</button></a>
             </div>
             <div className="flex justify-around md:justify-between md:ml-8 lg:ml-0 py-4 max-w-sm md:w-3/5">
-              <img src={GooglePlay} className="w-32" />
-              <img src={AppleStore} className="w-32" />
+                <img src={GooglePlay} className="w-32" fadeIn={false} />
+                <img src={AppleStore} className="w-32" fadeIn={false} />
             </div>
           </div>
           <div className="md:w-2/5 mx-auto my-8 text-center">
-            <Img resolutions={data.iphoneImage.resolutions} />
+              <Img resolutions={data.iphoneImage.resolutions} fadeIn={false} />
           </div>
         </div>
       </div>
@@ -152,9 +152,9 @@ const IndexPage = ({ data }) => (
       </div>
     </div>
 
-    <div className="bg-grey-lightest md:py-16 border-1 border-t-grey-lighter border-b-grey-lighter">
+    <div className="bg-grey-lightest md:py-16 border-t-grey-lighter border-b-grey-lighter">
       <div className="md:flex mx-auto justify-center items-center max-w-xl p-2">
-        <div className="md:w-2/3 pt-8 sm:pb-8 mx-auto max-w-md px-8"><Img sizes={data.seguridadImage.sizes} /></div>
+        <div className="md:w-2/3 pt-8 sm:pb-8 mx-auto max-w-md px-8"><Img sizes={data.seguridadImage.sizes} fadeIn={false}/></div>
         <div className="text-center md:text-left md:w-1/3 leading-normal max-w-xs md:max-w-sm mx-auto pb-24 sm:px-4 md:px-6 pt-4">
           <h3 className="pb-3">Seguridad</h3>
           <div className="mx-auto sm:mx-0 border-t-6 border-green w-12" />
@@ -168,7 +168,9 @@ const IndexPage = ({ data }) => (
     <hr />
     <ul className="list-reset flex flex-wrap items-center mx-auto justify-around max-w-xs sm:max-w-sm md:max-w-xl pt-3">
       {data.prensaQuery.edges.map(post => (
-        <li className="px-3 py-4 sm:py-4 md:py-2 w-1/2 sm:w-1/3 md:w-1/5 text-center mx-auto w-32"><a href={post.node.frontmatter.link} target="_blank"><Img resolutions={post.node.frontmatter.imagen.childImageSharp.resolutions} /></a></li>
+        <li className="px-3 my-4 sm:my-4 md:my-2 p-2 w-1/2 sm:w-1/3 md:w-1/5 text-center mx-auto w-32 ">
+          <a href={post.node.frontmatter.link} target="_blank"><Img resolutions={post.node.frontmatter.imagen.childImageSharp.resolutions} fadeIn={false} className=" border-transparent border-b-2 hover:border-grey-darkest hover:border-b-2"/></a>
+        </li>
       ))}
     </ul>
 
@@ -176,10 +178,10 @@ const IndexPage = ({ data }) => (
     <hr />
     <ul className="pt-3 flex flex-wrap justify-center max-w-xl mx-auto list-reset">{data.datosTestimonios.edges.map(post => (
       <li className="sm:w-1/2 lg:w-1/3 p-4 mx-auto text-center">
-        <Img resolutions={post.node.frontmatter.imagen.childImageSharp.resolutions} className="rounded-full shadow-md" />
+        <Img resolutions={post.node.frontmatter.imagen.childImageSharp.resolutions} className="rounded-full shadow-md" fadeIn={false} />
         <div className="max-w-sm mx-auto p-4">
           <div className="font-semibold text-xl sm:text-2xl mt-2 leading-tight text-center">{post.node.frontmatter.nombre} {post.node.frontmatter.apellido}</div>
-          <p className="text-grey-darker font-light pb-2">{post.node.frontmatter.cargo}</p>
+          <p className="text-grey-darker font-light pt-1 pb-2">{post.node.frontmatter.cargo}</p>
           <p className="max-w-xs leading-normal mx-auto text-sm italic font-light">{post.node.excerpt}</p>
         </div>
 
@@ -213,7 +215,7 @@ export const query = graphql`
               imagenFondo {
                 childImageSharp {
                   sizes (
-                    maxWidth: 1200
+                    maxWidth: 600
                     quality: 70
                     duotone: {
                     highlight: "#1bb876",
@@ -254,10 +256,6 @@ export const query = graphql`
                 width: 150
                 height: 150
                 cropFocus: ENTROPY
-                duotone: {
-                    highlight: "#1bb876",
-                    shadow: "#388dd1",
-                    opacity: 10  },
               ) {
                 ...GatsbyImageSharpResolutions_noBase64
               }
@@ -291,7 +289,7 @@ export const query = graphql`
       }
     }
   }
-  headerEstrellas: imageSharp(id: { regex: "/header_estrellas/"}){
+  headerEstrellas: imageSharp(id: { regex: "/headerEstrellasTres/"}){
       sizes(maxWidth:1920, duotone: {highlight: "#151616", shadow: "#191b1c", opacity: 45} ){
         ...GatsbyImageSharpSizes_noBase64
       }

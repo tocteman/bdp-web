@@ -30,7 +30,7 @@ class ModalForm extends Component {
 
     return (
       <div className="inline">
-        <button onClick={this.handleClick} className="relative inline text-green hover:text-grey-darkest">Escríbenos</button>
+        <button onClick={this.handleClick} className="relative inline text-green hover:text-grey-darkest hover:underline">Escríbenos</button>
         {this.state.showModal ? modal: ''}
       </div>
     )

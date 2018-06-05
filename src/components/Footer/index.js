@@ -48,10 +48,10 @@ const Footer = () => (
       
       <div className="text-grey-lightest sm:w-1/2 lg:w-1/4 text-center mx-auto text-center my-8 md:my-2">Descubre nuevas formas de ahorrar en nuestras redes sociales.
           <div className="flex justify-center items-center mx-auto text-center">
-          <div className="m-4 text-xl cursor-pointer hover:text-grey-lighter"><a href="https://twitter.com/ubankapp" target="_blank" className="no-underline text-white hover:text-grey-lighter hover:border-white hover:border-b-2"><FaTwitter /></a></div>
-          <div className="m-4 text-xl cursor-pointer hover:text-grey-lighter"><a href="https://facebook.com/ubanklatam" target="_blank" className="no-underline text-white hover:text-grey-lighter hover:border-white hover:border-b-2"><FaFacebookOfficial /></a></div>
-          <div className="m-4 text-xl cursor-pointer hover:text-grey-lighter"><a href="https://instagram.com/ubank_app/" target="_blank" className="no-underline text-white hover:text-grey-lighter hover:border-white hover:border-b-2"><FaInstagram /></a></div>
-            <div className="m-4 text-xl cursor-pointer hover:text-grey-lighter"><FaYoutubePlay /></div>
+          <div className="m-4 text-xl cursor-pointer hover:text-grey-lighter"><a href="https://twitter.com/ubankapp" target="_blank" className="no-underline text-white hover:text-grey-lighter hover:border-white hover:border-b-2"><FaTwitter className="mb-4"/></a></div>
+          <div className="m-4 text-xl cursor-pointer hover:text-grey-lighter"><a href="https://facebook.com/ubanklatam" target="_blank" className="no-underline text-white hover:text-grey-lighter hover:border-white hover:border-b-2"><FaFacebookOfficial className="mb-4"/></a></div>
+          <div className="m-4 text-xl cursor-pointer hover:text-grey-lighter"><a href="https://instagram.com/ubank_app/" target="_blank" className="no-underline text-white hover:text-grey-lighter hover:border-white hover:border-b-2"><FaInstagram className="mb-4"/></a></div>
+            <div className="m-4 text-xl cursor-pointer hover:text-grey-lighter"><FaYoutubePlay className="mb-4" /></div>
           </div>
       </div>
     </div>

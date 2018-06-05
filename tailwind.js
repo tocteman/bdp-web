@@ -131,6 +131,7 @@ module.exports = {
     'md': '768px',
     'lg': '992px',
     'xl': '1200px',
+    'xxl': '1920px',
   },
 
 
@@ -348,6 +349,7 @@ module.exports = {
   borderWidths: {
     default: '1px',
     '0': '0',
+    '1': '1px',
     '2': '2px',
     '3': '3px',
     '4': '4px',

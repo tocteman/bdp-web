@@ -56,6 +56,10 @@ export default class CarouselOne extends React.Component {
 
     }, 3500);
   }
+
+  componentWillUnmount(){
+    clearTimeout(this.setIndexes);
+  }
   render() {
     const move = this.state.move ? 'move' : '';
     if (this.state.move) {
@@ -132,7 +136,6 @@ export default class CarouselOne extends React.Component {
             </div>
         </div>
         </div>
-        <hr className="py-4" />
       </div>
     );
   }

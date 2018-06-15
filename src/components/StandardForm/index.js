@@ -36,8 +36,8 @@ const InnerFormStandard = ({
           <label className="font-medium mx-auto">
             Email:<br />
           </label>
-          {touched.email && errors.email && <div className="text-sm py-2 italic text-red-light">{errors.email}</div>}
-          <Field type="email" name="email" placeholder="Email" className="appearance-none text-grey-darkest bg-grey-lightest  focus:bg-blue-lighest rounded-lg shadow py-3 px-4 text-sm md:w-128 my-2" />
+          {touched.correo && errors.correo && <div className="text-sm py-2 italic text-red-light">{errors.correo}</div>}
+          <Field type="text" name="correo" placeholder="Email" className="appearance-none text-grey-darkest bg-grey-lightest  focus:bg-blue-lighest rounded-lg shadow py-3 px-4 text-sm md:w-128 my-2" />
         </div>
       </div>
 
@@ -58,27 +58,31 @@ const InnerFormStandard = ({
   )
 
 const OuterFormStandard = withFormik({
-  mapPropsToValues({ email, message, nombre, apellido, errors }) {
+  mapPropsToValues({ nombre, apellido, correo, message, errors }) {
     return {
-      email: email || '',
-      message: message || '',
       nombre: nombre || '',
       apellido: apellido || '',
+      correo: correo || '',
+      message: message || ''
     }
   },
   validationSchema: Yup.object().shape({
-    email: Yup.string('¿Cuál es tu dirección de correo?').email('Por favor asegúrate que sea una dirección válida').required('¿Cuál es tu dirección de correo?'),
     nombre: Yup.string().required('¿Cuál es tu nombre?'),
     apellido: Yup.string().required('¿Cuál es tu apellido?'),
+    correo: Yup.string().required('¿Cuál es tu dirección de correo?').email('Por favor asegúrate que sea una dirección válida'),
+    message: Yup.string().required('Te escuchamos.')
   }),
   handleSubmit(values, { resetForm, setErrors, setSubmitting }) {
     fetch('https://3a19x0n8o8.execute-api.us-east-1.amazonaws.com/prod/feedback/', {
       method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({
-        "email:": values.email,
-        "message": values.message,
         "nombre": values.nombre,
-        "apellido": values.apellido
+        "apellido": values.apellido,
+        "correo:": values.correo,
+        "message": values.message
       })
     })
       .then(()=>{

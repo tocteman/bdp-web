@@ -1,14 +1,15 @@
 {
-  "name": "gatsby-starter-tailwind",
-  "description": "Gatsby starter styled with Tailwind",
+  "name": "gatsby-ubank",
+  "description": "Ubank Website",
   "version": "1.1.0",
-  "author": "Taylor Bryant <taylor@bryant.io>",
+  "author": "Juan Vinueza",
   "dependencies": {
     "@fortawesome/react-fontawesome": "0.0.19",
     "axios": "^0.18.0",
     "bluebird": "^3.5.1",
+    "formik": "^0.11.11",
     "fs-extra": "^6.0.1",
-    "gatsby": "^1.9.261",
+    "gatsby": "^1.9.270",
     "gatsby-image": "^1.0.51",
     "gatsby-link": "^1.6.44",
     "gatsby-plugin-catch-links": "^1.0.22",
@@ -16,14 +17,14 @@
     "gatsby-plugin-netlify-cms": "^2.0.1",
     "gatsby-plugin-react-helmet": "^2.0.11",
     "gatsby-plugin-react-next": "^1.0.11",
-    "gatsby-plugin-sharp": "^1.6.44",
+    "gatsby-plugin-sharp": "^1.6.46",
     "gatsby-remark-autolink-headers": "^1.4.18",
-    "gatsby-remark-images": "^1.5.63",
+    "gatsby-remark-images": "^1.5.65",
     "gatsby-remark-relative-images": "0.0.6",
-    "gatsby-source-filesystem": "^1.5.36",
-    "gatsby-transformer-json": "^1.0.18",
+    "gatsby-source-filesystem": "^1.5.38",
+    "gatsby-transformer-json": "^1.0.19",
     "gatsby-transformer-remark": "^1.7.41",
-    "gatsby-transformer-sharp": "^1.6.24",
+    "gatsby-transformer-sharp": "^1.6.26",
     "gatsby-transformer-yaml": "^1.5.17",
     "limax": "^1.6.0",
     "lodash": "^4.17.10",
@@ -33,12 +34,10 @@
     "react-headroom": "^2.2.2",
     "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7",
-    "react-responsive-carousel": "^3.1.39",
     "react-transition-group": "^2.3.1",
     "rehype-react": "^3.0.2",
     "slash": "^2.0.0",
-    "typeface-clear-sans": "0.0.44",
-    "typeface-ibm-plex-sans": "0.0.58"
+    "yup": "^0.25.1"
   },
   "keywords": [
     "gatsby",
@@ -55,7 +54,7 @@
     "deploy": "tailwind build ./src/layouts/index.tailwind.css -c ./tailwind.js -o ./src/layouts/index.css && purgecss -c purgecss.config.js -o ./src/layouts && gatsby build &&aws s3 sync --acl public-read --sse --delete ~/dev/ubank_app/public/ s3://ubank-gatsby-prueba1.com && aws configure set preview.cloudfront true && aws cloudfront create-invalidation --distribution-id E13DNFK7ROMRMZ --paths '/*'"
   },
   "devDependencies": {
-    "prettier": "^1.13.2",
+    "prettier": "^1.13.4",
     "purgecss": "^0.21.0",
     "tailwindcss": "^0.5.3"
   }

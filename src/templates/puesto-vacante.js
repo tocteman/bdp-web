@@ -11,7 +11,7 @@ export default function VacanteTemplate({ data }) {
 
   return (
     <div>
-    <div className="w-full h-13 bg-grey-darkest">
+    <div className="w-full bg-grey-darkest">
     <Header/>
     </div>
     
@@ -24,8 +24,9 @@ export default function VacanteTemplate({ data }) {
       <div className="p-4">
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
-      <div className="ml-4 mt-8">
-        <h2>Déjanos echar un vistazo.</h2>
+      </div> 
+      <div className="mt-8 py-12 mx-auto bg-grey-lightest">
+        <h2 className="text-center py-4">Déjanos echar un vistazo.</h2>
         <br />
         <div className="flex flex-wrap mx-auto">
           <div className="w-full">
@@ -33,7 +34,7 @@ export default function VacanteTemplate({ data }) {
           </div>
         </div>
       </div>
-    </div>  
+    
   </div>
   )
 }

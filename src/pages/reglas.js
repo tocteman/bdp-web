@@ -80,9 +80,9 @@ const Reglas = ({ data }) => (
         {data.datosReglas.edges.map(post => (
           <li className="flex m-3 md:w-1/2 lg:w-1/3 xl:w-1/4 max-w-xs rounded-lg shadow-md overflow-hidden ">
             <div className="flex flex-col overflow-hidden bg-white overflow">
-              <Img resolutions={post.node.frontmatter.featuredImage.childImageSharp.resolutions} fadeIn={false} />
+              <Img resolutions={post.node.frontmatter.featuredImage.childImageSharp.resolutions}  />
               <div className="flex px-4 pt-4 pb-2 items-center">
-                <Img resolutions={post.node.frontmatter.icono.childImageSharp.resolutions} fadeIn={false} />
+                <Img resolutions={post.node.frontmatter.icono.childImageSharp.resolutions}  />
                 <h4 className="font-medium pl-2 leading-tight">{post.node.frontmatter.nombre}</h4>
               </div>
               <p className="px-6 max-w-xs leading-normal pt-2 pb-4">
@@ -90,7 +90,7 @@ const Reglas = ({ data }) => (
               </p>
               <hr/>
               <div className="flex justify-center items-center">
-                <Img resolutions={post.node.frontmatter.miniIcono.childImageSharp.resolutions} className="my-4" fadeIn={false} />
+                <Img resolutions={post.node.frontmatter.miniIcono.childImageSharp.resolutions} className="my-4"  />
                 <p className="p-2 text-xs font-light">{post.node.frontmatter.requerimento}</p>
 
               </div>

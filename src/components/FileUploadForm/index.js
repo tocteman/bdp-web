@@ -1,99 +1,94 @@
-import React from "react";
-import Link from "gatsby-link";
-import Helmet from "react-helmet";
+import React from 'react'
+import { withFormik, Form, Field } from 'formik'
+import * as Yup from 'yup'
 
-function encode(data) {
-  const formData = new FormData();
+const InnerForm = ({
+  values,
+  handleChange,
+  handleBlur,
+  errors,
+  touched,
+  isSubmitting,
+  setFieldValue
+}) => (
+    <Form>
 
-  for (const key of Object.keys(data)) {
-    formData.append(key, data[key]);
-  }
-
-  return formData;
-}
-
-export default class FileUploadForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {value: ''};
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleChange = e => {
-    if (e.target.files) {
-      this.setState({ [e.target.name]: e.target.files[0] });
-      document.getElementById("guatita").innerHTML = e.target.files[0].name
-    } else {
-      this.setState({ [e.target.name]: e.target.value });
-    }
-  };
-
-  handleSubmit = e => {
-    fetch("/", {
-      method: "POST",
-      body: encode({ "form-name": "file-upload", ...this.state })
-    })
-      .then(() => alert("Hemos recibido tu formulario"))
-      .catch(error => alert(error));
-
-    e.preventDefault();
-  };
-
-  render() {
-    return (
-      <div>
-        <form
-          name="file-upload"
-          method="post"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          onSubmit={this.handleSubmit}
-        >
-          <p hidden>
-            <label>
-              Don’t fill this out: <input name="bot-field" onChange={this.handleChange} />
-            </label>
-          </p>
-          <p>
-            <label>
+      <div className="flex flex-col items-center md:items-stretch ">
+        <div className="md:flex justify-around">
+          <div className=" py-3 px-4">
+            <label className="font-medium">
               Nombre:<br />
-              <input type="text" name="name" onChange={this.handleChange}  className="md:w-md block text-grey-darkest bg-grey-lightest focus:bg-grey-light rounded-lg shadow mb-4 p-3 text-sm" />
             </label>
-          </p>
-          <p>
-            <label>
+            {touched.nombre && errors.nombre && <div className="text-sm py-2 italic text-red-light">{errors.nombre}</div>}
+            <Field type="text" name="nombre" className="appearance-none text-grey-darkest bg-white focus:bg-grey-lighest rounded-lg shadow py-3 px-4 text-sm my-2 w-48 xs:w-64 sm:w-96 md:w-48" />
+          </div>
+
+          <div className="py-3 px-2 px-4">
+            <label className="font-medium">
               Apellido:<br />
-              <input type="text" name="name" onChange={this.handleChange}  className="md:w-md block  text-grey-darkest bg-grey-lightest focus:bg-grey-light rounded-lg shadow mb-4 p-3 text-sm" />
             </label>
-          </p>
-          <p>
-            <label>
-              Email:<br />
-              <input type="email" name="name" onChange={this.handleChange}  className="md:w-md block text-grey-darkest bg-grey-lightest rounded-lg shadow mb-4 p-3 text-sm" />
-            </label>
-          </p>
-          <p>
-            Sube tu CV:
-            <label for="file-upload" className="rounded-lg bg-grey-lightest block cursor-pointer shadow p-2 max-w-xs">
-            <div id="guatita">...</div>
-              <div>
-              <input
-                id="file-upload"
-                type="file"
-                name="attachment"
-                onChange={this.handleChange}
-                
-                className="hidden"
-              />
-              </div>
-            </label>
-          </p>
-          <p>
-            <button type="submit" className="mt-4 rounded text-white bg-green-dark hover:bg-green px-6 py-2 shadow-md ">Send</button>
-          </p>
-        </form>
+            {touched.apellido && errors.apellido && <div className="text-sm py-2 italic text-red-light">{errors.apellido}</div>}
+            <Field type="text" name="apellido" className="appearance-none text-grey-darkest bg-white focus:bg-grey-lightest rounded-lg shadow py-3 px-4 w-48 xs:w-64 sm:w-96 md:w-48 text-sm my-2" />
+          </div>
+        </div>
       </div>
-    );
+
+      <div className="flex flex-col items-center md:items-stretch">
+        <div className="py-3 px-2 px-4 mx-auto">
+          <label className="font-medium">
+            Email:<br />
+          </label>
+          {touched.email && errors.email && <div className="text-sm py-2 italic text-red-light">{errors.email}</div>}
+          <Field type="email" name="email" placeholder="Email" className="appearance-none text-grey-darkest bg-white focus:bg-grey-lighest border-green-lightest block rounded-lg shadow py-3 px-4 text-sm md:w-128 my-2 mx-auto w-48 xs:w-64 sm:w-96" />
+        </div>
+      </div>
+
+      
+
+      <div className="flex flex-col items-center md:items-stretch">
+        <div className="py-3 px-2 px-4 mx-auto">  
+          <label for="file-upload" className="font-medium"> Sube tu CV: </label>
+            <div>
+              <input id="file" name="file" type="file" onChange={(event) => {
+              setFieldValue("file", event.currentTarget.files[0]);
+            }} className="appearance-none text-grey-darkest bg-white focus:bg-grey-lighest border-green-lightest block rounded-lg shadow py-3 px-4 text-sm md:w-128 my-2 mx-auto w-48 xs:w-64 sm:w-96"/>
+            </div>
+          </div>
+        </div>
+      
+
+      <div className="text-center">
+        <button type="submit" className="mt-4 mx-2 sm:mx-4 rounded text-white bg-green active:bg-green-dark px-8 py-3 shadow-md" disabled={isSubmitting}>{isSubmitting ? 'Enviando...' : 'Enviar'}</button>
+      </div>
+
+    </Form>
+  )
+
+const OuterForm = withFormik({
+  mapPropsToValues({ email, nombre, apellido, errors }) {
+    return {
+      email: email || '',
+      nombre: nombre || '',
+      apellido: apellido || '',
+    }
+  },
+  validationSchema: Yup.object().shape({
+    email: Yup.string('¿Cuál es tu dirección de correo?').email('Por favor asegúrate que sea una dirección válida').required('¿Cuál es tu dirección de correo?'),
+    nombre: Yup.string().required('¿Cuál es tu nombre?'),
+    apellido: Yup.string().required('¿Cuál es tu apellido?'),
+  }),
+  handleSubmit(values, { resetForm, setErrors, setSubmitting }) {
+    setTimeout(() => {
+      resetForm();
+      setSubmitting(false)
+    }, 2000)
   }
-}
+})(InnerForm)
+
+const FileUploadForm = () => (
+  <div className="mx-auto sm:max-w-sm md:max-w-md">
+    <OuterForm className="mx-auto" />
+  </div>
+)
+
+export default FileUploadForm

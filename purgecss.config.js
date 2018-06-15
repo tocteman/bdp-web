@@ -11,5 +11,5 @@ module.exports = {
       extensions: ['html', 'js'],
     },
   ],
-  whitelist: ['headroom--unfixed', 'headroom--pinned', 'headroom-alt'],
+  whitelist: ['headroom--unfixed', 'headroom--pinned', 'headroom-alt', 'current', 'next', 'move', 'current.move', 'next.move', 'texto', 'pic'],
 }

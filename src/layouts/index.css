@@ -787,10 +787,6 @@ hr {
   height: 3rem;
 }
 
-.h-13 {
-  height: 3.25rem;
-}
-
 .h-americano {
   height: 75vh;
 }
@@ -852,11 +848,6 @@ hr {
 .my-3 {
   margin-top: .75rem;
   margin-bottom: .75rem;
-}
-
-.mx-3 {
-  margin-left: .75rem;
-  margin-right: .75rem;
 }
 
 .my-4 {
@@ -1124,6 +1115,10 @@ hr {
   padding-bottom: 2rem;
 }
 
+.pt-12 {
+  padding-top: 3rem;
+}
+
 .pt-16 {
   padding-top: 4rem;
 }
@@ -1146,6 +1141,10 @@ hr {
 
 .relative {
   position: relative;
+}
+
+.sticky {
+  position: sticky;
 }
 
 .pin-y {
@@ -1208,6 +1207,10 @@ hr {
 
 .text-white {
   color: #fff;
+}
+
+.text-red-light {
+  color: #ef5753;
 }
 
 .text-green {
@@ -1640,10 +1643,6 @@ hr {
 
   .md\:ml-8 {
     margin-left: 2rem;
-  }
-
-  .md\:ml-12 {
-    margin-left: 3rem;
   }
 
   .md\:ml-16 {

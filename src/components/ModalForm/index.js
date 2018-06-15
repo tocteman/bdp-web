@@ -22,7 +22,7 @@ class ModalForm extends Component {
           <div className="mx-auto">
             <StandardForm/>
           </div>
-          <div className="cursor-pointer px-2 text-grey-darker " onClick={this.handleClick}><FaClose /></div>
+          <div className="cursor-pointer p-4 text-grey-darker text-2xl absolute sticky pin-x pin-y" onClick={this.handleClick}><FaClose /></div>
         </div>
         
       </div>

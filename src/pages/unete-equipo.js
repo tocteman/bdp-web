@@ -42,7 +42,9 @@ const UneteEquipo = ({ data }) => (
         <br/>
       </div>
     ))}
-      <p className="text-center mx-auto py-12">¿No encuentras lo que estás buscando? <ModalForm /> y veremos algo para ti.</p>
+      <p className="text-center mx-auto pt-12">¿No encuentras lo que estás buscando?</p> 
+      <div className="text-center mx-auto py-2"><ModalForm /></div>
+      <p className="text-center mx-auto">y veremos algo para ti.</p>
     </div>
   </div>
 )

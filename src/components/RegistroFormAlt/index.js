@@ -8,7 +8,8 @@ const InnerForm = ({
   handleBlur,
   errors,
   touched,
-  isSubmitting
+  isSubmitting,
+  status
 }) => (
     <Form>
       <div className="flex flex-col items-center md:items-stretch">
@@ -16,7 +17,7 @@ const InnerForm = ({
           <label className="font-medium mx-auto">
             Cuéntanos:<br />
           </label>
-          <textarea name="message" onChange={handleChange} onBlur={handleBlur} value={values.message} className="appearance-none text-grey-lighter bg-grey-darkest focus:bg-blue-lightest border-green-lightest rounded-lg shadow py-3 px-4 text-sm w-48 xs:w-64 sm:w-96 md:w-128 my-2" placeholder="Tu idea..."></textarea>
+          <textarea lang="es" name="message" onChange={handleChange} onBlur={handleBlur} value={values.message} className="appearance-none text-grey-lighter bg-grey-darkest focus:bg-blue-lightest border-green-lightest rounded-lg shadow py-3 px-4 text-sm w-48 xs:w-64 sm:w-96 md:w-128 my-2" placeholder="Tu idea..."></textarea>
         </div>
       </div>
 
@@ -45,8 +46,8 @@ const InnerForm = ({
           <label className="font-medium">
             Email:<br />
           </label>
-          {touched.email && errors.email && <div className="text-sm py-2 italic text-red-light">{errors.email}</div>}
-          <Field type="email" name="email" placeholder="Email" className="appearance-none text-grey-lighter bg-grey-darkest focus:bg-grey-lighest border-green-lightest block rounded-lg shadow py-3 px-4 text-sm md:w-128 my-2 mx-auto w-48 xs:w-64 sm:w-96" />
+          {touched.correo && errors.correo && <div className="text-sm py-2 italic text-red-light">{errors.correo}</div>}
+          <Field type="email" name="correo" placeholder="Email" className="appearance-none text-grey-lighter bg-grey-darkest focus:bg-grey-lighest border-green-lightest block rounded-lg shadow py-3 px-4 text-sm md:w-128 my-2 mx-auto w-48 xs:w-64 sm:w-96" />
         </div>
       </div>
 
@@ -106,34 +107,52 @@ const InnerForm = ({
 
       <div className="text-center">
         <button type="submit" className="mt-4 mx-2 sm:mx-4 rounded text-white bg-green active:bg-green-dark px-8 py-3 shadow-md" disabled={isSubmitting}>{isSubmitting ? 'Enviando...' : 'Enviar'}</button>
+        {status && status.success && <div className="text-large py-4 text-green">¡Gracias! Hemos recibido tu información.</div>} 
       </div>
 
     </Form>
   )
 
 const OuterForm = withFormik({
-  mapPropsToValues({ email, message, nombre, apellido, pais, dispositivo, banco, errors }) {
+  mapPropsToValues({ correo, message, nombre, apellido, pais, dispositivo, banco, errors }) {
     return {
-      email: email || '',
+      correo: correo || '',
       message: message || '',
       nombre: nombre || '',
       apellido: apellido || '',
-      pais: pais || '',
-      dispositivo: dispositivo || '',
+      pais: pais || 'México',
+      dispositivo: dispositivo || 'Android',
       banco: banco || '',
     }
   },
   validationSchema: Yup.object().shape({
-    email: Yup.string('¿Cuál es tu dirección de correo?').email('Por favor asegúrate que sea una dirección válida').required('¿Cuál es tu dirección de correo?'),
+    correo: Yup.string('¿Cuál es tu dirección de correo?').email('Por favor asegúrate que sea una dirección válida').required('¿Cuál es tu dirección de correo?'),
     nombre: Yup.string().required('¿Cuál es tu nombre?'),
     apellido: Yup.string().required('¿Cuál es tu apellido?'),
     banco: Yup.string().required('Por favor cuéntanos de qué banco eres cliente'),
   }),
-  handleSubmit(values, { resetForm, setErrors, setSubmitting }) {
+  handleSubmit(values, { resetForm, setErrors, setSubmitting, setStatus }) {
+    setStatus({ success: false });
     setTimeout(() => {
+      _cio.identify({
+        id: values.correo,
+        email: values.correo,
+        created_at: Math.floor(Date.now() / 1000),
+        name: values.nombre,
+        apellido: values.apellido,
+        pais: values.pais,
+        dispositivo: values.dispositivo,
+        banco: values.banco,
+        message: values.message,
+        registro: true,
+        interesIdea: true
+      })
       resetForm();
       setSubmitting(false)
-    }, 2000)
+      setStatus({ success: true })
+      setTimeout(() => { setStatus({ success: false }) }, 3000)
+    }, 1200)
+    setStatus({ success: false });
   }
 })(InnerForm)
 

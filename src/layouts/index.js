@@ -8,6 +8,7 @@ import "./index.css";
 import Img from 'gatsby-image'
 
 const TemplateWrapper = ({ children, data }) => (
+
   <div className="flex flex-col font-sans min-h-screen text-grey-darkest">
       <Helmet
     title="Übank"
@@ -25,19 +26,6 @@ const TemplateWrapper = ({ children, data }) => (
     <Footer />
   </div>
 );
-
-// export const aunNoQuery = graphql`
-// query AunNoTienes {
-//   file (id: {regex: "/aunNoTienesIPhones/"})
-//   { 
-//     childImageSharp {
-//       sizes (maxWidth:2000){
-//       ...GatsbyImageSharpSizes_noBase64
-//       }    
-//     }
-//   }
-// }
-// `
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func

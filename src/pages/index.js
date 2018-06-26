@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
 import Header from "../components/Header";
-import ReactGranimCanvas from "../components/ReactGranimCanvas"
 import IPhone from "../img/iphone7.png"
 import FaLongArrowDown from 'react-icons/lib/fa/long-arrow-down'
 import FaShield from 'react-icons/lib/fa/shield'
@@ -28,7 +27,7 @@ const IndexPage = ({ data }) => (
           <div className="md:w-3/5 max-w-sm mx-auto">
             <p className="text-center font-semibold md:text-left md:ml-8 lg:ml-0 text-4xl lg:text-5xl px-2 pt-4 leading-tight max-w-sm text-white">Tu vida. Tus reglas. </p>
             <p className="text-center font-semibold md:text-left md:ml-8 lg:ml-0 text-4xl lg:text-5xl px-2 mb-2 leading-tight max-w-sm text-white">Tus ahorros.</p>
-            <p className="text-base text-center md:text-left lg:text-xl text-grey-lighter leading-normal max-w-sm lg:max-w-sm p-2 md:ml-8 lg:ml-0">Übank es la forma más fácil y entretenida para ahorrar y hacer tus sueños realidad.</p>
+            <p className="text-base text-center md:text-left lg:text-xl text-grey-lighter leading-normal max-w-sm lg:max-w-sm p-2 md:ml-8 lg:ml-0">Übank es la forma más fácil y entretenida para ahorrar y hacer tus sueños realidad. </p>
             <div className="flex justify-center md:justify-start md:ml-8 lg:ml-0">
               <a href="/#solicitud"><button className="rounded bg-green text-white px-8 mx-2 py-4 my-3 hover:bg-green-dark shadow-light">Descargar</button></a>
             </div>

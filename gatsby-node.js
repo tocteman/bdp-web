@@ -6,6 +6,7 @@ const fs = require ('fs-extra')
 const slash = require ('slash')
 const slugify = require('limax')
 const {createFilePath} = require('gatsby-source-filesystem')
+// const webpack = require('webpack');
 
 
 const slugToAnchor = slug => 
@@ -13,6 +14,17 @@ const slugToAnchor = slug =>
     .split('/')
     .filter(item => item !== ``)
     .pop()
+
+// exports.modifyWebpackConfig = ({ config, stage }) => {
+//   switch (stage) {
+//     case "build-html":
+//       config.plugin('define', webpack.DefinePlugin, [{ "global.GENTLY": false }]);
+
+//       break;
+//   }
+
+//   return config;
+// };
 
 exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators

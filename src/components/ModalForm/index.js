@@ -17,14 +17,15 @@ class ModalForm extends Component {
 
   render(){
     const modal = (
-      <div className="py-8 mx-auto">
+      <div className="py-2">
+        <div className="flex flex-col items-end max-w-md pin-y absolute sticky">
+          <div className="cursor-pointer p-4 text-grey-darker text-2xl " onClick={this.handleClick}><FaClose /></div>
+        </div>
         <div className="flex mx-auto max-w-xl items-start justify-center">
           <div className="mx-auto">
             <StandardForm/>
           </div>
-          <div className="cursor-pointer p-4 text-grey-darker text-2xl absolute sticky pin-x pin-y" onClick={this.handleClick}><FaClose /></div>
         </div>
-        
       </div>
     )
 

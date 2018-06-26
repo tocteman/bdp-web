@@ -8,7 +8,8 @@ const InnerFormStandard = ({
   handleBlur,
   errors,
   touched,
-  isSubmitting
+  isSubmitting,
+  status
 }) => (
     <Form>
       <div className="flex flex-col items-center md:items-stretch ">
@@ -37,7 +38,7 @@ const InnerFormStandard = ({
             Email:<br />
           </label>
           {touched.correo && errors.correo && <div className="text-sm py-2 italic text-red-light">{errors.correo}</div>}
-          <Field type="text" name="correo" placeholder="Email" className="appearance-none text-grey-darkest bg-grey-lightest  focus:bg-blue-lighest rounded-lg shadow py-3 px-4 text-sm md:w-128 my-2" />
+          <Field type="email" name="correo" placeholder="Email" className="appearance-none text-grey-darkest bg-grey-lightest  focus:bg-blue-lighest rounded-lg shadow py-3 px-4 text-sm md:w-128 my-2" />
         </div>
       </div>
 
@@ -52,6 +53,8 @@ const InnerFormStandard = ({
 
       <div className="text-center">
         <button type="submit" className="mt-4 mx-2 sm:mx-4 rounded text-white bg-green active:bg-green-dark px-8 py-3 shadow-md" disabled={isSubmitting} >{isSubmitting ? 'Enviando...' : 'Enviar'}</button>
+
+        {status && status.success && <div className="text-large py-4 text-green">¡Gracias! Hemos recibido tu información.</div>} 
       </div>
 
     </Form>
@@ -72,7 +75,7 @@ const OuterFormStandard = withFormik({
     correo: Yup.string().required('¿Cuál es tu dirección de correo?').email('Por favor asegúrate que sea una dirección válida'),
     message: Yup.string().required('Te escuchamos.')
   }),
-  handleSubmit(values, { resetForm, setErrors, setSubmitting }) {
+  handleSubmit(values, { resetForm, setErrors, setSubmitting, setStatus }) {
     fetch('https://3a19x0n8o8.execute-api.us-east-1.amazonaws.com/prod/feedback/', {
       method: "POST",
       headers: {
@@ -81,15 +84,25 @@ const OuterFormStandard = withFormik({
       body: JSON.stringify({
         "nombre": values.nombre,
         "apellido": values.apellido,
-        "correo:": values.correo,
+        "correo": values.correo,
         "message": values.message
       })
     })
       .then(()=>{
+        _cio.identify({
+          id: values.correo,
+          email: values.correo,
+          created_at: Math.floor(Date.now()/1000),
+          name: values.nombre,
+          message: values.message,
+          interesUnirse: true
+        })
         resetForm();
         setSubmitting(false)
-      })
-      .catch(error => alert(error))
+        setStatus({ success: true })
+        setTimeout(() => { setStatus({ success: false }) }, 3000)
+      }, 1200)
+    setStatus({ success: false });
   }
 })(InnerFormStandard)
 

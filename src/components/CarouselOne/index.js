@@ -54,7 +54,7 @@ export default class CarouselOne extends React.Component {
         this.setIndexes(this.getNextIndex(this.state.index));
       }, 500); // same delay as in the css transition here
 
-    }, 3500);
+    }, 2500);
   }
 
   componentWillUnmount(){

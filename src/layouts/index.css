@@ -114,6 +114,11 @@ strong {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 
+code {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
 /**
  * Add the correct font style in Android 4.3-.
  */
@@ -494,6 +499,34 @@ button,
   cursor: pointer;
 }
 
+@font-face {
+  font-family: 'din-slab';
+  src: url('../fonts/DINNextSlabPro.woff2') format('woff2'), url('../fonts/DINNextSlabPro.woff') format('woff'), url('../fonts/DINNextSlabPro.eot') format('eot');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'din-slab';
+  src: url('../fonts/DINNextSlabProMedium.woff2') format('woff2'), url('../fonts/DINNextSlabProMedium.woff') format('woff'), url('../fonts/DINNextSlabProMedium.eot') format('eot');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'accord-alternate';
+  src: url('../fonts/AccordAlternate.woff2') format('woff2'), url('../fonts/AccordAlternate.woff') format('woff'), url('../fonts/AccordAlternate.eot') format('eot');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'accord-alternate';
+  src: url('../fonts/AccordAlternate-Bold.woff2') format('woff2'), url('../fonts/AccordAlternate-Bold.woff') format('woff'), url('../fonts/AccordAlternate-Bold.eot') format('eot');
+  font-weight: bold;
+  font-style: normal;
+}
+
 h1,
 h2,
 h3,
@@ -503,33 +536,37 @@ h5 {
   font-weight: 600;
   margin-top: .25rem;
   margin-bottom: .25rem;
-  font-family: inherit;
   line-height: 1.5;
 }
 
 h1,
 .h1 {
   font-size: 2.5rem;
+  /* font-family: 'din_slab_pro'; */
 }
 
 h2,
 .h2 {
   font-size: 2rem;
+  /* font-family: 'din_slab_pro'; */
 }
 
 h3,
 .h3 {
   font-size: 1.75rem;
+  /* font-family: 'din_slab_pro'; */
 }
 
 h4,
 .h4 {
   font-size: 1.5rem;
+  /* font-family: 'din_slab_pro'; */
 }
 
 h5,
 .h5 {
   font-size: 1.25rem;
+  /* font-family: 'din_slab_pro'; */
 }
 
 hr {
@@ -537,17 +574,7 @@ hr {
   margin-bottom: 1rem;
   width: 3rem;
   border: 0;
-  border-top: 6px solid #17c671;
-}
-
-.headroom--unfixed {
-  background: transparent;
-}
-
-.headroom--pinned {
-  background-color: rgba(45, 51, 66, .95);
-  color: white;
-  z-index: 40;
+  border-top: 6px solid #005eb8;
 }
 
 .list-reset {
@@ -587,6 +614,26 @@ hr {
   background-color: #fff;
 }
 
+.bg-oceano {
+  background-color: #005eb8;
+}
+
+.bg-cielo {
+  background-color: #009fdf;
+}
+
+.bg-piedra-very-dark {
+  background-color: #161716;
+}
+
+.bg-piedra-quite-dark {
+  background-color: #212222;
+}
+
+.bg-piedra-very-light {
+  background-color: #f0f1f0;
+}
+
 .bg-yellow {
   background-color: #ffed4a;
 }
@@ -607,16 +654,20 @@ hr {
   background-color: #f7f7f7;
 }
 
+.hover\:bg-oceano-dark:hover {
+  background-color: #004b93;
+}
+
+.hover\:bg-cielo-dark:hover {
+  background-color: #007fb2;
+}
+
 .hover\:bg-green-dark:hover {
   background-color: #14a860;
 }
 
 .hover\:bg-green:hover {
   background-color: #17c671;
-}
-
-.hover\:bg-blue-lightest:hover {
-  background-color: #eaf8ff;
 }
 
 .border-transparent {
@@ -631,12 +682,16 @@ hr {
   border-color: #a5b4cc;
 }
 
-.border-grey-lightest {
-  border-color: #f7f7f7;
+.border-oceano {
+  border-color: #005eb8;
 }
 
-.border-green {
-  border-color: #17c671;
+.border-oceano-lightest {
+  border-color: #b2cee9;
+}
+
+.border-piedra-lightest {
+  border-color: #fcf7ef;
 }
 
 .border-green-lightest {
@@ -661,10 +716,6 @@ hr {
 
 .rounded-lg {
   border-radius: .5rem;
-}
-
-.rounded-full {
-  border-radius: 9999px;
 }
 
 .border {
@@ -707,6 +758,10 @@ hr {
   display: inline;
 }
 
+.table {
+  display: table;
+}
+
 .hidden {
   display: none;
 }
@@ -739,10 +794,6 @@ hr {
   align-items: baseline;
 }
 
-.items-stretch {
-  align-items: stretch;
-}
-
 .justify-center {
   justify-content: center;
 }
@@ -755,20 +806,24 @@ hr {
   justify-content: space-around;
 }
 
+.content-center {
+  align-content: center;
+}
+
 .flex-grow {
   flex-grow: 1;
 }
 
 .font-sans {
-  font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: accord-alternate, sans-serif;
+}
+
+.font-serif {
+  font-family: din-slab, serif;
 }
 
 .font-light {
   font-weight: 300;
-}
-
-.font-normal {
-  font-weight: 400;
 }
 
 .font-medium {
@@ -785,10 +840,6 @@ hr {
 
 .h-4 {
   height: 1rem;
-}
-
-.h-12 {
-  height: 3rem;
 }
 
 .h-americano {
@@ -815,10 +866,6 @@ hr {
   margin: 0;
 }
 
-.m-2 {
-  margin: .5rem;
-}
-
 .m-3 {
   margin: .75rem;
 }
@@ -827,16 +874,13 @@ hr {
   margin: 1rem;
 }
 
-.m-6 {
-  margin: 1.5rem;
-}
-
-.m-8 {
-  margin: 2rem;
-}
-
 .m-12 {
   margin: 3rem;
+}
+
+.mx-1 {
+  margin-left: .25rem;
+  margin-right: .25rem;
 }
 
 .my-2 {
@@ -864,9 +908,19 @@ hr {
   margin-right: 1rem;
 }
 
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .mx-auto {
@@ -886,14 +940,6 @@ hr {
   margin-bottom: .5rem;
 }
 
-.mt-3 {
-  margin-top: .75rem;
-}
-
-.ml-3 {
-  margin-left: .75rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
 }
@@ -904,10 +950,6 @@ hr {
 
 .ml-4 {
   margin-left: 1rem;
-}
-
-.mt-6 {
-  margin-top: 1.5rem;
 }
 
 .mr-6 {
@@ -930,16 +972,8 @@ hr {
   margin-top: 3rem;
 }
 
-.mt-16 {
-  margin-top: 4rem;
-}
-
 .mb-16 {
   margin-bottom: 4rem;
-}
-
-.max-w-xxs {
-  max-width: 12rem;
 }
 
 .max-w-xs {
@@ -1067,14 +1101,6 @@ hr {
   padding-bottom: 4rem;
 }
 
-.pb-0 {
-  padding-bottom: 0;
-}
-
-.pt-1 {
-  padding-top: .25rem;
-}
-
 .pb-1 {
   padding-bottom: .25rem;
 }
@@ -1107,10 +1133,6 @@ hr {
   padding-bottom: 1rem;
 }
 
-.pl-4 {
-  padding-left: 1rem;
-}
-
 .pt-8 {
   padding-top: 2rem;
 }
@@ -1137,6 +1159,10 @@ hr {
 
 .pointer-events-none {
   pointer-events: none;
+}
+
+.fixed {
+  position: fixed;
 }
 
 .absolute {
@@ -1217,28 +1243,48 @@ hr {
   color: #ef5753;
 }
 
-.text-green {
-  color: #17c671;
+.text-oceano {
+  color: #005eb8;
 }
 
-.text-blue-darkest {
-  color: #316099;
+.text-oceano-lighter {
+  color: #669ed4;
+}
+
+.text-cielo {
+  color: #009fdf;
+}
+
+.text-piedra-very-dark {
+  color: #161716;
+}
+
+.text-piedra-quite-dark {
+  color: #212222;
+}
+
+.text-piedra-lighter {
+  color: #a9abaa;
+}
+
+.text-piedra-very-light {
+  color: #f0f1f0;
+}
+
+.text-piedra-lightest {
+  color: #fcf7ef;
+}
+
+.text-green {
+  color: #17c671;
 }
 
 .hover\:text-grey-darkest:hover {
   color: #2d3342;
 }
 
-.hover\:text-grey-lighter:hover {
-  color: #e3e9ea;
-}
-
 .hover\:text-white:hover {
   color: #fff;
-}
-
-.hover\:text-blue-darker:hover {
-  color: #296699;
 }
 
 .text-xs {
@@ -1251,6 +1297,10 @@ hr {
 
 .text-base {
   font-size: 1rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
 }
 
 .text-xl {
@@ -1267,6 +1317,10 @@ hr {
 
 .text-4xl {
   font-size: 2.25rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
 }
 
 .italic {
@@ -1435,10 +1489,6 @@ hr {
     flex-shrink: 1;
   }
 
-  .sm\:h-16 {
-    height: 4rem;
-  }
-
   .sm\:h-160 {
     height: 40rem;
   }
@@ -1458,11 +1508,6 @@ hr {
     margin-right: .5rem;
   }
 
-  .sm\:my-4 {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
   .sm\:mx-4 {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -1471,14 +1516,6 @@ hr {
   .sm\:mx-8 {
     margin-left: 2rem;
     margin-right: 2rem;
-  }
-
-  .sm\:mt-4 {
-    margin-top: 1rem;
-  }
-
-  .sm\:ml-4 {
-    margin-left: 1rem;
   }
 
   .sm\:mt-16 {
@@ -1524,8 +1561,9 @@ hr {
     padding-right: 2rem;
   }
 
-  .sm\:pb-8 {
-    padding-bottom: 2rem;
+  .sm\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .sm\:absolute {
@@ -1540,10 +1578,6 @@ hr {
     text-align: left;
   }
 
-  .sm\:text-2xl {
-    font-size: 1.5rem;
-  }
-
   .sm\:text-3xl {
     font-size: 1.875rem;
   }
@@ -1554,10 +1588,6 @@ hr {
 
   .sm\:text-5xl {
     font-size: 3rem;
-  }
-
-  .sm\:w-16 {
-    width: 4rem;
   }
 
   .sm\:w-96 {
@@ -1583,8 +1613,8 @@ hr {
 
 @media (min-width: 768px) {
 
-  .md\:border-grey-lightest {
-    border-color: #f7f7f7;
+  .md\:border-piedra-lightest {
+    border-color: #fcf7ef;
   }
 
   .md\:border-b-2 {
@@ -1631,11 +1661,6 @@ hr {
     height: 100vh;
   }
 
-  .md\:my-2 {
-    margin-top: .5rem;
-    margin-bottom: .5rem;
-  }
-
   .md\:mx-8 {
     margin-left: 2rem;
     margin-right: 2rem;
@@ -1643,6 +1668,10 @@ hr {
 
   .md\:mt-0 {
     margin-top: 0;
+  }
+
+  .md\:ml-6 {
+    margin-left: 1.5rem;
   }
 
   .md\:ml-8 {
@@ -1673,36 +1702,14 @@ hr {
     max-width: 50rem;
   }
 
-  .md\:max-w-xl {
-    max-width: 60rem;
-  }
-
-  .md\:p-4 {
-    padding: 1rem;
-  }
-
-  .md\:p-8 {
-    padding: 2rem;
-  }
-
   .md\:py-2 {
     padding-top: .5rem;
     padding-bottom: .5rem;
   }
 
-  .md\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-
-  .md\:py-16 {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
   }
 
   .md\:text-left {
@@ -1731,14 +1738,6 @@ hr {
 
   .md\:w-1\/3 {
     width: 33.33333%;
-  }
-
-  .md\:w-2\/3 {
-    width: 66.66667%;
-  }
-
-  .md\:w-1\/5 {
-    width: 20%;
   }
 
   .md\:w-2\/5 {
@@ -1796,10 +1795,6 @@ hr {
 
   .lg\:w-1\/3 {
     width: 33.33333%;
-  }
-
-  .lg\:w-1\/4 {
-    width: 25%;
   }
 }
 

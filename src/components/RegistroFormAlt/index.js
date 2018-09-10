@@ -17,7 +17,7 @@ const InnerForm = ({
           <label className="font-medium mx-auto">
             Cuéntanos:<br />
           </label>
-          <textarea lang="es" name="message" onChange={handleChange} onBlur={handleBlur} value={values.message} className="appearance-none text-grey-lighter bg-grey-darkest focus:bg-blue-lightest border-green-lightest rounded-lg shadow py-3 px-4 text-sm w-48 xs:w-64 sm:w-96 md:w-128 my-2" placeholder="Tu idea..."></textarea>
+          <textarea lang="es" name="message" onChange={handleChange} onBlur={handleBlur} value={values.message} className="appearance-none text-grey-lighter bg-piedra-very-dark focus:bg-oceano-lightest border-oceano-lightest rounded-lg shadow py-3 px-4 text-sm w-48 xs:w-64 sm:w-96 md:w-128 my-2" placeholder="Tu idea..."></textarea>
         </div>
       </div>
 
@@ -28,7 +28,7 @@ const InnerForm = ({
               Nombre:<br />
             </label>
             {touched.nombre && errors.nombre && <div className="text-sm py-2 italic text-red-light">{errors.nombre}</div>}
-            <Field type="text" name="nombre" className="appearance-none text-grey-lighter bg-grey-darkest rounded-lg shadow py-3 px-4 text-sm my-2 w-48 xs:w-64 sm:w-96 md:w-48" />
+            <Field type="text" name="nombre" className="appearance-none text-grey-lighter bg-piedra-very-dark rounded-lg shadow py-3 px-4 text-sm my-2 w-48 xs:w-64 sm:w-96 md:w-48" />
           </div>
 
           <div className="py-3 px-2 px-4">
@@ -36,7 +36,7 @@ const InnerForm = ({
               Apellido:<br />
             </label>
             {touched.apellido && errors.apellido && <div className="text-sm py-2 italic text-red-light">{errors.apellido}</div>}
-            <Field type="text" name="apellido" className="appearance-none text-grey-lighter bg-grey-darkest rounded-lg shadow py-3 px-4 w-48 xs:w-64 sm:w-96 md:w-48 text-sm my-2" />
+            <Field type="text" name="apellido" className="appearance-none text-grey-lighter bg-piedra-very-dark rounded-lg shadow py-3 px-4 w-48 xs:w-64 sm:w-96 md:w-48 text-sm my-2" />
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@ const InnerForm = ({
             Email:<br />
           </label>
           {touched.correo && errors.correo && <div className="text-sm py-2 italic text-red-light">{errors.correo}</div>}
-          <Field type="email" name="correo" placeholder="Email" className="appearance-none text-grey-lighter bg-grey-darkest focus:bg-grey-lighest border-green-lightest block rounded-lg shadow py-3 px-4 text-sm md:w-128 my-2 mx-auto w-48 xs:w-64 sm:w-96" />
+          <Field type="email" name="correo" placeholder="Email" className="appearance-none text-grey-lighter bg-piedra-very-dark focus:bg-grey-lighest border-oceano-lightest block rounded-lg shadow py-3 px-4 text-sm md:w-128 my-2 mx-auto w-48 xs:w-64 sm:w-96" />
         </div>
       </div>
 
@@ -58,7 +58,7 @@ const InnerForm = ({
               País:<br />
             </label>
             <div className="relative">
-              <Field component="select" name="pais" className="appearance-none text-grey-lighter bg-grey-darkest focus:bg-grey-darkest rounded-lg shadow py-3 px-4 w-48 xs:w-64 sm:w-96 md:w-48 text-sm my-2">
+              <Field component="select" name="pais" className="appearance-none text-grey-lighter bg-piedra-very-dark focus:bg-piedra-very-dark rounded-lg shadow py-3 px-4 w-48 xs:w-64 sm:w-96 md:w-48 text-sm my-2">
                 <option value="México">México</option>
                 <option value="Chile">Chile</option>
                 <option value="España">España</option>
@@ -81,7 +81,7 @@ const InnerForm = ({
               Dispositivo:<br />
             </label>
             <div className="relative">
-              <Field component="select" name="dispositivo" className="appearance-none text-grey-lighter bg-grey-darkest focus:bg-grey-darkest rounded-lg shadow py-3 px-4 w-48 xs:w-64 sm:w-96 md:w-48 text-sm my-2">
+              <Field component="select" name="dispositivo" className="appearance-none text-grey-lighter bg-piedra-very-dark focus:bg-piedra-very-dark rounded-lg shadow py-3 px-4 w-48 xs:w-64 sm:w-96 md:w-48 text-sm my-2">
                 <option value="Android">Android</option>
                 <option value="iPhone">iPhone</option>
               </Field>
@@ -100,14 +100,14 @@ const InnerForm = ({
           </label>
           {touched.banco && errors.banco && <div className="text-sm py-2 italic text-red-light">{errors.banco}</div>}
           <div className="relative">
-            <Field type="text" name="banco" className="appearance-none text-grey-lighter bg-grey-darkest focus:bg-grey-lighest border-green-lightest block rounded-lg shadow py-3 px-4 text-sm w-48 xs:w-64 sm:w-96 md:w-128 my-2 mx-auto" />
+            <Field type="text" name="banco" className="appearance-none text-grey-lighter bg-piedra-very-dark focus:bg-grey-lighest border-oceano-lightest block rounded-lg shadow py-3 px-4 text-sm w-48 xs:w-64 sm:w-96 md:w-128 my-2 mx-auto" />
           </div>
         </div>
       </div>
 
       <div className="text-center">
-        <button type="submit" className="mt-4 mx-2 sm:mx-4 rounded text-white bg-green active:bg-green-dark px-8 py-3 shadow-md" disabled={isSubmitting}>{isSubmitting ? 'Enviando...' : 'Enviar'}</button>
-        {status && status.success && <div className="text-large py-4 text-green">¡Gracias! Hemos recibido tu información.</div>} 
+        <button type="submit" className="mt-4 mx-2 sm:mx-4 rounded text-white bg-oceano hover:bg-oceano-dark px-8 py-3 shadow-md" disabled={isSubmitting}>{isSubmitting ? 'Enviando...' : 'Enviar'}</button>
+        {status && status.success && <div className="text-large py-4 text-oceano">¡Gracias! Hemos recibido tu información.</div>} 
       </div>
 
     </Form>

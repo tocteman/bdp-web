@@ -7,4 +7,4 @@
 
 ---
 
-Ahorra $5 en la semana 1, $10 en la semana 2 y así hasta ahorrar $260 la semana 52. A fin de año ahorrarás $6.890.
+Ahorra $1 en la primera semana, $2 en la siguiente y así hasta ahorrar $52 en la última. Al final habrás ahorrado $1.378.

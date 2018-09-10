@@ -1,21 +1,21 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
-import IconoCafe from '../img/iconos-colores/icono-placer-culpable.png'
-import ReglaCompletandose from '../img/fotos_reglas/regla_completandose.png'
+// import IconoCafeImg from '../img/iconos-colores/icono-placer-culpable-img.png'
+// import ReglaCompletandoseImg from '../img/iconos-colores/icono-desafio-img.png'
 import FlechaAbajo from '../img/fotos_reglas/flechaAbajo.png'
 import IdeaRegla from '../components/IdeaRegla';
 import CarouselOne from '../components/CarouselOne'
 import HeaderAlt from '../components/HeaderAlt'
+import RegistroForm from '../components/RegistroForm'
 
 
 const Reglas = ({ data }) => (
   <div>
     <div className="pt-2 bg-solid-gradient-white-grey-lightest">
-      <HeaderAlt />
       <div className="flex flex-col mx-auto max-w-xl text-center py-16">
-        <h1 className="text-4xl sm:text-5xl pb-4 p-1 mb-2 leading-tight max-w-sm mx-auto text-grey-darkest">Ahorra mientras vives tu vida.</h1>
-        <p className="text-xl text-grey-darkest leading-normal p-1 max-w-md mx-auto">Conoce las <strong>Reglas de Ahorro autómatico</strong> y descubre las miles de formas en las que puedes ahorrar sin esfuerzo.</p>
+        <h1 className="text-4xl sm:text-5xl pb-4 p-1 mb-2 leading-tight max-w-sm mx-auto text-piedra-very-dark font-serif">Ahorra mientras vives tu vida.</h1>
+        <p className="text-xl text-piedra-very-dark leading-normal p-1 max-w-sm sm:max-w-md mx-auto">Conoce las <strong>Reglas de Ahorro autómatico</strong> y descubre las miles de formas en las que puedes ahorrar sin esfuerzo.</p>
       </div>
       <div>
           <div className="absolute hidden sm:block pin-x mx-auto">
@@ -61,7 +61,7 @@ const Reglas = ({ data }) => (
 
     <div className="shadow-sm">
       <div className="mt-8 p-4 mx-auto leading-normal max-w-xs sm:max-w-sm md:max-w-md text-center">
-        <div className="text-3xl sm:text-4xl font-bold pb-3 leading-tight">Por qué ahorrar en automático.</div>
+        <div className="text-3xl sm:text-4xl font-bold pb-3 leading-tight font-serif">¿Por qué ahorrar en automático?</div>
         <hr />
         <p className="py-3 leading-normal">Las Reglas de Ahorro convierten tu estilo de vida y tus aplicaciones favoritas en ahorros automáticos. Con ellas podrás seguir haciendo lo que más te gusta y al mismo tiempo ahorrar para las cosas que más te importan.</p>
         <hr className="py-3"/>
@@ -75,7 +75,7 @@ const Reglas = ({ data }) => (
     
     
     </div>
-    <div className="bg-grey-lightest border-grey pb-8">
+    <div className="bg-piedra-very-light border-grey pb-8">
       <ul className="flex flex-wrap px-3 sm:px-8 mx-auto justify-center py-16 max-w-3xl xl:max-w-4xl xl:py-24 xl:px-8">
         {data.datosReglas.edges.map(post => (
           <li className="flex m-3 md:w-1/2 lg:w-1/3 xl:w-1/4 max-w-xs rounded-lg shadow-md overflow-hidden ">
@@ -83,7 +83,7 @@ const Reglas = ({ data }) => (
               <Img resolutions={post.node.frontmatter.featuredImage.childImageSharp.resolutions}  />
               <div className="flex px-4 pt-4 pb-2 items-center">
                 <Img resolutions={post.node.frontmatter.icono.childImageSharp.resolutions}  />
-                <h4 className="font-medium pl-2 leading-tight">{post.node.frontmatter.nombre}</h4>
+                <h4 className="font-medium pl-2 leading-tight font-serif">{post.node.frontmatter.nombre}</h4>
               </div>
               <p className="px-6 max-w-xs leading-normal pt-2 pb-4">
                 {post.node.excerpt}
@@ -99,7 +99,13 @@ const Reglas = ({ data }) => (
         ))}
       </ul>
     </div>
-    <IdeaRegla/>
+
+    <div className="mx-auto py-16 bg-piedra-quite-dark">
+      <h3 className="text-center mx-auto font-semibold sm:text-3xl pb-3 text-piedra-lightest font-serif">Se acabaron las excusas para no ahorrar.</h3>
+      <div className="text-center max-w-sm p-3 leading-normal mx-auto text-piedra-lighter">Regístrate y sé parte de los 500 usuarios del piloto.</div>
+      <hr className="pb-3" />
+      <RegistroForm className="my-8" />
+    </div>
   </div>
 )
 
@@ -153,7 +159,7 @@ query indexReglasQuery {
         }
       }
     }
-  iphoneImageReglas: imageSharp(id: { regex: "/home_pasos_home/"}){
+  iphoneImageReglas: imageSharp(id: { regex: "/iphoneVacaciones/"}){
       resolutions(width:225){
         ...GatsbyImageSharpResolutions_noBase64
       }

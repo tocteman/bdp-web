@@ -6,4 +6,4 @@ imagenApp: "../../img/home-pasos/home_pasos_disfruta.png"
 pasoNro: 3
 ---
 
-Al registrarte en Übank, aperturaremos automáticamente una cuenta a tu nombre en un banco partner. Tus ahorros siempre estarán seguros y disponibles para que los uses cuando gustes. Mientras tanto, te generarán interés.
+Cada vez que se activen tus reglas, tus ahorros serán transferidos automáticamente a tu cuenta de ahorro seleccionada. ¡A fin de mes te sorprenderás con lo que has ahorrado!

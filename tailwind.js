@@ -61,9 +61,70 @@ let colors = {
   'red-dark': '#cc1f1a',
   'red': '#e3342f',
   'red-light': '#ef5753',
-  'orange-dark': '#de751f',
-  'orange': '#f6993f',
-  'orange-light': '#faad63',
+
+  'oceano-darkest': '#002549',
+  'oceano-darker': '#00386e',
+  'oceano-dark': '#004b93',
+  'oceano': '#005eb8',
+  'oceano-light': '#327ec6',
+  'oceano-lighter': '#669ed4',
+  'oceano-lightest': '#b2cee9',
+  
+  'cielo-darkest': '#003f59',
+  'cielo-darker': '#005f85',
+  'cielo-dark': '#007fb2',
+  'cielo': '#009FDF',
+  'cielo-light': '#19a8e2',
+  'cielo-lighter': '#4cbbe8',
+  'cielo-lightest': '#ccebf8',
+
+  'piel-darkest': '#62484e',
+  'piel-darker': '#936c75',
+  'piel-dark': '#c4909c',
+  'piel': '#f6b5c4',
+  'piel-light': '#f7c3cf',
+  'piel-lighter': '#f9d2db',
+  'piel-lightest': '#fce8ed',
+
+  'cacao-darkest': '#272018',
+  'cacao-darker': '#3b3024',
+  'cacao-dark': '#4f4030',
+  'cacao': '#63513d',
+  'cacao-light': '#827363',
+  'cacao-lighter': '#a1968a',
+  'cacao-lightest': '#d0cac4',
+
+
+  'selva': '#3d3e13',
+  'selva': '#5b5d1c',
+  'selva-dark': '#7a7c26',
+  'selva': '#999b30',
+  'selva-light': '#adaf59',
+  'selva-lighter': '#c1c382',
+  'selva-lightest': '#e0e1c0',
+
+  'craft-darkest': '#2a251c',
+  'craft-darker': '#695e46',
+  'craft-dark': '#a89670',
+  'craft': '#d3bc8d',
+  'craft-light': '#dbc9a3',
+  'craft-lighter': '#e9ddc6',
+  'craft-lightest': '#f6f1e8',
+
+  'piedra-darkest': '#0b0b0b',
+  'piedra-very-dark': '#161716',
+  'piedra-quite-dark': '#212222',
+  'piedra-darker': '#383939',
+  'piedra-dark': '#595c5b',
+  'piedra': '#707372',
+  'piedra-light': '#7e8180',
+  'piedra-lighter': '#a9abaa',
+  'piedra-quite-light': '#d4d5d4',
+  'piedra-very-light': '#f0f1f0',
+  'piedra-lightest': '#fcf7ef',
+
+
+
 
 
   'yellow-dark': '#f2d024',
@@ -78,13 +139,6 @@ let colors = {
   'green-lighter': '#88feaa',
   'green-lightest': '#e5fcf4',
 
-  'blue-darkest': '#316099',
-  'blue-darker': '#296699',
-  'blue-dark': '#327dba',
-  'blue': '#388dd1',
-  'blue-light': '#3e9ce8',
-  'blue-lighter': '#c8e8f4',
-  'blue-lightest': '#eaf8ff',
 
 }
 
@@ -153,31 +207,18 @@ module.exports = {
   |
   */
 
+
+
   fonts: {
     'sans': [
-      'system-ui',
-      'BlinkMacSystemFont',
-      '-apple-system',
-      'Segoe UI',
-      'Roboto',
-      'Oxygen',
-      'Ubuntu',
-      'Cantarell',
-      'Fira Sans',
-      'Droid Sans',
-      'Helvetica Neue',
+      'accord-alternate',
       'sans-serif',
     ],
     'serif': [
-      'Source Serif Pro',
+      'din-slab',
       'serif'
     ],
     'mono': [
-      'Menlo',
-      'Monaco',
-      'Consolas',
-      'Liberation Mono',
-      'Courier New',
       'monospace',
     ]
   },

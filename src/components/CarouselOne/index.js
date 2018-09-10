@@ -6,10 +6,10 @@ import GoogleMaps from '../../img/fotos_reglas/google_maps.jpg'
 import VacacionesPalmeras from '../../img/fotos_reglas/vacaciones_palmeras.jpg'
 import TazaCarton from '../../img/fotos_reglas/tazaCarton.jpg'
 import IPhoneX from '../../img/fotos_reglas/iPhoneX.jpg'
-import SeleccionMexico from '../../img/fotos_reglas/escudo_mexico.jpg'
+import SeleccionEcuador from '../../img/fotos_reglas/escudo_ecuador.jpg'
 import CopaMundo from '../../img/fotos_reglas/copaDelMundo.jpg'
 
-const pics = [Cabify, GoogleMaps, TazaCarton, SeleccionMexico ];
+const pics = [Cabify, GoogleMaps, TazaCarton, SeleccionEcuador ];
 const picsDos = [Cerato, VacacionesPalmeras, IPhoneX, CopaMundo];
 const inicioEnunciado = ['Cada viaje', 'Cada  vez que', 'Cada café', 'Cada gol',];
 const explicacionUno = ['en Cabify', 'llego a la oficina', 'en mi cafetería favorita', 'de la Selección',];
@@ -69,7 +69,7 @@ export default class CarouselOne extends React.Component {
       <div className="flex flex-col md:block py-4  max-w-xl mx-auto ">
         <div className="lg:flex mx-auto text-center sm:text-left md:text-center lg:text-left">
           <div className="sm:flex items-center py-4 md:py-2 mx-auto">
-            <div className="mask-texto font-semibold text-2xl sm:text-3xl mx-auto">
+            <div className="mask-texto font-semibold text-2xl sm:text-3xl mx-auto font-serif">
               <div className="pic-wrapper">
                 <div className={`current texto ${move}`}>
                     {inicioEnunciado[this.state.index]}
@@ -109,7 +109,7 @@ export default class CarouselOne extends React.Component {
           <div className="sm:flex justify-around items-center md:py-2 mx-auto">
             <div className="mask-texto font-semibold text-2xl sm:text-3xl mx-auto">
               <div className="pic-wrapper">
-            <div className="texto current">ahorro para</div>
+            <div className="texto current font-serif">ahorro para</div>
               </div>
             </div>
             <div className="flex flex-col items-center mx-auto">

@@ -5,13 +5,14 @@ import AppleStore from '../img/aunNoTienes/apple_store.svg'
 import GooglePlay from '../img/aunNoTienes/google_play.svg'
 import Footer from "../components/Footer";
 import "./index.css";
-import Img from 'gatsby-image'
+import Img from 'gatsby-image';
+import Header from '../components/Header'
 
 const TemplateWrapper = ({ children, data }) => (
 
-  <div className="flex flex-col font-sans min-h-screen text-grey-darkest">
+  <div className="flex flex-col font-sans min-h-screen text-piedra-very-dark">
       <Helmet
-    title="Übank"
+    title="MetaBdP"
       meta={[
         { name: 'viewport', content: 'width=device-width, maximum-scale=1' },
         { name: "description", content: "Ahorra para las cosas que realmente importan. Tú decides las reglas que las harán realidad" },
@@ -19,7 +20,7 @@ const TemplateWrapper = ({ children, data }) => (
       ]}
     />
     
-    
+    <Header />
     <div className="flex flex-col flex-grow md:justify-center w-full">      {children()}
     </div>
     

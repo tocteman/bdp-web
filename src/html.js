@@ -51,7 +51,7 @@ module.exports = class HTML extends React.Component {
                    s = document.getElementsByTagName('script')[0];
                t.async = true;
                t.id    = 'cio-tracker';
-               t.setAttribute('data-site-id', '920a5a36c54bba26e448');
+               t.setAttribute('data-site-id', 'dc29643f2e45d1e7e538');
                t.src = 'https://assets.customer.io/assets/track.js';
                s.parentNode.insertBefore(t, s);
               })();

@@ -3,7 +3,7 @@ import AppleStore from '../../img/aunNoTienes/app_store_alt.svg'
 import GooglePlay from '../../img/aunNoTienes/google_play.svg'
 
 const AunNoLoTienes = () => (
-  <div className="flex flex-col bg-black text-grey-lightest mt-0 pt-16 pb-16 text-center">
+  <div className="flex flex-col bg-piedra-quite-dark text-grey-lightest mt-0 pt-16 pb-16 text-center">
     <div className="mx-auto">
       <h3 className="font-medium pb-3 px-4">¿Aún no tienes <span className="text-white">Übank?</span></h3>
       <hr/>

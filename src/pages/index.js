@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
 import Header from "../components/Header";
-import IPhone from "../img/iphone7.png"
+import IPhone from "../img/iphoneFilipinas.png"
 import FaLongArrowDown from 'react-icons/lib/fa/long-arrow-down'
 import FaShield from 'react-icons/lib/fa/shield'
 import FaDollar from 'react-icons/lib/fa/dollar'
@@ -9,6 +9,8 @@ import FaBuildingO from 'react-icons/lib/fa/building-o'
 import FaLineChart from 'react-icons/lib/fa/line-chart'
 import FaLightbulbO from 'react-icons/lib/fa/lightbulb-o'
 import FaList from 'react-icons/lib/fa/list'
+import FaAndroid from 'react-icons/lib/fa/android'
+import FaApple from 'react-icons/lib/fa/apple'
 import Img from 'gatsby-image'
 import StandardForm from '../components/StandardForm'
 import RegistroForm from '../components/RegistroForm'
@@ -21,15 +23,14 @@ const IndexPage = ({ data }) => (
   <div>
     <div>
       <div className="flex flex-col w-full absolute h-screen2/3 xs:h-screen1/4 xl:h-casitoda md:h-screen mt-2">
-      <Header />
-        <div className="flex flex-col justify-between xs:justify-around md:justify-center z-10 md:items-center h-screen2/3 xs:h-screen1/4 xl:h-casitoda -mt-2">
+        <div className="flex flex-col justify-between xs:justify-around md:justify-center z-10 md:items-center h-screen2/3 xs:h-screen1/4 xl:h-casitoda">
         <div className="md:flex md:items-center mx-auto w-full max-w-xl">
           <div className="md:w-3/5 max-w-sm mx-auto">
-            <p className="text-center font-semibold md:text-left md:ml-8 lg:ml-0 text-4xl lg:text-5xl px-2 pt-4 leading-tight max-w-sm text-white">Tu vida. Tus reglas. </p>
-            <p className="text-center font-semibold md:text-left md:ml-8 lg:ml-0 text-4xl lg:text-5xl px-2 mb-2 leading-tight max-w-sm text-white">Tus ahorros.</p>
-            <p className="text-base text-center md:text-left lg:text-xl text-grey-lighter leading-normal max-w-sm lg:max-w-sm p-2 md:ml-8 lg:ml-0">Übank es la forma más fácil y entretenida para ahorrar y hacer tus sueños realidad. </p>
+            <p className="text-center font-semibold md:text-left md:ml-8 lg:ml-0 text-4xl lg:text-5xl px-2 pt-4 leading-tight max-w-sm text-white font-serif">Tu vida. Tus reglas. </p>
+            <p className="text-center font-semibold md:text-left md:ml-8 lg:ml-0 text-4xl lg:text-5xl px-2 mb-2 leading-tight max-w-sm text-white font-serif">Tus ahorros.</p>
+            <p className="text-base text-center md:text-left lg:text-xl text-grey-lighter leading-normal max-w-sm lg:max-w-sm p-2 md:ml-8 lg:ml-0">MetaBdP es la forma más fácil y entretenida para ahorrar y hacer tus sueños realidad. </p>
             <div className="flex justify-center md:justify-start md:ml-8 lg:ml-0">
-              <a href="/#solicitud"><button className="rounded bg-green text-white px-8 mx-2 py-4 my-3 hover:bg-green-dark shadow-light">Descargar</button></a>
+              <a href="/#solicitud"><button className="rounded bg-oceano text-white px-8 mx-2 py-4 my-3 hover:bg-oceano-dark shadow-light">Regístrate</button></a>
             </div>
             <div className="flex justify-around md:justify-between md:ml-8 lg:ml-0 py-4 max-w-sm md:w-3/5">
                 <img src={GooglePlay} className="w-32"  />
@@ -42,39 +43,39 @@ const IndexPage = ({ data }) => (
         </div>
       </div>
       </div>
-      <Img sizes={data.headerEstrellas.sizes} className="h-screen2/3 xs:h-screen1/4 md:h-screen xl:h-casitoda m-0" />
+      <Img sizes={data.headerSunset.sizes} className="h-screen2/3 xs:h-screen1/4 md:h-screen xl:h-casitoda m-0" />
     </div>
-    <div className="w-full bg-grey-lightest">
-      <div className="flex pt-16 px-8 pb-8 mx-auto text-grey-darkest max-w-xl bg-grey-lightest">
+    <div className="w-full bg-piedra-very-light">
+      <div className="flex pt-16 px-8 pb-8 mx-auto text-piedra-very-dark max-w-xl">
         <div className="sm:w-full md:w-1/2 mx-auto">
-          <div className="text-3xl sm:text-4xl font-semibold pb-3 leading-tight text-center">¿Qué es Übank?</div>
+          <div className="text-3xl sm:text-4xl font-semibold pb-3 leading-tight text-center font-serif">Piloto MetaBdP</div>
           <hr />
-          <p className="pt-3 max-w-sm leading-normal mx-auto text-center"><strong>Übank</strong> es la aplicación que te permite ahorrar según tu estilo de vida. A través de las <em>Reglas de Ahorro Automático</em>, puedes elegir cuándo ahorrar y seguir haciendo tu vida. Los ahorros se acumularán sin que te des cuenta.</p>
+          <p className="pt-3 max-w-sm leading-normal mx-auto text-center">Banco del Pacífico te invita a probar una novedosa aplicación que te permite ahorrar según tu estilo de vida. Al usar las <em>Reglas de Ahorro Automático</em>, podrás elegir cuándo y cuánto ahorrar, y luego seguir viviendo tu vida. Mientras tanto, los ahorros se acumularán sin que lo notes.</p>
         </div>
       </div>
       <div className="flex flex-wrap p-4 max-w-xl mx-auto items-baseline pb-16">
         <div className="md:w-1/3 p-4 text-center mx-auto">
+          <Img resolutions={data.descargaImage.resolutions} />
+          <h4 className="leading-normal font-medium font-serif">Descarga la app</h4>
+          <p className="max-w-sm leading-normal">Encuéntranos en la AppStore o en Google Play. Debes trabajar en el Banco del Pacífico para participar.</p>
+        </div>
+        <div className="md:w-1/3 p-4 text-center mx-auto">
           <Img resolutions={data.montaniaImage.resolutions} />
-          <h4 className="leading-normal font-medium">Sueña</h4>
-          <p className="max-w-sm leading-normal">Ahorra para las cosas que realmente te importan. Tú decides las <em>Reglas</em> que las harán realidad.</p>
+          <h4 className="leading-normal font-medium font-serif">Crea tu plan de ahorro</h4>
+          <p className="max-w-sm leading-normal">Decide la meta que quieres conseguir y establece las Reglas de Ahorro que la harán realidad.</p>
         </div>
         <div className="md:w-1/3 p-4 text-center mx-auto">
-          <Img resolutions={data.coctelImage.resolutions} />
-          <h4 className="leading-normal font-medium">Vive</h4>
-          <p className="max-w-sm leading-normal">Ahorrar no tiene por qué significar sacrificarte. Vive tu vida y deja que <strong>Übank</strong> haga el trabajo difícil.</p>
-        </div>
-        <div className="md:w-1/3 p-4 text-center mx-auto">
-          <Img resolutions={data.creceImage.resolutions} />
-          <h4 className="leading-normal font-medium">Crece</h4>
-          <p className="max-w-sm leading-normal">Cuando las <em>Reglas</em> se activan, transferimos el dinero a una cuenta segura. Siempre estará disponible.</p>
+          <Img resolutions={data.depositoImage.resolutions} />
+          <h4 className="leading-normal font-medium font-serif">Activa tu cuenta</h4>
+          <p className="max-w-sm leading-normal">Decide a qué cuenta transferiremos los ahorros. ¡Vive tu vida y mira cómo se van acumulando!</p>
         </div>
       </div>
     </div>
     <div className="bg-white">
 
-      <ul className="list-reset border-t-2 border-b-2 bg-white border-grey-lightest mx-auto">
+      <ul className="list-reset border-t-2 border-b-2 bg-white border-piedra-lightest mx-auto">
         {data.pasosHome.edges.map(post => (
-          <li className="m-0 p-0 w-full md:border-b-2 md:border-grey-lightest py-2 sm:py-0">
+          <li className="m-0 p-0 w-full md:border-b-2 md:border-piedra-lightest py-2 sm:py-0">
             <div className="sm:flex sm:flex-row items-center">
               <div className="sm:w-1/3">
                 <div className="z-20 my-8 sm:my-0 sm:mt-16 sm:ml-16 md:ml-24 lg:ml-32 xl:ml-1/5 sm:absolute mx-auto sm:flex justify-around items-center max-w-xl">
@@ -82,9 +83,9 @@ const IndexPage = ({ data }) => (
                     <Img resolutions={post.node.frontmatter.imagenApp.childImageSharp.resolutions} />
                   </div>
                   <div className="sm:w-2/3 max-w-md sm:ml-24 md:ml-16 sm:max-w-xs text-center sm:text-left w-full">
-                    <h3 className="px-2 pb-3">{post.node.frontmatter.titulo}</h3>
-                    <div className="mx-auto sm:mx-2 border-t-6 border-green w-12" />
-                    <h5 className="max-w-xs md:max-w-sm mx-auto mt-8 sm:mt-16 mb-2 px-2">{post.node.frontmatter.subtitulo}</h5>
+                    <h3 className="px-2 pb-3 font-serif">{post.node.frontmatter.titulo}</h3>
+                    <div className="mx-auto sm:mx-2 border-t-6 border-oceano w-12" />
+                    <h5 className="max-w-xs md:max-w-sm mx-auto mt-8 sm:mt-16 mb-2 px-2 font-cielo">{post.node.frontmatter.subtitulo}</h5>
                     <div dangerouslySetInnerHTML={{ __html: post.node.html }} className="max-w-xs md:max-w-sm leading-normal mx-auto px-2" />
                   </div>
                 </div>
@@ -96,107 +97,70 @@ const IndexPage = ({ data }) => (
       </ul>
     </div>
 
-    <div className="py-8 mt-16 mb-8 max-w-xl mx-auto">
-      <div className="text-2xl sm:text-3xl font-semibold mb-4 mx-auto text-center pb-3">Funcionalidades</div>
-      <hr />
-      <div className="sm:flex flex-wrap justify-around pt-3">
-        <div className="sm:w-full md:w-1/2 pt-4 px-4 pb-0 mx-auto md:p-8">
-          <div className="flex items-center">
-            <div className="wt-1/3 p-2">
-              <div className="bg-green w-12 h-12 sm:w-16 sm:h-16 rounded-full shadow-md">
-                <FaBuildingO className="mt-3 ml-3 sm:mt-4 sm:ml-4 text-2xl sm:text-3xl text-white text-center" />
-              </div>
-            </div>
-            <div className="wt-2/3 p-2 m-4">
-              <div className="leading-normal font-normal text-xl font-medium">Multibanco</div>
-              <p className="max-w-sm leading-normal">Conecta tus cuentas y tarjetas de tus bancos y elige desde cuáles quieres ahorrar.</p>
-            </div>
-          </div>
-          <div className="flex items-center">
-            <div className="wt-1/3 p-2 pb-0">
-              <div className="bg-green w-12 h-12 sm:w-16 sm:h-16 rounded-full shadow-md">
-                <FaLightbulbO className="mt-3 ml-3 sm:mt-4 sm:ml-4 text-2xl sm:text-3xl text-white text-center" />
-              </div>
-            </div>
-            <div className="wt-2/3 p-2 m-4">
-              <div className="leading-normal font-normal text-xl font-medium">Recomendaciones</div>
-              <p className="max-w-sm leading-normal">Recibe recomendaciones de <em>Reglas</em> que podrías activar en base a tu estilo de vida.</p>
-            </div>
-          </div>
+
+    <div className="bg-piedra-very-light pt-16">
+    <div className="text-2xl sm:text-3xl font-semibold mx-auto text-center pb-4 font-serif">Detalles del Piloto</div>
+    <hr />
+      <div className="sm:flex max-w-xl mx-auto pb-8">
+        <div className="flex flex-col mx-8 px-4 sm:px-12 sm:w-1/2 mx-auto text-center py-8 sm:py-0 max-w-sm leading-normal">
+          <p className="pt-4">Regístrate en el piloto y sé parte de los 500 colaboradores que probarán esta nueva forma de ahorrar para luego ofrecer este producto a nuestro clientes.</p>
+          <p className="pt-4">Para participar solo debes registrate y descargar la aplicación.</p>
+          <p className="pt-4">Cierre de registros: <strong>25 de Septiembre de 2018</strong></p>
+          <p className="pt-4">Inicio del piloto: <strong>28 de Septiembre de 2018</strong></p>
         </div>
-        <div className="sm:w-full md:w-1/2 mx-auto pl-4 py-4 md:p-8">
-          <div className="flex items-center">
-            <div className="wt-1/3 p-2">
-              <div className="bg-green w-12 h-12 sm:w-16 sm:h-16 rounded-full shadow-md">
-                <FaList className="mt-3 ml-3 sm:mt-4 sm:ml-4 text-2xl sm:text-3xl text-white text-center" />
+        <div className="flex flex-wrap sm:w-1/2 mx-auto text-center pt-8 sm:py-0 max-w-xs items-end justify-center">
+            <div className="flex flex-col content-center sm:w-1/2">
+            <Img resolutions={data.detallesPilotoReloj.resolutions} />
+              <strong>Duración</strong>
+              <p>Tres meses</p><br/>
+            </div>
+          <div className="flex flex-col px-4 sm:w-1/2 text-center max-w-xs">
+              <Img resolutions={data.detallesPilotoCupos.resolutions} />
+              <strong>Cupos limitados</strong>
+              <p>500 participantes</p><br />
+            </div>
+            <div className="flex flex-col sm:w-1/2 py-4">
+              <div className="flex text-ocean text-center text-5xl justify-center">
+              <FaAndroid className="text-oceano-lighter mx-1" stroke="#222222" strokeWidth="1"/>
+              <FaApple className="text-oceano-lighter mx-1" stroke="#222222" strokeWidth="1"/>
               </div>
+              <p className="pt-4"><strong>Disponible en</strong></p>
+              <p>iOS y Android</p><br />
             </div>
-            <div className="wt-2/3 p-2 m-4">
-              <div className="leading-normal font-normal text-xl font-medium">Claridad</div>
-              <p className="max-w-sm leading-normal">Mira todas tus transacciones por categoría. Ahorra más, gasta mejor.</p>
-            </div>
-          </div>
-          <div className="flex items-center">
-            <div className="wt-1/3 p-2">
-              <div className="bg-green w-12 h-12 sm:w-16 sm:h-16 rounded-full shadow-md">
-                <FaLineChart className="mt-3 ml-3 sm:mt-4 sm:ml-4 text-2xl sm:text-3xl text-white text-center" />
-              </div>
-            </div>
-            <div className="wt-2/3 p-2 m-4">
-              <div className="leading-normal font-normal text-xl font-medium">Rentabilidad</div>
-              <p className="max-w-sm leading-normal">Ahorrar fácil no es suficiente. Genera interés de todos los fondos que guardes mediante <strong>Übank</strong>.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+          </div>    
     </div>
 
-    <div className="bg-grey-lightest md:py-16 border-t-grey-lighter border-b-grey-lighter">
-      <div className="md:flex mx-auto justify-center items-center max-w-xl p-2">
-        <div className="md:w-2/3 pt-8 sm:pb-8 mx-auto max-w-md px-8"><Img sizes={data.seguridadImage.sizes} /></div>
-        <div className="text-center md:text-left md:w-1/3 leading-normal max-w-xs md:max-w-sm mx-auto pb-24 sm:px-4 md:px-6 pt-4">
-          <h3 className="pb-3">Seguridad</h3>
-          <div className="mx-auto sm:mx-0 border-t-6 border-green w-12" />
-          <h5 className="mt-16">Tu dinero seguro. Siempre.</h5>
-          <p>Al registrate en Übank, aperturaremos automáticamente una cuenta de ahorros en un banco partner. Tus ahorros siempre estarán seguros y disponibles para usarlos cuando quieras. Dile adiós a ahorrar en la misma cuenta bancaria que no genera interés.</p>
-        </div>
+    <a name="requisitos" />
+    <div className="text-2xl sm:text-3xl font-semibold mt-4 sm:mt-16 mx-auto text-center pb-4 font-serif">Requisitos del Piloto</div>
+    <hr />
+    <div className="sm:flex max-w-xl mx-auto pb-24">
+      <div className="flex flex-col mx-8 px-4 sm:px-12 sm:w-1/2 mx-auto text-center py-8 sm:py-0 max-w-sm">
+        <Img resolutions={data.requisitosPilotoChanchito.resolutions} />
+        <h4 className="pt-4">Tener cuenta de ahorro activa en el Banco del Pacífico</h4>
+        <p className="leading-normal pt-4">La cuenta es necesaria para que Übank separe tus ahorros de tu cuenta de gastos.</p>
+        <p className="leading-normal pt-4">Si no tienes una cuenta de ahorro activa, debes abrir una antes del inicio del piloto. Contrátala desde aquí:</p>
+          <a href="https://www.bancodelpacifico.com/personas/canales-de-atencion/virtuales/onboard-bdp" className="no-underline text-white" target="_blank">
+            <button className="bg-cielo rounded-lg my-6 shadow-md max-w-md mx-auto px-4 py-4 text-white hover:bg-cielo-dark">
+              Contrata tu cuenta Onboard BdP
+            </button>
+          </a>
+      </div>
+      <div className="flex flex-col mx-8 px-4 sm:px-12 sm:w-1/2 mx-auto text-center max-w-sm">
+        <Img resolutions={data.requisitosPilotoTarjeta.resolutions} />
+        <h4 className="pt-4">Usar tu cuenta Banco del Pacífico como cuenta principal</h4>
+        <p className="leading-normal pt-4">Usa tus tarjetas del Banco del Pacífico para hacer tus gastos y compras diarias. Conforme las uses irás generando ahorros.</p>
+        <p className="leading-normal pt-4">Al usar tus tarjetas Banco del Pacífico podrás visualizar todas tus compras categorizadas y ordenadas de forma automática.</p>
       </div>
     </div>
+    </div>
 
-    <div className="text-center mx-auto text-2xl font-semibold sm:text-3xl mt-16 pb-3">Prensa</div>
-    <hr />
-    <ul className="list-reset flex flex-wrap items-center mx-auto justify-around max-w-xs sm:max-w-sm md:max-w-xl pt-3">
-      {data.prensaQuery.edges.map(post => (
-        <li className="px-3 my-4 sm:my-4 md:my-2 p-2 w-1/2 sm:w-1/3 md:w-1/5 text-center mx-auto w-32 ">
-          <a href={post.node.frontmatter.link} target="_blank"><Img resolutions={post.node.frontmatter.imagen.childImageSharp.resolutions}  className=" border-transparent border-b-2 hover:border-grey-darkest hover:border-b-2"/></a>
-        </li>
-      ))}
-    </ul>
-
-    <div className="text-2xl sm:text-3xl font-semibold mt-16 mx-auto text-center pb-3">Testimonios</div>
-    <hr />
-    <ul className="pt-3 flex flex-wrap justify-center max-w-xl mx-auto list-reset">{data.datosTestimonios.edges.map(post => (
-      <li className="sm:w-1/2 lg:w-1/3 p-4 mx-auto text-center">
-        <Img resolutions={post.node.frontmatter.imagen.childImageSharp.resolutions} className="rounded-full shadow-md"  />
-        <div className="max-w-sm mx-auto p-4">
-          <div className="font-semibold text-xl sm:text-2xl mt-2 leading-tight text-center">{post.node.frontmatter.nombre} {post.node.frontmatter.apellido}</div>
-          <p className="text-grey-darker font-light pt-1 pb-2">{post.node.frontmatter.cargo}</p>
-          <p className="max-w-xs leading-normal mx-auto text-sm italic font-light">{post.node.excerpt}</p>
-        </div>
-
-      </li>
-    ))}
-    </ul>
     <a name="solicitud" />
-    <div className="bg-grey-lightest rounded shadow-md mx-auto mt-16 py-16">
-      <div className="text-center mx-auto text-2xl font-semibold sm:text-3xl pb-3">Solicita tu invitación</div>
-      <div className="text-center max-w-sm p-3 leading-normal mx-auto">Se te acabaron las excusas para no ahorrar. Regístrate para ser el primero en usar Übank cuando esté disponible en tu país.</div>
+    <div className="mx-auto py-16 bg-piedra-quite-dark">
+      <h3 className="text-center mx-auto font-semibold sm:text-3xl pb-3 text-piedra-lightest font-serif">Se acabaron las excusas para no ahorrar.</h3>
+      <div className="text-center max-w-sm p-3 leading-normal mx-auto text-piedra-lighter">Regístrate y sé parte de los 500 usuarios del piloto.</div>
       <hr className="pb-3" />
-      <RegistroForm />
+      <RegistroForm className="my-8" />
     </div>
-
-
-    <AunNoLoTienes />
   </div>
 );
 
@@ -288,7 +252,7 @@ export const query = graphql`
       }
     }
   }
-  headerEstrellas: imageSharp(id: { regex: "/headerEstrellasTres/"}){
+  headerSunset: imageSharp(id: { regex: "/sunsetAmarillo/"}){
       sizes(maxWidth:1920, duotone: {highlight: "#151616", shadow: "#191b1c", opacity: 45} ){
         ...GatsbyImageSharpSizes_noBase64
       }
@@ -298,8 +262,8 @@ export const query = graphql`
         ...GatsbyImageSharpSizes_noBase64
       }
     }
-  iphoneImage: imageSharp(id: { regex: "/home_pasos_home/"}){
-      resolutions(width:225){
+  iphoneImage: imageSharp(id: { regex: "/iphoneVacaciones/"}){
+      resolutions(width:230){
         ...GatsbyImageSharpResolutions_noBase64
       }
     }
@@ -308,13 +272,33 @@ export const query = graphql`
         ...GatsbyImageSharpResolutions_noBase64
       }
     }
-    creceImage: imageSharp(id: { regex: "/icono-crece/"}){
-      resolutions(width:90){
+    depositoImage: imageSharp(id: { regex: "/icono-deposito/"}){
+      resolutions(width:88){
         ...GatsbyImageSharpResolutions_noBase64
       }
     }
-    coctelImage: imageSharp(id: { regex: "/icono-coctel/"}){
-      resolutions(width:90){
+    descargaImage: imageSharp(id: { regex: "/icono-descarga/"}){
+      resolutions(width:75){
+        ...GatsbyImageSharpResolutions_noBase64
+      }
+    }
+    detallesPilotoReloj: imageSharp(id: { regex: "/icono-cronometro/"}){
+      resolutions(width:80){
+        ...GatsbyImageSharpResolutions_noBase64
+      }
+    }
+    detallesPilotoCupos: imageSharp(id: { regex: "/icono-conferencia/"}){
+      resolutions(width:80){
+        ...GatsbyImageSharpResolutions_noBase64
+      }
+    }
+    requisitosPilotoChanchito: imageSharp(id: { regex: "/icono-chanchito/"}){
+      resolutions(width:80){
+        ...GatsbyImageSharpResolutions_noBase64
+      }
+    }
+    requisitosPilotoTarjeta: imageSharp(id: { regex: "/icono-pago-tarjeta/"}){
+      resolutions(width:80){
         ...GatsbyImageSharpResolutions_noBase64
       }
     }

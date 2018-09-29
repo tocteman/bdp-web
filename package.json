@@ -50,7 +50,7 @@
     "develop": "tailwind build ./src/layouts/index.tailwind.css -c ./tailwind.js -o ./src/layouts/index.css && gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "tailwind build ./src/layouts/index.tailwind.css -c ./tailwind.js -o ./src/layouts/index.css && purgecss -c purgecss.config.js -o ./src/layouts && gatsby build &&aws s3 sync --acl public-read --sse --delete ~/dev/ubank_app/public/ s3://ubank-gatsby-prueba1.com && aws configure set preview.cloudfront true && aws cloudfront create-invalidation --distribution-id E13DNFK7ROMRMZ --paths '/*'"
+    "deploy": "tailwind build ./src/layouts/index.tailwind.css - c ./tailwind.js -o ./src/layouts/index.css && purgecss - c purgecss.config.js -o ./src/layouts && gatsby build &&aws s3 sync --acl public-read --sse --delete ~/dev/ubank/web-bdp/bp-web/bdp-web/public/ s3://metabdp.ubankapp.com"
   },
   "devDependencies": {
     "prettier": "^1.13.4",

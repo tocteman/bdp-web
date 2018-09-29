@@ -3,7 +3,7 @@ import Link from "gatsby-link";
 import FaBars from 'react-icons/lib/fa/bars';
 import { navigateTo } from "gatsby-link"
 import Headroom from 'react-headroom'
-import LogoBP from '../../img/logo_bp.png'
+import LogoBP from '../../img/logoBdP.png'
 
 const Header = () => {
   const handleClick = function (e) {
@@ -33,7 +33,7 @@ const Header = () => {
       <nav className="bg-oceano">
         <div className="flex flex-wrap items-center justify-between max-w-xl mx-auto px-4">
           <div className="block md:inline-block md:mt-0 mr-6 no-underline text-grey-lightest hover:text-white py-4 hover:border-b-2 border-transparent border-b-2 cursor-pointer hover:border-b-2 hover:border-white" onClick={handleClickHome}>
-            <strong className="text-lg">MetaBdP</strong>
+            <strong className="text-lg">Meta <span className="inline-text floating-right text-serif">BdP</span></strong>
           </div>
 
 
@@ -46,7 +46,14 @@ const Header = () => {
                 Reglas
               </div>
               <a href="https://www.bancodelpacifico.com/inicio.aspx" target="_blank" className="block md:inline-block md:ml-6 mr-6 no-underline text-grey-lightest font-medium hover:text-white py-3 hover:border-b-2 border-transparent border-b-2 cursor-pointer font-medium  hover:border-white">
-                <img src={LogoBP} width="160" />
+              <div className="flex items-center">
+                <div className="mr-2">
+                  <img src={LogoBP} width="25"/>
+                </div>
+                <div className="font-bold mx-2 self-center text-lg text-serif">
+                  BdP
+                </div>
+              </div>
               </a>
               </div>
             </div>

@@ -12,7 +12,7 @@ const TemplateWrapper = ({ children, data }) => (
 
   <div className="flex flex-col font-sans min-h-screen text-piedra-very-dark">
       <Helmet
-    title="MetaBdP"
+    title="Meta BdP"
       meta={[
         { name: 'viewport', content: 'width=device-width, maximum-scale=1' },
         { name: "description", content: "Ahorra para las cosas que realmente importan. Tú decides las reglas que las harán realidad" },

@@ -11,7 +11,16 @@ import FintechWinner from '../../img/footer/fintech.jpg'
 const Footer = () => (
   <div className="bg-piedra-very-dark text-piedra-lightest py-4 leading-normal w-full">
     <div className="text-piedra-very-light max-w-lg text-center mx-auto">
-      <div className="text-piedra-very-light no-underline hover:text-white" target="_blank">MetaBdP, powered by <em>Übank</em></div>
+      <div className="flex justify-around">
+      <div className="text-piedra-very-light no-underline hover:text-white" target="_blank">Meta BdP, powered by <em>Übank</em></div>
+      <div>
+        <Link to="legal">
+          <div className="text-piedra-very-light hover:text-white no-underline">
+            Legal
+          </div>
+        </Link>
+      </div>
+      </div>
     </div>
   </div>
 );

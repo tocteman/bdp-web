@@ -28,7 +28,7 @@ const IndexPage = ({ data }) => (
           <div className="md:w-3/5 max-w-sm mx-auto">
             <p className="text-center font-semibold md:text-left md:ml-8 lg:ml-0 text-4xl lg:text-5xl px-2 pt-4 leading-tight max-w-sm text-white font-serif">Tu vida. Tus reglas. </p>
             <p className="text-center font-semibold md:text-left md:ml-8 lg:ml-0 text-4xl lg:text-5xl px-2 mb-2 leading-tight max-w-sm text-white font-serif">Tus ahorros.</p>
-            <p className="text-base text-center md:text-left lg:text-xl text-grey-lighter leading-normal max-w-sm lg:max-w-sm p-2 md:ml-8 lg:ml-0">MetaBdP es la forma más fácil y entretenida para ahorrar y hacer tus sueños realidad. </p>
+            <p className="text-base text-center md:text-left lg:text-xl text-grey-lighter leading-normal max-w-sm lg:max-w-sm p-2 md:ml-8 lg:ml-0">Meta BdP es la forma más fácil y entretenida para ahorrar y hacer tus sueños realidad. </p>
             <div className="flex justify-center md:justify-start md:ml-8 lg:ml-0">
               <a href="/#solicitud"><button className="rounded bg-oceano text-white px-8 mx-2 py-4 my-3 hover:bg-oceano-dark shadow-light">Regístrate</button></a>
             </div>
@@ -48,7 +48,7 @@ const IndexPage = ({ data }) => (
     <div className="w-full bg-piedra-very-light">
       <div className="flex pt-16 px-8 pb-8 mx-auto text-piedra-very-dark max-w-xl">
         <div className="sm:w-full md:w-1/2 mx-auto">
-          <div className="text-3xl sm:text-4xl font-semibold pb-3 leading-tight text-center font-serif">Piloto MetaBdP</div>
+          <div className="text-3xl sm:text-4xl font-semibold pb-3 leading-tight text-center font-serif">Piloto Meta BdP</div>
           <hr />
           <p className="pt-3 max-w-sm leading-normal mx-auto text-center">Banco del Pacífico te invita a probar una novedosa aplicación que te permite ahorrar según tu estilo de vida. Al usar las <em>Reglas de Ahorro Automático</em>, podrás elegir cuándo y cuánto ahorrar, y luego seguir viviendo tu vida. Mientras tanto, los ahorros se acumularán sin que lo notes.</p>
         </div>
